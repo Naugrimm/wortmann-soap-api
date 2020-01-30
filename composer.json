@@ -1,0 +1,26 @@
+{
+    "name": "naugrim/wortmann-soap-api",
+    "type": "library",
+    "description": "Allows to talk to the API of Wortmann AG",
+    "keywords": ["wortmann"],
+    "homepage": "https://github.com/naugrimm/wortmann-soap-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Erik Anders",
+            "email": "erik.gto@googlemail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Naugrim\\WortmannSoapApi\\Tests\\": "tests/",
+            "Naugrim\\WortmannSoapApi\\": "src/"
+        }
+    }
+}
