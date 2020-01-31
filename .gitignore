@@ -1,5 +1,7 @@
 .idea
 .tmp
+.credentials.php
 vendor
 composer.phar
+composer.lock
 /.phpunit.result.cache
