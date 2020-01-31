@@ -16,7 +16,7 @@ class WortmannSoapApiProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/wortmann-soap-api.php' => config_path('wortmann-soap-api.php'),
+            __DIR__.'/../config/wortmann-soap-api.php' => config_path('wortmann-soap-api.php'),
         ]);
     }
 
@@ -28,7 +28,7 @@ class WortmannSoapApiProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/wortmann-soap-api.php',
+            __DIR__.'/../config/wortmann-soap-api.php',
             'wortmann-soap-api',
         );
 
