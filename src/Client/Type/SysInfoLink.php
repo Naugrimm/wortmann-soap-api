@@ -154,7 +154,4 @@ class SysInfoLink
 
         return $new;
     }
-
-
 }
-

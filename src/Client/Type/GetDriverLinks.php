@@ -41,7 +41,4 @@ class GetDriverLinks implements RequestInterface
 
         return $new;
     }
-
-
 }
-

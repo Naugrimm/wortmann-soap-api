@@ -2,21 +2,20 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetServiceInfoByWarrantyEndingDateResponse implements RequestInterface, ResultInterface
+class GetServiceInfoByWarrantyEndingDateResponse implements ResultInterface
 {
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
+     * @var CustomerWebServiceServiceInfoResponse
      */
     private $GetServiceInfoByWarrantyEndingDateResult;
 
     /**
      * Constructor
      *
-     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoByWarrantyEndingDateResult
+     * @var CustomerWebServiceServiceInfoResponse $GetServiceInfoByWarrantyEndingDateResult
      */
     public function __construct($GetServiceInfoByWarrantyEndingDateResult)
     {
@@ -24,7 +23,7 @@ class GetServiceInfoByWarrantyEndingDateResponse implements RequestInterface, Re
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
+     * @return CustomerWebServiceServiceInfoResponse
      */
     public function getGetServiceInfoByWarrantyEndingDateResult()
     {
@@ -32,7 +31,7 @@ class GetServiceInfoByWarrantyEndingDateResponse implements RequestInterface, Re
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoByWarrantyEndingDateResult
+     * @param CustomerWebServiceServiceInfoResponse $GetServiceInfoByWarrantyEndingDateResult
      * @return GetServiceInfoByWarrantyEndingDateResponse
      */
     public function withGetServiceInfoByWarrantyEndingDateResult($GetServiceInfoByWarrantyEndingDateResult)
@@ -42,7 +41,4 @@ class GetServiceInfoByWarrantyEndingDateResponse implements RequestInterface, Re
 
         return $new;
     }
-
-
 }
-

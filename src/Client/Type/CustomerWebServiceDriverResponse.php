@@ -81,7 +81,4 @@ class CustomerWebServiceDriverResponse implements ResultInterface
 
         return $new;
     }
-
-
 }
-

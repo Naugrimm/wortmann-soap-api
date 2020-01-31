@@ -95,7 +95,4 @@ class GetServiceInfoBySerialNo implements RequestInterface
 
         return $new;
     }
-
-
 }
-

@@ -2,6 +2,8 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
+use DateTimeInterface;
+
 class SysInfoDocument
 {
 
@@ -46,7 +48,7 @@ class SysInfoDocument
     private $Languages;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     private $DocumentDate;
 
@@ -81,12 +83,12 @@ class SysInfoDocument
     private $LongDescription;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     private $MinDate;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     private $MaxDate;
 
@@ -266,7 +268,7 @@ class SysInfoDocument
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getDocumentDate()
     {
@@ -274,7 +276,7 @@ class SysInfoDocument
     }
 
     /**
-     * @param \DateTimeInterface $DocumentDate
+     * @param DateTimeInterface $DocumentDate
      * @return SysInfoDocument
      */
     public function withDocumentDate($DocumentDate)
@@ -406,7 +408,7 @@ class SysInfoDocument
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getMinDate()
     {
@@ -414,7 +416,7 @@ class SysInfoDocument
     }
 
     /**
-     * @param \DateTimeInterface $MinDate
+     * @param DateTimeInterface $MinDate
      * @return SysInfoDocument
      */
     public function withMinDate($MinDate)
@@ -426,7 +428,7 @@ class SysInfoDocument
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getMaxDate()
     {
@@ -434,7 +436,7 @@ class SysInfoDocument
     }
 
     /**
-     * @param \DateTimeInterface $MaxDate
+     * @param DateTimeInterface $MaxDate
      * @return SysInfoDocument
      */
     public function withMaxDate($MaxDate)
@@ -504,7 +506,4 @@ class SysInfoDocument
 
         return $new;
     }
-
-
 }
-

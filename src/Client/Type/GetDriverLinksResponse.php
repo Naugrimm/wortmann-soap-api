@@ -9,14 +9,14 @@ class GetDriverLinksResponse implements RequestInterface, ResultInterface
 {
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse
+     * @var CustomerWebServiceDriverResponse
      */
     private $GetDriverLinksResult;
 
     /**
      * Constructor
      *
-     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse $GetDriverLinksResult
+     * @var CustomerWebServiceDriverResponse $GetDriverLinksResult
      */
     public function __construct($GetDriverLinksResult)
     {
@@ -24,7 +24,7 @@ class GetDriverLinksResponse implements RequestInterface, ResultInterface
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse
+     * @return CustomerWebServiceDriverResponse
      */
     public function getGetDriverLinksResult()
     {
@@ -32,7 +32,7 @@ class GetDriverLinksResponse implements RequestInterface, ResultInterface
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse $GetDriverLinksResult
+     * @param CustomerWebServiceDriverResponse $GetDriverLinksResult
      * @return GetDriverLinksResponse
      */
     public function withGetDriverLinksResult($GetDriverLinksResult)
@@ -42,7 +42,4 @@ class GetDriverLinksResponse implements RequestInterface, ResultInterface
 
         return $new;
     }
-
-
 }
-

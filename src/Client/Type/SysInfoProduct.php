@@ -129,7 +129,4 @@ class SysInfoProduct
 
         return $new;
     }
-
-
 }
-

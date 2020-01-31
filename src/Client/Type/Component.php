@@ -104,7 +104,4 @@ class Component
 
         return $new;
     }
-
-
 }
-

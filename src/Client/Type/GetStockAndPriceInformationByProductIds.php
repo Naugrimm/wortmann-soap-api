@@ -95,7 +95,4 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
 
         return $new;
     }
-
-
 }
-

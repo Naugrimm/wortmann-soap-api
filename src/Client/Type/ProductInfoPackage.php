@@ -2,6 +2,8 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
+use DateTimeInterface;
+
 class ProductInfoPackage
 {
 
@@ -61,7 +63,7 @@ class ProductInfoPackage
     private $Stock;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     private $StockNextDelivery;
 
@@ -291,7 +293,7 @@ class ProductInfoPackage
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getStockNextDelivery()
     {
@@ -299,7 +301,7 @@ class ProductInfoPackage
     }
 
     /**
-     * @param \DateTimeInterface $StockNextDelivery
+     * @param DateTimeInterface $StockNextDelivery
      * @return ProductInfoPackage
      */
     public function withStockNextDelivery($StockNextDelivery)
@@ -329,7 +331,4 @@ class ProductInfoPackage
 
         return $new;
     }
-
-
 }
-

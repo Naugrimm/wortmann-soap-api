@@ -2,6 +2,8 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
+use DateTimeInterface;
+
 class TreeListEntry
 {
 
@@ -36,7 +38,7 @@ class TreeListEntry
     private $SolutionText;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     private $DocumentDate;
 
@@ -171,7 +173,7 @@ class TreeListEntry
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getDocumentDate()
     {
@@ -179,7 +181,7 @@ class TreeListEntry
     }
 
     /**
-     * @param \DateTimeInterface $DocumentDate
+     * @param DateTimeInterface $DocumentDate
      * @return TreeListEntry
      */
     public function withDocumentDate($DocumentDate)
@@ -229,7 +231,4 @@ class TreeListEntry
 
         return $new;
     }
-
-
 }
-

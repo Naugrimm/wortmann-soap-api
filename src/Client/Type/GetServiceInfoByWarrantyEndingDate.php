@@ -2,6 +2,7 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
+use DateTimeInterface;
 use Phpro\SoapClient\Type\RequestInterface;
 
 class GetServiceInfoByWarrantyEndingDate implements RequestInterface
@@ -18,7 +19,7 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
     private $PasswordHash;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     private $WarrantyEndingDate;
 
@@ -27,7 +28,7 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
      *
      * @var string $Username
      * @var string $PasswordHash
-     * @var \DateTimeInterface $WarrantyEndingDate
+     * @var DateTimeInterface $WarrantyEndingDate
      */
     public function __construct($Username, $PasswordHash, $WarrantyEndingDate)
     {
@@ -77,7 +78,7 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getWarrantyEndingDate()
     {
@@ -85,7 +86,7 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
     }
 
     /**
-     * @param \DateTimeInterface $WarrantyEndingDate
+     * @param DateTimeInterface $WarrantyEndingDate
      * @return GetServiceInfoByWarrantyEndingDate
      */
     public function withWarrantyEndingDate($WarrantyEndingDate)
@@ -95,7 +96,4 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
 
         return $new;
     }
-
-
 }
-

@@ -9,7 +9,7 @@ use Phpro\SoapClient\Soap\ClassMap\ClassMap;
 class ApiClassmap
 {
 
-    public static function getCollection() : \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection() : ClassMapCollection
     {
         return new ClassMapCollection([
             new ClassMap('GetStockAndPriceInformationByProductId', Type\GetStockAndPriceInformationByProductId::class),
@@ -38,7 +38,4 @@ class ApiClassmap
             new ClassMap('GetServiceInfoBySerialNoResponse', Type\GetServiceInfoBySerialNoResponse::class),
         ]);
     }
-
-
 }
-

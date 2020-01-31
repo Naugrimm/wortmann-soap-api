@@ -21,7 +21,4 @@ class ApiClientFactory
 
         return new ApiClient($engine, $eventDispatcher);
     }
-
-
 }
-

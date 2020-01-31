@@ -81,7 +81,4 @@ class CustomerWebServiceServiceInfoResponse implements ResultInterface
 
         return $new;
     }
-
-
 }
-

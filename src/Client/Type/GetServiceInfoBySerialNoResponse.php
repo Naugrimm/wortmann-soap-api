@@ -5,18 +5,18 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetServiceInfoBySerialNoResponse implements RequestInterface, ResultInterface
+class GetServiceInfoBySerialNoResponse implements ResultInterface
 {
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
+     * @var CustomerWebServiceServiceInfoResponse
      */
     private $GetServiceInfoBySerialNoResult;
 
     /**
      * Constructor
      *
-     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult
+     * @var CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult
      */
     public function __construct($GetServiceInfoBySerialNoResult)
     {
@@ -24,7 +24,7 @@ class GetServiceInfoBySerialNoResponse implements RequestInterface, ResultInterf
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
+     * @return CustomerWebServiceServiceInfoResponse
      */
     public function getGetServiceInfoBySerialNoResult()
     {
@@ -32,7 +32,7 @@ class GetServiceInfoBySerialNoResponse implements RequestInterface, ResultInterf
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult
+     * @param CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult
      * @return GetServiceInfoBySerialNoResponse
      */
     public function withGetServiceInfoBySerialNoResult($GetServiceInfoBySerialNoResult)
@@ -42,7 +42,4 @@ class GetServiceInfoBySerialNoResponse implements RequestInterface, ResultInterf
 
         return $new;
     }
-
-
 }
-

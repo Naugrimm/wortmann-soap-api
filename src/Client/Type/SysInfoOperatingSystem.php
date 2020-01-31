@@ -104,7 +104,4 @@ class SysInfoOperatingSystem
 
         return $new;
     }
-
-
 }
-

@@ -2,21 +2,20 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetStockAndPriceInformationByProductIdsResponse implements RequestInterface, ResultInterface
+class GetStockAndPriceInformationByProductIdsResponse implements ResultInterface
 {
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
+     * @var CustomerWebServiceProductInfoResponse
      */
     private $GetStockAndPriceInformationByProductIdsResult;
 
     /**
      * Constructor
      *
-     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdsResult
+     * @var CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdsResult
      */
     public function __construct($GetStockAndPriceInformationByProductIdsResult)
     {
@@ -24,7 +23,7 @@ class GetStockAndPriceInformationByProductIdsResponse implements RequestInterfac
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
+     * @return CustomerWebServiceProductInfoResponse
      */
     public function getGetStockAndPriceInformationByProductIdsResult()
     {
@@ -32,7 +31,7 @@ class GetStockAndPriceInformationByProductIdsResponse implements RequestInterfac
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdsResult
+     * @param CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdsResult
      * @return GetStockAndPriceInformationByProductIdsResponse
      */
     public function withGetStockAndPriceInformationByProductIdsResult($GetStockAndPriceInformationByProductIdsResult)
@@ -42,7 +41,4 @@ class GetStockAndPriceInformationByProductIdsResponse implements RequestInterfac
 
         return $new;
     }
-
-
 }
-

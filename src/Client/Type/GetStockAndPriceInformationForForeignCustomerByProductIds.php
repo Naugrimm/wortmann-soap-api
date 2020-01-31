@@ -122,7 +122,4 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
 
         return $new;
     }
-
-
 }
-

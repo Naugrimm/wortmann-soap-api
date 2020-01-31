@@ -3,73 +3,83 @@
 namespace Naugrim\WortmannSoapApi\Client;
 
 use Naugrim\WortmannSoapApi\Client\Type;
+use Naugrim\WortmannSoapApi\Client\Type\GetDriverLinks;
+use Naugrim\WortmannSoapApi\Client\Type\GetDriverLinksResponse;
+use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNo;
+use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNoResponse;
+use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDate;
+use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDateResponse;
+use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductId;
+use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdResponse;
+use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds;
+use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse;
+use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds;
+use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse;
+use Phpro\SoapClient\Client;
 use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
 
-class ApiClient extends \Phpro\SoapClient\Client
+class ApiClient extends Client
 {
 
     /**
-     * @param RequestInterface|Type\GetStockAndPriceInformationByProductId $parameters
-     * @return ResultInterface|Type\GetStockAndPriceInformationByProductIdResponse
+     * @param RequestInterface|GetStockAndPriceInformationByProductId $parameters
+     * @return ResultInterface|GetStockAndPriceInformationByProductIdResponse
      * @throws SoapException
      */
-    public function getStockAndPriceInformationByProductId(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductId $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdResponse
+    public function getStockAndPriceInformationByProductId(GetStockAndPriceInformationByProductId $parameters) : GetStockAndPriceInformationByProductIdResponse
     {
         return $this->call('GetStockAndPriceInformationByProductId', $parameters);
     }
 
     /**
-     * @param RequestInterface|Type\GetStockAndPriceInformationByProductIds $parameters
-     * @return ResultInterface|Type\GetStockAndPriceInformationByProductIdsResponse
+     * @param RequestInterface|GetStockAndPriceInformationByProductIds $parameters
+     * @return ResultInterface|GetStockAndPriceInformationByProductIdsResponse
      * @throws SoapException
      */
-    public function getStockAndPriceInformationByProductIds(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse
+    public function getStockAndPriceInformationByProductIds(GetStockAndPriceInformationByProductIds $parameters) : GetStockAndPriceInformationByProductIdsResponse
     {
         return $this->call('GetStockAndPriceInformationByProductIds', $parameters);
     }
 
     /**
-     * @param RequestInterface|Type\GetStockAndPriceInformationForForeignCustomerByProductIds $parameters
-     * @return ResultInterface|Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
+     * @param RequestInterface|GetStockAndPriceInformationForForeignCustomerByProductIds $parameters
+     * @return ResultInterface|GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
      * @throws SoapException
      */
-    public function getStockAndPriceInformationForForeignCustomerByProductIds(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
+    public function getStockAndPriceInformationForForeignCustomerByProductIds(GetStockAndPriceInformationForForeignCustomerByProductIds $parameters) : GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
     {
         return $this->call('GetStockAndPriceInformationForForeignCustomerByProductIds', $parameters);
     }
 
     /**
-     * @param RequestInterface|Type\GetDriverLinks $parameters
-     * @return ResultInterface|Type\GetDriverLinksResponse
+     * @param RequestInterface|GetDriverLinks $parameters
+     * @return ResultInterface|GetDriverLinksResponse
      * @throws SoapException
      */
-    public function getDriverLinks(\Naugrim\WortmannSoapApi\Client\Type\GetDriverLinks $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetDriverLinksResponse
+    public function getDriverLinks(GetDriverLinks $parameters) : GetDriverLinksResponse
     {
         return $this->call('GetDriverLinks', $parameters);
     }
 
     /**
-     * @param RequestInterface|Type\GetServiceInfoByWarrantyEndingDate $parameters
-     * @return ResultInterface|Type\GetServiceInfoByWarrantyEndingDateResponse
+     * @param RequestInterface|GetServiceInfoByWarrantyEndingDate $parameters
+     * @return ResultInterface|GetServiceInfoByWarrantyEndingDateResponse
      * @throws SoapException
      */
-    public function getServiceInfoByWarrantyEndingDate(\Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDate $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDateResponse
+    public function getServiceInfoByWarrantyEndingDate(GetServiceInfoByWarrantyEndingDate $parameters) : GetServiceInfoByWarrantyEndingDateResponse
     {
         return $this->call('GetServiceInfoByWarrantyEndingDate', $parameters);
     }
 
     /**
-     * @param RequestInterface|Type\GetServiceInfoBySerialNo $parameters
-     * @return ResultInterface|Type\GetServiceInfoBySerialNoResponse
+     * @param RequestInterface|GetServiceInfoBySerialNo $parameters
+     * @return ResultInterface|GetServiceInfoBySerialNoResponse
      * @throws SoapException
      */
-    public function getServiceInfoBySerialNo(\Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNo $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNoResponse
+    public function getServiceInfoBySerialNo(GetServiceInfoBySerialNo $parameters) : GetServiceInfoBySerialNoResponse
     {
         return $this->call('GetServiceInfoBySerialNo', $parameters);
     }
-
-
 }
-

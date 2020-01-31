@@ -529,7 +529,4 @@ class ServiceInfo
 
         return $new;
     }
-
-
 }
-
