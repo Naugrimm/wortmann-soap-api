@@ -28,7 +28,7 @@ class Component
     /**
      * @return string
      */
-    public function getItemNo()
+    public function getItemNo(): string
     {
         return $this->ItemNo;
     }
@@ -37,18 +37,16 @@ class Component
      * @param string $ItemNo
      * @return Component
      */
-    public function withItemNo($ItemNo)
+    public function setItemNo(string $ItemNo): Component
     {
-        $new = clone $this;
-        $new->ItemNo = $ItemNo;
-
-        return $new;
+        $this->ItemNo = $ItemNo;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getLineNo()
+    public function getLineNo(): int
     {
         return $this->LineNo;
     }
@@ -57,18 +55,16 @@ class Component
      * @param int $LineNo
      * @return Component
      */
-    public function withLineNo($LineNo)
+    public function setLineNo(int $LineNo): Component
     {
-        $new = clone $this;
-        $new->LineNo = $LineNo;
-
-        return $new;
+        $this->LineNo = $LineNo;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->Description;
     }
@@ -77,18 +73,16 @@ class Component
      * @param string $Description
      * @return Component
      */
-    public function withDescription($Description)
+    public function setDescription(string $Description): Component
     {
-        $new = clone $this;
-        $new->Description = $Description;
-
-        return $new;
+        $this->Description = $Description;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSerialNo()
+    public function getSerialNo(): string
     {
         return $this->SerialNo;
     }
@@ -97,11 +91,9 @@ class Component
      * @param string $SerialNo
      * @return Component
      */
-    public function withSerialNo($SerialNo)
+    public function setSerialNo(string $SerialNo): Component
     {
-        $new = clone $this;
-        $new->SerialNo = $SerialNo;
-
-        return $new;
+        $this->SerialNo = $SerialNo;
+        return $this;
     }
 }

@@ -32,21 +32,8 @@ class GetStockAndPriceInformationByProductIdResponse implements ResultInterface,
         return $this->GetStockAndPriceInformationByProductIdResult;
     }
 
-    /**
-     * @param CustomerWebServiceProductInfoResponse $item
-     * @return GetStockAndPriceInformationByProductIdResponse
-     */
-    public function withGetStockAndPriceInformationByProductIdResult($item)
+    public function entry(): array
     {
-        $new = clone $this;
-        $new->GetStockAndPriceInformationByProductIdResult = $item;
-
-        return $new;
-    }
-
-
-    public function entry()
-    {
-        return $this->getGetStockAndPriceInformationByProductIdResult();
+        return $this->getGetStockAndPriceInformationByProductIdResult()->entry();
     }
 }

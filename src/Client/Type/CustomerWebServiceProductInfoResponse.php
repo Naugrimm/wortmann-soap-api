@@ -32,37 +32,12 @@ class CustomerWebServiceProductInfoResponse implements ResultInterface, ApiRespo
     }
 
     /**
-     * @param bool $Success
-     * @return CustomerWebServiceProductInfoResponse
-     */
-    public function withSuccess($Success)
-    {
-        $new = clone $this;
-        $new->Success = $Success;
-
-        return $new;
-    }
-
-    /**
      * @return string
      */
     public function getErrorMesssage()
     {
         return $this->ErrorMesssage;
     }
-
-    /**
-     * @param string $ErrorMesssage
-     * @return CustomerWebServiceProductInfoResponse
-     */
-    public function withErrorMesssage($ErrorMesssage)
-    {
-        $new = clone $this;
-        $new->ErrorMesssage = $ErrorMesssage;
-
-        return $new;
-    }
-
     /**
      * @return array
      */
@@ -71,20 +46,8 @@ class CustomerWebServiceProductInfoResponse implements ResultInterface, ApiRespo
         return $this->ProductInfoPackages;
     }
 
-    /**
-     * @param array $ProductInfoPackages
-     * @return CustomerWebServiceProductInfoResponse
-     */
-    public function withProductInfoPackages($ProductInfoPackages)
+    public function entry(): array
     {
-        $new = clone $this;
-        $new->ProductInfoPackages = $ProductInfoPackages;
-
-        return $new;
-    }
-
-    public function entry()
-    {
-        return $this->getProductInfoPackages();
+        return current($this->getProductInfoPackages());
     }
 }

@@ -32,35 +32,11 @@ class CustomerWebServiceServiceInfoResponse implements ResultInterface, ApiRespo
     }
 
     /**
-     * @param bool $Success
-     * @return CustomerWebServiceServiceInfoResponse
-     */
-    public function withSuccess($Success)
-    {
-        $new = clone $this;
-        $new->Success = $Success;
-
-        return $new;
-    }
-
-    /**
      * @return string
      */
     public function getErrorMesssage()
     {
         return $this->ErrorMesssage;
-    }
-
-    /**
-     * @param string $ErrorMesssage
-     * @return CustomerWebServiceServiceInfoResponse
-     */
-    public function withErrorMesssage($ErrorMesssage)
-    {
-        $new = clone $this;
-        $new->ErrorMesssage = $ErrorMesssage;
-
-        return $new;
     }
 
     /**
@@ -71,20 +47,8 @@ class CustomerWebServiceServiceInfoResponse implements ResultInterface, ApiRespo
         return $this->ServiceInfos;
     }
 
-    /**
-     * @param array $ServiceInfos
-     * @return CustomerWebServiceServiceInfoResponse
-     */
-    public function withServiceInfos($ServiceInfos)
+    public function entry(): array
     {
-        $new = clone $this;
-        $new->ServiceInfos = $ServiceInfos;
-
-        return $new;
-    }
-
-    public function entry()
-    {
-        return $this->getServiceInfos();
+        return current($this->getServiceInfos());
     }
 }

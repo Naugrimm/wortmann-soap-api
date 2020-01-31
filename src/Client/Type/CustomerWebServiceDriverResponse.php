@@ -32,35 +32,11 @@ class CustomerWebServiceDriverResponse implements ResultInterface, ApiResponseCo
     }
 
     /**
-     * @param bool $Success
-     * @return CustomerWebServiceDriverResponse
-     */
-    public function withSuccess($Success)
-    {
-        $new = clone $this;
-        $new->Success = $Success;
-
-        return $new;
-    }
-
-    /**
      * @return string
      */
     public function getErrorMesssage()
     {
         return $this->ErrorMesssage;
-    }
-
-    /**
-     * @param string $ErrorMesssage
-     * @return CustomerWebServiceDriverResponse
-     */
-    public function withErrorMesssage($ErrorMesssage)
-    {
-        $new = clone $this;
-        $new->ErrorMesssage = $ErrorMesssage;
-
-        return $new;
     }
 
     /**
@@ -71,20 +47,8 @@ class CustomerWebServiceDriverResponse implements ResultInterface, ApiResponseCo
         return $this->Drivers;
     }
 
-    /**
-     * @param array $Drivers
-     * @return CustomerWebServiceDriverResponse
-     */
-    public function withDrivers($Drivers)
+    public function entry(): array
     {
-        $new = clone $this;
-        $new->Drivers = $Drivers;
-
-        return $new;
-    }
-
-    public function entry()
-    {
-        return $this->getDrivers();
+        return current($this->getDrivers());
     }
 }

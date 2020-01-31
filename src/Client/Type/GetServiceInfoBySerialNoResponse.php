@@ -32,20 +32,8 @@ class GetServiceInfoBySerialNoResponse implements ResultInterface, ApiResponseCo
         return $this->GetServiceInfoBySerialNoResult;
     }
 
-    /**
-     * @param CustomerWebServiceServiceInfoResponse $item
-     * @return GetServiceInfoBySerialNoResponse
-     */
-    public function withGetServiceInfoBySerialNoResult($item)
+    public function entry(): array
     {
-        $new = clone $this;
-        $new->GetServiceInfoBySerialNoResult = $item;
-
-        return $new;
-    }
-
-    public function entry()
-    {
-        return $this->getGetServiceInfoBySerialNoResult();
+        return $this->getGetServiceInfoBySerialNoResult()->entry();
     }
 }

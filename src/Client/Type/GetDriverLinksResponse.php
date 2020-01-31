@@ -31,20 +31,8 @@ class GetDriverLinksResponse implements ResultInterface, ApiResponseContract
         return $this->GetDriverLinksResult;
     }
 
-    /**
-     * @param CustomerWebServiceDriverResponse $GetDriverLinksResult
-     * @return GetDriverLinksResponse
-     */
-    public function withGetDriverLinksResult($GetDriverLinksResult)
+    public function entry(): array
     {
-        $new = clone $this;
-        $new->GetDriverLinksResult = $GetDriverLinksResult;
-
-        return $new;
-    }
-
-    public function entry()
-    {
-        return $this->getGetDriverLinksResult();
+        return $this->getGetDriverLinksResult()->entry();
     }
 }

@@ -31,20 +31,8 @@ class GetServiceInfoByWarrantyEndingDateResponse implements ResultInterface, Api
         return $this->GetServiceInfoByWarrantyEndingDateResult;
     }
 
-    /**
-     * @param CustomerWebServiceServiceInfoResponse $item
-     * @return GetServiceInfoByWarrantyEndingDateResponse
-     */
-    public function withGetServiceInfoByWarrantyEndingDateResult($item)
+    public function entry(): array
     {
-        $new = clone $this;
-        $new->GetServiceInfoByWarrantyEndingDateResult = $item;
-
-        return $new;
-    }
-
-    public function entry()
-    {
-        return $this->getGetServiceInfoByWarrantyEndingDateResult();
+        return $this->getGetServiceInfoByWarrantyEndingDateResult()->entry();
     }
 }

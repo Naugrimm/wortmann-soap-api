@@ -31,20 +31,8 @@ class GetStockAndPriceInformationForForeignCustomerByProductIdsResponse implemen
         return $this->GetStockAndPriceInformationForForeignCustomerByProductIdsResult;
     }
 
-    /**
-     * @param CustomerWebServiceProductInfoResponse $item
-     * @return GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
-     */
-    public function withGetStockAndPriceInformationForForeignCustomerByProductIdsResult($item)
+    public function entry(): array
     {
-        $new = clone $this;
-        $new->GetStockAndPriceInformationForForeignCustomerByProductIdsResult = $item;
-
-        return $new;
-    }
-
-    public function entry()
-    {
-        return $this->getGetStockAndPriceInformationForForeignCustomerByProductIdsResult();
+        return $this->getGetStockAndPriceInformationForForeignCustomerByProductIdsResult()->entry();
     }
 }
