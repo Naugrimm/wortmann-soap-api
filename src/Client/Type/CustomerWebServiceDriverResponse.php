@@ -2,9 +2,10 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
+use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class CustomerWebServiceDriverResponse implements ResultInterface
+class CustomerWebServiceDriverResponse implements ResultInterface, ApiResponseContract
 {
 
     /**
@@ -80,5 +81,10 @@ class CustomerWebServiceDriverResponse implements ResultInterface
         $new->Drivers = $Drivers;
 
         return $new;
+    }
+
+    public function entry()
+    {
+        return $this->getDrivers();
     }
 }

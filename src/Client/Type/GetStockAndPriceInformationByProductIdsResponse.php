@@ -2,9 +2,10 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
+use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetStockAndPriceInformationByProductIdsResponse implements ResultInterface
+class GetStockAndPriceInformationByProductIdsResponse implements ResultInterface, ApiResponseContract
 {
 
     /**
@@ -15,11 +16,11 @@ class GetStockAndPriceInformationByProductIdsResponse implements ResultInterface
     /**
      * Constructor
      *
-     * @var CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdsResult
+     * @var CustomerWebServiceProductInfoResponse $item
      */
-    public function __construct($GetStockAndPriceInformationByProductIdsResult)
+    public function __construct($item)
     {
-        $this->GetStockAndPriceInformationByProductIdsResult = $GetStockAndPriceInformationByProductIdsResult;
+        $this->GetStockAndPriceInformationByProductIdsResult = $item;
     }
 
     /**
@@ -31,14 +32,19 @@ class GetStockAndPriceInformationByProductIdsResponse implements ResultInterface
     }
 
     /**
-     * @param CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdsResult
+     * @param CustomerWebServiceProductInfoResponse $item
      * @return GetStockAndPriceInformationByProductIdsResponse
      */
-    public function withGetStockAndPriceInformationByProductIdsResult($GetStockAndPriceInformationByProductIdsResult)
+    public function withGetStockAndPriceInformationByProductIdsResult($item)
     {
         $new = clone $this;
-        $new->GetStockAndPriceInformationByProductIdsResult = $GetStockAndPriceInformationByProductIdsResult;
+        $new->GetStockAndPriceInformationByProductIdsResult = $item;
 
         return $new;
+    }
+
+    public function entry()
+    {
+        return $this->getGetStockAndPriceInformationByProductIdsResult();
     }
 }

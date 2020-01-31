@@ -2,9 +2,10 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
+use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetStockAndPriceInformationForForeignCustomerByProductIdsResponse implements ResultInterface
+class GetStockAndPriceInformationForForeignCustomerByProductIdsResponse implements ResultInterface, ApiResponseContract
 {
 
     /**
@@ -15,11 +16,11 @@ class GetStockAndPriceInformationForForeignCustomerByProductIdsResponse implemen
     /**
      * Constructor
      *
-     * @var CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationForForeignCustomerByProductIdsResult
+     * @var CustomerWebServiceProductInfoResponse $item
      */
-    public function __construct($GetStockAndPriceInformationForForeignCustomerByProductIdsResult)
+    public function __construct($item)
     {
-        $this->GetStockAndPriceInformationForForeignCustomerByProductIdsResult = $GetStockAndPriceInformationForForeignCustomerByProductIdsResult;
+        $this->GetStockAndPriceInformationForForeignCustomerByProductIdsResult = $item;
     }
 
     /**
@@ -31,14 +32,19 @@ class GetStockAndPriceInformationForForeignCustomerByProductIdsResponse implemen
     }
 
     /**
-     * @param CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationForForeignCustomerByProductIdsResult
+     * @param CustomerWebServiceProductInfoResponse $item
      * @return GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
      */
-    public function withGetStockAndPriceInformationForForeignCustomerByProductIdsResult($GetStockAndPriceInformationForForeignCustomerByProductIdsResult)
+    public function withGetStockAndPriceInformationForForeignCustomerByProductIdsResult($item)
     {
         $new = clone $this;
-        $new->GetStockAndPriceInformationForForeignCustomerByProductIdsResult = $GetStockAndPriceInformationForForeignCustomerByProductIdsResult;
+        $new->GetStockAndPriceInformationForForeignCustomerByProductIdsResult = $item;
 
         return $new;
+    }
+
+    public function entry()
+    {
+        return $this->getGetStockAndPriceInformationForForeignCustomerByProductIdsResult();
     }
 }

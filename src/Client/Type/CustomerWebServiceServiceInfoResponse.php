@@ -2,9 +2,10 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
+use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class CustomerWebServiceServiceInfoResponse implements ResultInterface
+class CustomerWebServiceServiceInfoResponse implements ResultInterface, ApiResponseContract
 {
 
     /**
@@ -80,5 +81,10 @@ class CustomerWebServiceServiceInfoResponse implements ResultInterface
         $new->ServiceInfos = $ServiceInfos;
 
         return $new;
+    }
+
+    public function entry()
+    {
+        return $this->getServiceInfos();
     }
 }

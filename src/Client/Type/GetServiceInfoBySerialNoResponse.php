@@ -2,10 +2,11 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
+use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
 use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetServiceInfoBySerialNoResponse implements ResultInterface
+class GetServiceInfoBySerialNoResponse implements ResultInterface, ApiResponseContract
 {
 
     /**
@@ -16,11 +17,11 @@ class GetServiceInfoBySerialNoResponse implements ResultInterface
     /**
      * Constructor
      *
-     * @var CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult
+     * @var CustomerWebServiceServiceInfoResponse $item
      */
-    public function __construct($GetServiceInfoBySerialNoResult)
+    public function __construct($item)
     {
-        $this->GetServiceInfoBySerialNoResult = $GetServiceInfoBySerialNoResult;
+        $this->GetServiceInfoBySerialNoResult = $item;
     }
 
     /**
@@ -32,14 +33,19 @@ class GetServiceInfoBySerialNoResponse implements ResultInterface
     }
 
     /**
-     * @param CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult
+     * @param CustomerWebServiceServiceInfoResponse $item
      * @return GetServiceInfoBySerialNoResponse
      */
-    public function withGetServiceInfoBySerialNoResult($GetServiceInfoBySerialNoResult)
+    public function withGetServiceInfoBySerialNoResult($item)
     {
         $new = clone $this;
-        $new->GetServiceInfoBySerialNoResult = $GetServiceInfoBySerialNoResult;
+        $new->GetServiceInfoBySerialNoResult = $item;
 
         return $new;
+    }
+
+    public function entry()
+    {
+        return $this->getGetServiceInfoBySerialNoResult();
     }
 }
