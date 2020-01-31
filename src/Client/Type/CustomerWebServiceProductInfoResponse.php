@@ -18,7 +18,7 @@ class CustomerWebServiceProductInfoResponse implements ResultInterface
     private $ErrorMesssage;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfProductInfoPackage
+     * @var array
      */
     private $ProductInfoPackages;
 
@@ -63,7 +63,7 @@ class CustomerWebServiceProductInfoResponse implements ResultInterface
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfProductInfoPackage
+     * @return array
      */
     public function getProductInfoPackages()
     {
@@ -71,7 +71,7 @@ class CustomerWebServiceProductInfoResponse implements ResultInterface
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfProductInfoPackage $ProductInfoPackages
+     * @param array $ProductInfoPackages
      * @return CustomerWebServiceProductInfoResponse
      */
     public function withProductInfoPackages($ProductInfoPackages)

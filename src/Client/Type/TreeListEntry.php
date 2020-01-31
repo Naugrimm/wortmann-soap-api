@@ -11,17 +11,17 @@ class TreeListEntry
     private $Type;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem
+     * @var array
      */
     private $OperatingSystems;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage
+     * @var array
      */
     private $Languages;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink
+     * @var array
      */
     private $Links;
 
@@ -71,7 +71,7 @@ class TreeListEntry
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem
+     * @return array
      */
     public function getOperatingSystems()
     {
@@ -79,7 +79,7 @@ class TreeListEntry
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem $OperatingSystems
+     * @param array $OperatingSystems
      * @return TreeListEntry
      */
     public function withOperatingSystems($OperatingSystems)
@@ -91,7 +91,7 @@ class TreeListEntry
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage
+     * @return array
      */
     public function getLanguages()
     {
@@ -99,7 +99,7 @@ class TreeListEntry
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage $Languages
+     * @param array $Languages
      * @return TreeListEntry
      */
     public function withLanguages($Languages)
@@ -111,7 +111,7 @@ class TreeListEntry
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink
+     * @return array
      */
     public function getLinks()
     {
@@ -119,7 +119,7 @@ class TreeListEntry
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink $Links
+     * @param array $Links
      * @return TreeListEntry
      */
     public function withLinks($Links)

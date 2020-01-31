@@ -18,7 +18,7 @@ class CustomerWebServiceDriverResponse implements ResultInterface
     private $ErrorMesssage;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
+     * @var array
      */
     private $Drivers;
 
@@ -63,7 +63,7 @@ class CustomerWebServiceDriverResponse implements ResultInterface
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
+     * @return array
      */
     public function getDrivers()
     {
@@ -71,7 +71,7 @@ class CustomerWebServiceDriverResponse implements ResultInterface
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers
+     * @param array $Drivers
      * @return CustomerWebServiceDriverResponse
      */
     public function withDrivers($Drivers)

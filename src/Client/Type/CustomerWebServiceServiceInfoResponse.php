@@ -18,7 +18,7 @@ class CustomerWebServiceServiceInfoResponse implements ResultInterface
     private $ErrorMesssage;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfServiceInfo
+     * @var array
      */
     private $ServiceInfos;
 
@@ -63,7 +63,7 @@ class CustomerWebServiceServiceInfoResponse implements ResultInterface
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfServiceInfo
+     * @return array
      */
     public function getServiceInfos()
     {
@@ -71,7 +71,7 @@ class CustomerWebServiceServiceInfoResponse implements ResultInterface
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfServiceInfo $ServiceInfos
+     * @param array $ServiceInfos
      * @return CustomerWebServiceServiceInfoResponse
      */
     public function withServiceInfos($ServiceInfos)

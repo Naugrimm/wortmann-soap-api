@@ -26,7 +26,7 @@ class SysInfoProduct
     private $Description;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument
+     * @var array
      */
     private $Documents;
 
@@ -111,7 +111,7 @@ class SysInfoProduct
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument
+     * @return array
      */
     public function getDocuments()
     {
@@ -119,7 +119,7 @@ class SysInfoProduct
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument $Documents
+     * @param array $Documents
      * @return SysInfoProduct
      */
     public function withDocuments($Documents)

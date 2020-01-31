@@ -106,7 +106,7 @@ class ServiceInfo
     private $WarrantyEndingDate;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfComponent
+     * @var array
      */
     private $Components;
 
@@ -511,7 +511,7 @@ class ServiceInfo
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfComponent
+     * @return array
      */
     public function getComponents()
     {
@@ -519,7 +519,7 @@ class ServiceInfo
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfComponent $Components
+     * @param array $Components
      * @return ServiceInfo
      */
     public function withComponents($Components)

@@ -18,7 +18,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     private $PasswordHash;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
+     * @var array
      */
     private $ProductIds;
 
@@ -32,7 +32,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
      *
      * @var string $Username
      * @var string $PasswordHash
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds
+     * @var array $ProductIds
      * @var string $ForeignCustomerNumber
      */
     public function __construct($Username, $PasswordHash, $ProductIds, $ForeignCustomerNumber)
@@ -84,7 +84,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
+     * @return array
      */
     public function getProductIds()
     {
@@ -92,7 +92,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds
+     * @param array $ProductIds
      * @return GetStockAndPriceInformationForForeignCustomerByProductIds
      */
     public function withProductIds($ProductIds)

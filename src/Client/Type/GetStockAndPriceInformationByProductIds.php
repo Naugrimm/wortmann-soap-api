@@ -18,7 +18,7 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
     private $PasswordHash;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
+     * @var array
      */
     private $ProductIds;
 
@@ -27,7 +27,7 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
      *
      * @var string $Username
      * @var string $PasswordHash
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds
+     * @var array $ProductIds
      */
     public function __construct($Username, $PasswordHash, $ProductIds)
     {
@@ -77,7 +77,7 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
+     * @return array
      */
     public function getProductIds()
     {
@@ -85,7 +85,7 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds
+     * @param array $ProductIds
      * @return GetStockAndPriceInformationByProductIds
      */
     public function withProductIds($ProductIds)
