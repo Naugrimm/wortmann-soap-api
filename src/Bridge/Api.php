@@ -6,11 +6,12 @@ use Illuminate\Support\Str;
 use LibXMLError;
 use Naugrim\WortmannSoapApi\Bridge\Exceptions\XmlException;
 use Naugrim\WortmannSoapApi\Client\ApiClientFactory;
+use Naugrim\WortmannSoapApi\Contracts\WortmannSoapApi;
 use Phpro\SoapClient\Type\ResultInterface;
 use ReflectionClass;
 use ReflectionException;
 
-class Api
+class Api implements WortmannSoapApi
 {
     protected $client;
 
