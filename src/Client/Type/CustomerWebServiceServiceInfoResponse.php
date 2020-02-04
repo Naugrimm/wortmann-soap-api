@@ -49,6 +49,9 @@ class CustomerWebServiceServiceInfoResponse implements ResultInterface, ApiRespo
 
     public function entry(): array
     {
+        if (!$this->getServiceInfos()) {
+            return [];
+        }
         return current($this->getServiceInfos());
     }
 }

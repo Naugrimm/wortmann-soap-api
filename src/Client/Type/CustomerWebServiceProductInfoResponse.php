@@ -48,6 +48,9 @@ class CustomerWebServiceProductInfoResponse implements ResultInterface, ApiRespo
 
     public function entry(): array
     {
+        if (!$this->getProductInfoPackages()) {
+            return [];
+        }
         return current($this->getProductInfoPackages());
     }
 }
