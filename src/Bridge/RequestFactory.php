@@ -15,6 +15,8 @@ class RequestFactory
             \Naugrim\WortmannSoapApi\Bridge\Client\Type\GetStockAndPriceInformationByProductIds::class,
         \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds::class =>
             \Naugrim\WortmannSoapApi\Bridge\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds::class,
+        \Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNo::class =>
+            \Naugrim\WortmannSoapApi\Bridge\Client\Type\GetServiceInfoBySerialNo::class,
     ];
 
     /**
