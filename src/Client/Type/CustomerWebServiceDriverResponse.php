@@ -49,6 +49,9 @@ class CustomerWebServiceDriverResponse implements ResultInterface, ApiResponseCo
 
     public function entry(): array
     {
+        if (!$this->getDrivers()) {
+            return [];
+        }
         return current($this->getDrivers());
     }
 }
