@@ -15,7 +15,7 @@
         "php": "^8.0",
         "ext-libxml": "*",
         "ext-soap": "*",
-        "phpro/soap-client": "^1.1",
+        "phpro/soap-client": "^2.1",
         "illuminate/support": "^8.0|^9.0"
     },
     "require-dev": {
