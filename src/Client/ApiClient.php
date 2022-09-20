@@ -39,7 +39,7 @@ class ApiClient
      */
     public function getStockAndPriceInformationByProductId(GetStockAndPriceInformationByProductId $parameters) : GetStockAndPriceInformationByProductIdResponse
     {
-        return $this->call('GetStockAndPriceInformationByProductId', $parameters);
+        return ($this->caller)('GetStockAndPriceInformationByProductId', $parameters);
     }
 
     /**
@@ -49,7 +49,7 @@ class ApiClient
      */
     public function getStockAndPriceInformationByProductIds(GetStockAndPriceInformationByProductIds $parameters) : GetStockAndPriceInformationByProductIdsResponse
     {
-        return $this->call('GetStockAndPriceInformationByProductIds', $parameters);
+        return ($this->caller)('GetStockAndPriceInformationByProductIds', $parameters);
     }
 
     /**
@@ -59,7 +59,7 @@ class ApiClient
      */
     public function getStockAndPriceInformationForForeignCustomerByProductIds(GetStockAndPriceInformationForForeignCustomerByProductIds $parameters) : GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
     {
-        return $this->call('GetStockAndPriceInformationForForeignCustomerByProductIds', $parameters);
+        return ($this->caller)('GetStockAndPriceInformationForForeignCustomerByProductIds', $parameters);
     }
 
     /**
@@ -69,7 +69,7 @@ class ApiClient
      */
     public function getDriverLinks(GetDriverLinks $parameters) : GetDriverLinksResponse
     {
-        return $this->call('GetDriverLinks', $parameters);
+        return ($this->caller)('GetDriverLinks', $parameters);
     }
 
     /**
@@ -79,7 +79,7 @@ class ApiClient
      */
     public function getServiceInfoByWarrantyEndingDate(GetServiceInfoByWarrantyEndingDate $parameters) : GetServiceInfoByWarrantyEndingDateResponse
     {
-        return $this->call('GetServiceInfoByWarrantyEndingDate', $parameters);
+        return ($this->caller)('GetServiceInfoByWarrantyEndingDate', $parameters);
     }
 
     /**
@@ -89,6 +89,6 @@ class ApiClient
      */
     public function getServiceInfoBySerialNo(GetServiceInfoBySerialNo $parameters) : GetServiceInfoBySerialNoResponse
     {
-        return $this->call('GetServiceInfoBySerialNo', $parameters);
+        return ($this->caller)('GetServiceInfoBySerialNo', $parameters);
     }
 }
