@@ -15,13 +15,22 @@ use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse;
-use Phpro\SoapClient\Client;
 use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
+use Phpro\SoapClient\Caller\Caller;
 
-class ApiClient extends Client
+class ApiClient
 {
+    /**
+     * @var Caller
+     */
+    private $caller;
+
+    public function __construct(Caller $caller)
+    {
+        $this->caller = $caller;
+    }
 
     /**
      * @param RequestInterface|GetStockAndPriceInformationByProductId $parameters
