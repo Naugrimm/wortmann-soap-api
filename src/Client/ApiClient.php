@@ -15,13 +15,22 @@ use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse;
-use Phpro\SoapClient\Client;
 use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
+use Phpro\SoapClient\Caller\Caller;
 
-class ApiClient extends Client
+class ApiClient
 {
+    /**
+     * @var Caller
+     */
+    private $caller;
+
+    public function __construct(Caller $caller)
+    {
+        $this->caller = $caller;
+    }
 
     /**
      * @param RequestInterface|GetStockAndPriceInformationByProductId $parameters
@@ -30,7 +39,7 @@ class ApiClient extends Client
      */
     public function getStockAndPriceInformationByProductId(GetStockAndPriceInformationByProductId $parameters) : GetStockAndPriceInformationByProductIdResponse
     {
-        return $this->call('GetStockAndPriceInformationByProductId', $parameters);
+        return ($this->caller)('GetStockAndPriceInformationByProductId', $parameters);
     }
 
     /**
@@ -40,7 +49,7 @@ class ApiClient extends Client
      */
     public function getStockAndPriceInformationByProductIds(GetStockAndPriceInformationByProductIds $parameters) : GetStockAndPriceInformationByProductIdsResponse
     {
-        return $this->call('GetStockAndPriceInformationByProductIds', $parameters);
+        return ($this->caller)('GetStockAndPriceInformationByProductIds', $parameters);
     }
 
     /**
@@ -50,7 +59,7 @@ class ApiClient extends Client
      */
     public function getStockAndPriceInformationForForeignCustomerByProductIds(GetStockAndPriceInformationForForeignCustomerByProductIds $parameters) : GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
     {
-        return $this->call('GetStockAndPriceInformationForForeignCustomerByProductIds', $parameters);
+        return ($this->caller)('GetStockAndPriceInformationForForeignCustomerByProductIds', $parameters);
     }
 
     /**
@@ -60,7 +69,7 @@ class ApiClient extends Client
      */
     public function getDriverLinks(GetDriverLinks $parameters) : GetDriverLinksResponse
     {
-        return $this->call('GetDriverLinks', $parameters);
+        return ($this->caller)('GetDriverLinks', $parameters);
     }
 
     /**
@@ -70,7 +79,7 @@ class ApiClient extends Client
      */
     public function getServiceInfoByWarrantyEndingDate(GetServiceInfoByWarrantyEndingDate $parameters) : GetServiceInfoByWarrantyEndingDateResponse
     {
-        return $this->call('GetServiceInfoByWarrantyEndingDate', $parameters);
+        return ($this->caller)('GetServiceInfoByWarrantyEndingDate', $parameters);
     }
 
     /**
@@ -80,6 +89,6 @@ class ApiClient extends Client
      */
     public function getServiceInfoBySerialNo(GetServiceInfoBySerialNo $parameters) : GetServiceInfoBySerialNoResponse
     {
-        return $this->call('GetServiceInfoBySerialNo', $parameters);
+        return ($this->caller)('GetServiceInfoBySerialNo', $parameters);
     }
 }

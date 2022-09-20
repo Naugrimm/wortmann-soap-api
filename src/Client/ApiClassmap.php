@@ -3,15 +3,15 @@
 namespace Naugrim\WortmannSoapApi\Client;
 
 use Naugrim\WortmannSoapApi\Client\Type;
-use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
-use Phpro\SoapClient\Soap\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 
 class ApiClassmap
 {
 
     public static function getCollection() : ClassMapCollection
     {
-        return new ClassMapCollection([
+        return new ClassMapCollection(
             new ClassMap('GetStockAndPriceInformationByProductId', Type\GetStockAndPriceInformationByProductId::class),
             new ClassMap('GetStockAndPriceInformationByProductIdResponse', Type\GetStockAndPriceInformationByProductIdResponse::class),
             new ClassMap('CustomerWebServiceProductInfoResponse', Type\CustomerWebServiceProductInfoResponse::class),
@@ -36,6 +36,6 @@ class ApiClassmap
             new ClassMap('Component', Type\Component::class),
             new ClassMap('GetServiceInfoBySerialNo', Type\GetServiceInfoBySerialNo::class),
             new ClassMap('GetServiceInfoBySerialNoResponse', Type\GetServiceInfoBySerialNoResponse::class),
-        ]);
+        );
     }
 }
