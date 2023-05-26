@@ -16,7 +16,7 @@
         "ext-libxml": "*",
         "ext-soap": "*",
         "phpro/soap-client": "^1.1|^2.1",
-        "illuminate/support": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0|^10.0",
         "guzzlehttp/guzzle": "^7.4"
     },
     "require-dev": {
@@ -34,6 +34,11 @@
             "providers": [
                 "\\Naugrim\\WortmannSoapApi\\Provider\\WortmannSoapApiProvider"
             ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
         }
     }
 }
