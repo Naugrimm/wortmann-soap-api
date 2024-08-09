@@ -4,7 +4,7 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetServiceInfoByWarrantyEndingDate implements RequestInterface
+class GetExtendedDriverLinks implements RequestInterface
 {
     /**
      * @var string
@@ -17,22 +17,22 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
     private string $PasswordHash;
 
     /**
-     * @var \DateTimeInterface
+     * @var string
      */
-    private \DateTimeInterface $WarrantyEndingDate;
+    private string $SearchTerm;
 
     /**
      * Constructor
      *
      * @param string $Username
      * @param string $PasswordHash
-     * @param \DateTimeInterface $WarrantyEndingDate
+     * @param string $SearchTerm
      */
-    public function __construct(string $Username, string $PasswordHash, \DateTimeInterface $WarrantyEndingDate)
+    public function __construct(string $Username, string $PasswordHash, string $SearchTerm)
     {
         $this->Username = $Username;
         $this->PasswordHash = $PasswordHash;
-        $this->WarrantyEndingDate = $WarrantyEndingDate;
+        $this->SearchTerm = $SearchTerm;
     }
 
     /**
@@ -76,21 +76,21 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return string
      */
-    public function getWarrantyEndingDate() : \DateTimeInterface
+    public function getSearchTerm() : string
     {
-        return $this->WarrantyEndingDate;
+        return $this->SearchTerm;
     }
 
     /**
-     * @param \DateTimeInterface $WarrantyEndingDate
+     * @param string $SearchTerm
      * @return static
      */
-    public function withWarrantyEndingDate(\DateTimeInterface $WarrantyEndingDate) : static
+    public function withSearchTerm(string $SearchTerm) : static
     {
         $new = clone $this;
-        $new->WarrantyEndingDate = $WarrantyEndingDate;
+        $new->SearchTerm = $SearchTerm;
 
         return $new;
     }

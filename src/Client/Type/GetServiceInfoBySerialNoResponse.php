@@ -2,38 +2,44 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
 use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetServiceInfoBySerialNoResponse implements ResultInterface, ApiResponseContract
+class GetServiceInfoBySerialNoResponse implements RequestInterface, ResultInterface
 {
-
     /**
-     * @var CustomerWebServiceServiceInfoResponse
+     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
      */
-    private $GetServiceInfoBySerialNoResult;
+    private \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult;
 
     /**
      * Constructor
      *
-     * @var CustomerWebServiceServiceInfoResponse $item
+     * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult
      */
-    public function __construct($item)
+    public function __construct(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult)
     {
-        $this->GetServiceInfoBySerialNoResult = $item;
+        $this->GetServiceInfoBySerialNoResult = $GetServiceInfoBySerialNoResult;
     }
 
     /**
-     * @return CustomerWebServiceServiceInfoResponse
+     * @return \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
      */
-    public function getGetServiceInfoBySerialNoResult()
+    public function getGetServiceInfoBySerialNoResult() : \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
     {
         return $this->GetServiceInfoBySerialNoResult;
     }
 
-    public function entry(): array
+    /**
+     * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult
+     * @return static
+     */
+    public function withGetServiceInfoBySerialNoResult(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult) : static
     {
-        return $this->getGetServiceInfoBySerialNoResult()->entry();
+        $new = clone $this;
+        $new->GetServiceInfoBySerialNoResult = $GetServiceInfoBySerialNoResult;
+
+        return $new;
     }
 }
+

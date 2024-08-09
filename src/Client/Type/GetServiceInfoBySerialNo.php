@@ -6,30 +6,29 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetServiceInfoBySerialNo implements RequestInterface
 {
+    /**
+     * @var string
+     */
+    private string $Username;
 
     /**
      * @var string
      */
-    private $Username;
+    private string $PasswordHash;
 
     /**
      * @var string
      */
-    private $PasswordHash;
-
-    /**
-     * @var string
-     */
-    private $SerialNo;
+    private string $SerialNo;
 
     /**
      * Constructor
      *
-     * @var string $Username
-     * @var string $PasswordHash
-     * @var string $SerialNo
+     * @param string $Username
+     * @param string $PasswordHash
+     * @param string $SerialNo
      */
-    public function __construct($Username, $PasswordHash, $SerialNo)
+    public function __construct(string $Username, string $PasswordHash, string $SerialNo)
     {
         $this->Username = $Username;
         $this->PasswordHash = $PasswordHash;
@@ -39,16 +38,16 @@ class GetServiceInfoBySerialNo implements RequestInterface
     /**
      * @return string
      */
-    public function getUsername()
+    public function getUsername() : string
     {
         return $this->Username;
     }
 
     /**
      * @param string $Username
-     * @return GetServiceInfoBySerialNo
+     * @return static
      */
-    public function withUsername($Username)
+    public function withUsername(string $Username) : static
     {
         $new = clone $this;
         $new->Username = $Username;
@@ -59,16 +58,16 @@ class GetServiceInfoBySerialNo implements RequestInterface
     /**
      * @return string
      */
-    public function getPasswordHash()
+    public function getPasswordHash() : string
     {
         return $this->PasswordHash;
     }
 
     /**
      * @param string $PasswordHash
-     * @return GetServiceInfoBySerialNo
+     * @return static
      */
-    public function withPasswordHash($PasswordHash)
+    public function withPasswordHash(string $PasswordHash) : static
     {
         $new = clone $this;
         $new->PasswordHash = $PasswordHash;
@@ -79,16 +78,16 @@ class GetServiceInfoBySerialNo implements RequestInterface
     /**
      * @return string
      */
-    public function getSerialNo()
+    public function getSerialNo() : string
     {
         return $this->SerialNo;
     }
 
     /**
      * @param string $SerialNo
-     * @return GetServiceInfoBySerialNo
+     * @return static
      */
-    public function withSerialNo($SerialNo)
+    public function withSerialNo(string $SerialNo) : static
     {
         $new = clone $this;
         $new->SerialNo = $SerialNo;
@@ -96,3 +95,4 @@ class GetServiceInfoBySerialNo implements RequestInterface
         return $new;
     }
 }
+

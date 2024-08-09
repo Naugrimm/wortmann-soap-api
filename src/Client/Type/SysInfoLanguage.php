@@ -4,45 +4,44 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 
 class SysInfoLanguage
 {
+    /**
+     * @var int
+     */
+    private int $Id;
 
     /**
      * @var int
      */
-    private $Id;
-
-    /**
-     * @var int
-     */
-    private $ParentId;
+    private int $ParentId;
 
     /**
      * @var string
      */
-    private $Description;
+    private string $Description;
 
     /**
      * @var string
      */
-    private $Code;
+    private string $Code;
 
     /**
      * @var int
      */
-    private $SortOrder;
+    private int $SortOrder;
 
     /**
      * @return int
      */
-    public function getId()
+    public function getId() : int
     {
         return $this->Id;
     }
 
     /**
      * @param int $Id
-     * @return SysInfoLanguage
+     * @return static
      */
-    public function withId($Id)
+    public function withId(int $Id) : static
     {
         $new = clone $this;
         $new->Id = $Id;
@@ -53,16 +52,16 @@ class SysInfoLanguage
     /**
      * @return int
      */
-    public function getParentId()
+    public function getParentId() : int
     {
         return $this->ParentId;
     }
 
     /**
      * @param int $ParentId
-     * @return SysInfoLanguage
+     * @return static
      */
-    public function withParentId($ParentId)
+    public function withParentId(int $ParentId) : static
     {
         $new = clone $this;
         $new->ParentId = $ParentId;
@@ -73,16 +72,16 @@ class SysInfoLanguage
     /**
      * @return string
      */
-    public function getDescription()
+    public function getDescription() : string
     {
         return $this->Description;
     }
 
     /**
      * @param string $Description
-     * @return SysInfoLanguage
+     * @return static
      */
-    public function withDescription($Description)
+    public function withDescription(string $Description) : static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -93,16 +92,16 @@ class SysInfoLanguage
     /**
      * @return string
      */
-    public function getCode()
+    public function getCode() : string
     {
         return $this->Code;
     }
 
     /**
      * @param string $Code
-     * @return SysInfoLanguage
+     * @return static
      */
-    public function withCode($Code)
+    public function withCode(string $Code) : static
     {
         $new = clone $this;
         $new->Code = $Code;
@@ -113,16 +112,16 @@ class SysInfoLanguage
     /**
      * @return int
      */
-    public function getSortOrder()
+    public function getSortOrder() : int
     {
         return $this->SortOrder;
     }
 
     /**
      * @param int $SortOrder
-     * @return SysInfoLanguage
+     * @return static
      */
-    public function withSortOrder($SortOrder)
+    public function withSortOrder(int $SortOrder) : static
     {
         $new = clone $this;
         $new->SortOrder = $SortOrder;
@@ -130,3 +129,4 @@ class SysInfoLanguage
         return $new;
     }
 }
+

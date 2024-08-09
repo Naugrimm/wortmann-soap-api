@@ -2,93 +2,127 @@
 
 namespace Naugrim\WortmannSoapApi\Client;
 
+use Phpro\SoapClient\Caller\Caller;
 use Naugrim\WortmannSoapApi\Client\Type;
-use Naugrim\WortmannSoapApi\Client\Type\GetDriverLinks;
-use Naugrim\WortmannSoapApi\Client\Type\GetDriverLinksResponse;
-use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNo;
-use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNoResponse;
-use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDate;
-use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDateResponse;
-use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductId;
-use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdResponse;
-use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds;
-use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse;
-use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds;
-use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse;
-use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
-use Phpro\SoapClient\Caller\Caller;
+use Phpro\SoapClient\Type\RequestInterface;
 
 class ApiClient
 {
     /**
      * @var Caller
      */
-    private $caller;
+    private Caller $caller;
 
-    public function __construct(Caller $caller)
+    public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
     {
         $this->caller = $caller;
     }
 
     /**
-     * @param RequestInterface|GetStockAndPriceInformationByProductId $parameters
-     * @return ResultInterface|GetStockAndPriceInformationByProductIdResponse
+     * @param RequestInterface & Type\GetStockAndPriceInformationByProductId $parameters
+     * @return ResultInterface & Type\GetStockAndPriceInformationByProductIdResponse
      * @throws SoapException
      */
-    public function getStockAndPriceInformationByProductId(GetStockAndPriceInformationByProductId $parameters) : GetStockAndPriceInformationByProductIdResponse
+    public function getStockAndPriceInformationByProductId(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductId $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdResponse
     {
-        return ($this->caller)('GetStockAndPriceInformationByProductId', $parameters);
+        $response = ($this->caller)('GetStockAndPriceInformationByProductId', $parameters);
+
+        \Psl\Type\instance_of(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdResponse::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param RequestInterface|GetStockAndPriceInformationByProductIds $parameters
-     * @return ResultInterface|GetStockAndPriceInformationByProductIdsResponse
+     * @param RequestInterface & Type\GetStockAndPriceInformationByProductIds $parameters
+     * @return ResultInterface & Type\GetStockAndPriceInformationByProductIdsResponse
      * @throws SoapException
      */
-    public function getStockAndPriceInformationByProductIds(GetStockAndPriceInformationByProductIds $parameters) : GetStockAndPriceInformationByProductIdsResponse
+    public function getStockAndPriceInformationByProductIds(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse
     {
-        return ($this->caller)('GetStockAndPriceInformationByProductIds', $parameters);
+        $response = ($this->caller)('GetStockAndPriceInformationByProductIds', $parameters);
+
+        \Psl\Type\instance_of(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param RequestInterface|GetStockAndPriceInformationForForeignCustomerByProductIds $parameters
-     * @return ResultInterface|GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
+     * @param RequestInterface & Type\GetStockAndPriceInformationForForeignCustomerByProductIds $parameters
+     * @return ResultInterface & Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
      * @throws SoapException
      */
-    public function getStockAndPriceInformationForForeignCustomerByProductIds(GetStockAndPriceInformationForForeignCustomerByProductIds $parameters) : GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
+    public function getStockAndPriceInformationForForeignCustomerByProductIds(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
     {
-        return ($this->caller)('GetStockAndPriceInformationForForeignCustomerByProductIds', $parameters);
+        $response = ($this->caller)('GetStockAndPriceInformationForForeignCustomerByProductIds', $parameters);
+
+        \Psl\Type\instance_of(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param RequestInterface|GetDriverLinks $parameters
-     * @return ResultInterface|GetDriverLinksResponse
+     * @param RequestInterface & Type\GetDriverLinks $parameters
+     * @return ResultInterface & Type\GetDriverLinksResponse
      * @throws SoapException
      */
-    public function getDriverLinks(GetDriverLinks $parameters) : GetDriverLinksResponse
+    public function getDriverLinks(\Naugrim\WortmannSoapApi\Client\Type\GetDriverLinks $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetDriverLinksResponse
     {
-        return ($this->caller)('GetDriverLinks', $parameters);
+        $response = ($this->caller)('GetDriverLinks', $parameters);
+
+        \Psl\Type\instance_of(\Naugrim\WortmannSoapApi\Client\Type\GetDriverLinksResponse::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param RequestInterface|GetServiceInfoByWarrantyEndingDate $parameters
-     * @return ResultInterface|GetServiceInfoByWarrantyEndingDateResponse
+     * @param RequestInterface & Type\GetExtendedDriverLinks $parameters
+     * @return ResultInterface & Type\GetExtendedDriverLinksResponse
      * @throws SoapException
      */
-    public function getServiceInfoByWarrantyEndingDate(GetServiceInfoByWarrantyEndingDate $parameters) : GetServiceInfoByWarrantyEndingDateResponse
+    public function getExtendedDriverLinks(\Naugrim\WortmannSoapApi\Client\Type\GetExtendedDriverLinks $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetExtendedDriverLinksResponse
     {
-        return ($this->caller)('GetServiceInfoByWarrantyEndingDate', $parameters);
+        $response = ($this->caller)('GetExtendedDriverLinks', $parameters);
+
+        \Psl\Type\instance_of(\Naugrim\WortmannSoapApi\Client\Type\GetExtendedDriverLinksResponse::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 
     /**
-     * @param RequestInterface|GetServiceInfoBySerialNo $parameters
-     * @return ResultInterface|GetServiceInfoBySerialNoResponse
+     * @param RequestInterface & Type\GetServiceInfoByWarrantyEndingDate $parameters
+     * @return ResultInterface & Type\GetServiceInfoByWarrantyEndingDateResponse
      * @throws SoapException
      */
-    public function getServiceInfoBySerialNo(GetServiceInfoBySerialNo $parameters) : GetServiceInfoBySerialNoResponse
+    public function getServiceInfoByWarrantyEndingDate(\Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDate $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDateResponse
     {
-        return ($this->caller)('GetServiceInfoBySerialNo', $parameters);
+        $response = ($this->caller)('GetServiceInfoByWarrantyEndingDate', $parameters);
+
+        \Psl\Type\instance_of(\Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDateResponse::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
+    }
+
+    /**
+     * @param RequestInterface & Type\GetServiceInfoBySerialNo $parameters
+     * @return ResultInterface & Type\GetServiceInfoBySerialNoResponse
+     * @throws SoapException
+     */
+    public function getServiceInfoBySerialNo(\Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNo $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNoResponse
+    {
+        $response = ($this->caller)('GetServiceInfoBySerialNo', $parameters);
+
+        \Psl\Type\instance_of(\Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNoResponse::class)->assert($response);
+        \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
+
+        return $response;
     }
 }
+

@@ -4,96 +4,104 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 
 class Component
 {
-
     /**
      * @var string
      */
-    private $ItemNo;
+    private string $ItemNo;
 
     /**
      * @var int
      */
-    private $LineNo;
+    private int $LineNo;
 
     /**
      * @var string
      */
-    private $Description;
+    private string $Description;
 
     /**
      * @var string
      */
-    private $SerialNo;
+    private string $SerialNo;
 
     /**
      * @return string
      */
-    public function getItemNo(): string
+    public function getItemNo() : string
     {
         return $this->ItemNo;
     }
 
     /**
      * @param string $ItemNo
-     * @return Component
+     * @return static
      */
-    public function setItemNo(string $ItemNo): Component
+    public function withItemNo(string $ItemNo) : static
     {
-        $this->ItemNo = $ItemNo;
-        return $this;
+        $new = clone $this;
+        $new->ItemNo = $ItemNo;
+
+        return $new;
     }
 
     /**
      * @return int
      */
-    public function getLineNo(): int
+    public function getLineNo() : int
     {
         return $this->LineNo;
     }
 
     /**
      * @param int $LineNo
-     * @return Component
+     * @return static
      */
-    public function setLineNo(int $LineNo): Component
+    public function withLineNo(int $LineNo) : static
     {
-        $this->LineNo = $LineNo;
-        return $this;
+        $new = clone $this;
+        $new->LineNo = $LineNo;
+
+        return $new;
     }
 
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->Description;
     }
 
     /**
      * @param string $Description
-     * @return Component
+     * @return static
      */
-    public function setDescription(string $Description): Component
+    public function withDescription(string $Description) : static
     {
-        $this->Description = $Description;
-        return $this;
+        $new = clone $this;
+        $new->Description = $Description;
+
+        return $new;
     }
 
     /**
      * @return string
      */
-    public function getSerialNo(): string
+    public function getSerialNo() : string
     {
         return $this->SerialNo;
     }
 
     /**
      * @param string $SerialNo
-     * @return Component
+     * @return static
      */
-    public function setSerialNo(string $SerialNo): Component
+    public function withSerialNo(string $SerialNo) : static
     {
-        $this->SerialNo = $SerialNo;
-        return $this;
+        $new = clone $this;
+        $new->SerialNo = $SerialNo;
+
+        return $new;
     }
 }
+

@@ -4,50 +4,49 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 
 class SysInfoLink
 {
+    /**
+     * @var int
+     */
+    private int $Id;
+
+    /**
+     * @var string
+     */
+    private string $NavID;
 
     /**
      * @var int
      */
-    private $Id;
+    private int $ParentId;
 
     /**
      * @var string
      */
-    private $NavID;
-
-    /**
-     * @var int
-     */
-    private $ParentId;
+    private string $Description;
 
     /**
      * @var string
      */
-    private $Description;
-
-    /**
-     * @var string
-     */
-    private $URL;
+    private string $URL;
 
     /**
      * @var bool
      */
-    private $RegisteredDownload;
+    private bool $RegisteredDownload;
 
     /**
      * @return int
      */
-    public function getId()
+    public function getId() : int
     {
         return $this->Id;
     }
 
     /**
      * @param int $Id
-     * @return SysInfoLink
+     * @return static
      */
-    public function withId($Id)
+    public function withId(int $Id) : static
     {
         $new = clone $this;
         $new->Id = $Id;
@@ -58,16 +57,16 @@ class SysInfoLink
     /**
      * @return string
      */
-    public function getNavID()
+    public function getNavID() : string
     {
         return $this->NavID;
     }
 
     /**
      * @param string $NavID
-     * @return SysInfoLink
+     * @return static
      */
-    public function withNavID($NavID)
+    public function withNavID(string $NavID) : static
     {
         $new = clone $this;
         $new->NavID = $NavID;
@@ -78,16 +77,16 @@ class SysInfoLink
     /**
      * @return int
      */
-    public function getParentId()
+    public function getParentId() : int
     {
         return $this->ParentId;
     }
 
     /**
      * @param int $ParentId
-     * @return SysInfoLink
+     * @return static
      */
-    public function withParentId($ParentId)
+    public function withParentId(int $ParentId) : static
     {
         $new = clone $this;
         $new->ParentId = $ParentId;
@@ -98,16 +97,16 @@ class SysInfoLink
     /**
      * @return string
      */
-    public function getDescription()
+    public function getDescription() : string
     {
         return $this->Description;
     }
 
     /**
      * @param string $Description
-     * @return SysInfoLink
+     * @return static
      */
-    public function withDescription($Description)
+    public function withDescription(string $Description) : static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -118,16 +117,16 @@ class SysInfoLink
     /**
      * @return string
      */
-    public function getURL()
+    public function getURL() : string
     {
         return $this->URL;
     }
 
     /**
      * @param string $URL
-     * @return SysInfoLink
+     * @return static
      */
-    public function withURL($URL)
+    public function withURL(string $URL) : static
     {
         $new = clone $this;
         $new->URL = $URL;
@@ -138,16 +137,16 @@ class SysInfoLink
     /**
      * @return bool
      */
-    public function getRegisteredDownload()
+    public function getRegisteredDownload() : bool
     {
         return $this->RegisteredDownload;
     }
 
     /**
      * @param bool $RegisteredDownload
-     * @return SysInfoLink
+     * @return static
      */
-    public function withRegisteredDownload($RegisteredDownload)
+    public function withRegisteredDownload(bool $RegisteredDownload) : static
     {
         $new = clone $this;
         $new->RegisteredDownload = $RegisteredDownload;
@@ -155,3 +154,4 @@ class SysInfoLink
         return $new;
     }
 }
+

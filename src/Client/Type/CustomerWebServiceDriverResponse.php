@@ -2,56 +2,83 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class CustomerWebServiceDriverResponse implements ResultInterface, ApiResponseContract
+class CustomerWebServiceDriverResponse implements ResultInterface
 {
-
     /**
      * @var bool
      */
-    private $Success;
+    private bool $Success;
 
     /**
      * @var string
      */
-    private $ErrorMesssage;
+    private string $ErrorMesssage;
 
     /**
-     * @var array
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
      */
-    private $Drivers;
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers;
 
     /**
      * @return bool
      */
-    public function getSuccess()
+    public function getSuccess() : bool
     {
         return $this->Success;
     }
 
     /**
+     * @param bool $Success
+     * @return static
+     */
+    public function withSuccess(bool $Success) : static
+    {
+        $new = clone $this;
+        $new->Success = $Success;
+
+        return $new;
+    }
+
+    /**
      * @return string
      */
-    public function getErrorMesssage()
+    public function getErrorMesssage() : string
     {
         return $this->ErrorMesssage;
     }
 
     /**
-     * @return array
+     * @param string $ErrorMesssage
+     * @return static
      */
-    public function getDrivers()
+    public function withErrorMesssage(string $ErrorMesssage) : static
+    {
+        $new = clone $this;
+        $new->ErrorMesssage = $ErrorMesssage;
+
+        return $new;
+    }
+
+    /**
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
+     */
+    public function getDrivers() : \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
     {
         return $this->Drivers;
     }
 
-    public function entry(): array
+    /**
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers
+     * @return static
+     */
+    public function withDrivers(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers) : static
     {
-        if (!$this->getDrivers()) {
-            return [];
-        }
-        return current($this->getDrivers());
+        $new = clone $this;
+        $new->Drivers = $Drivers;
+
+        return $new;
     }
 }
+

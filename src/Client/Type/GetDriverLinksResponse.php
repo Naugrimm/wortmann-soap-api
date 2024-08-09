@@ -2,37 +2,44 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
+use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetDriverLinksResponse implements ResultInterface, ApiResponseContract
+class GetDriverLinksResponse implements RequestInterface, ResultInterface
 {
-
     /**
-     * @var CustomerWebServiceDriverResponse
+     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse
      */
-    private $GetDriverLinksResult;
+    private \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse $GetDriverLinksResult;
 
     /**
      * Constructor
      *
-     * @var CustomerWebServiceDriverResponse $GetDriverLinksResult
+     * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse $GetDriverLinksResult
      */
-    public function __construct($GetDriverLinksResult)
+    public function __construct(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse $GetDriverLinksResult)
     {
         $this->GetDriverLinksResult = $GetDriverLinksResult;
     }
 
     /**
-     * @return CustomerWebServiceDriverResponse
+     * @return \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse
      */
-    public function getGetDriverLinksResult()
+    public function getGetDriverLinksResult() : \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse
     {
         return $this->GetDriverLinksResult;
     }
 
-    public function entry(): array
+    /**
+     * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse $GetDriverLinksResult
+     * @return static
+     */
+    public function withGetDriverLinksResult(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse $GetDriverLinksResult) : static
     {
-        return $this->getGetDriverLinksResult()->entry();
+        $new = clone $this;
+        $new->GetDriverLinksResult = $GetDriverLinksResult;
+
+        return $new;
     }
 }
+
