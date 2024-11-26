@@ -4,45 +4,44 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 
 class SysInfoProduct
 {
+    /**
+     * @var int
+     */
+    private int $Id;
 
     /**
      * @var int
      */
-    private $Id;
-
-    /**
-     * @var int
-     */
-    private $ParentId;
+    private int $ParentId;
 
     /**
      * @var string
      */
-    private $ProductId;
+    private string $ProductId;
 
     /**
      * @var string
      */
-    private $Description;
+    private string $Description;
 
     /**
-     * @var array
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument
      */
-    private $Documents;
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument $Documents;
 
     /**
      * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->Id;
     }
 
     /**
      * @param int $Id
-     * @return SysInfoProduct
+     * @return static
      */
-    public function withId($Id)
+    public function withId(int $Id): static
     {
         $new = clone $this;
         $new->Id = $Id;
@@ -53,16 +52,16 @@ class SysInfoProduct
     /**
      * @return int
      */
-    public function getParentId()
+    public function getParentId(): int
     {
         return $this->ParentId;
     }
 
     /**
      * @param int $ParentId
-     * @return SysInfoProduct
+     * @return static
      */
-    public function withParentId($ParentId)
+    public function withParentId(int $ParentId): static
     {
         $new = clone $this;
         $new->ParentId = $ParentId;
@@ -73,16 +72,16 @@ class SysInfoProduct
     /**
      * @return string
      */
-    public function getProductId()
+    public function getProductId(): string
     {
         return $this->ProductId;
     }
 
     /**
      * @param string $ProductId
-     * @return SysInfoProduct
+     * @return static
      */
-    public function withProductId($ProductId)
+    public function withProductId(string $ProductId): static
     {
         $new = clone $this;
         $new->ProductId = $ProductId;
@@ -93,16 +92,16 @@ class SysInfoProduct
     /**
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->Description;
     }
 
     /**
      * @param string $Description
-     * @return SysInfoProduct
+     * @return static
      */
-    public function withDescription($Description)
+    public function withDescription(string $Description): static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -111,18 +110,18 @@ class SysInfoProduct
     }
 
     /**
-     * @return array
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument
      */
-    public function getDocuments()
+    public function getDocuments(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument
     {
         return $this->Documents;
     }
 
     /**
-     * @param array $Documents
-     * @return SysInfoProduct
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument $Documents
+     * @return static
      */
-    public function withDocuments($Documents)
+    public function withDocuments(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument $Documents): static
     {
         $new = clone $this;
         $new->Documents = $Documents;

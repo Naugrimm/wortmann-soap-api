@@ -6,30 +6,29 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetStockAndPriceInformationByProductIds implements RequestInterface
 {
+    /**
+     * @var string
+     */
+    private string $Username;
 
     /**
      * @var string
      */
-    private $Username;
+    private string $PasswordHash;
 
     /**
-     * @var string
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
      */
-    private $PasswordHash;
-
-    /**
-     * @var array
-     */
-    private $ProductIds;
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds;
 
     /**
      * Constructor
      *
-     * @var string $Username
-     * @var string $PasswordHash
-     * @var array $ProductIds
+     * @param string $Username
+     * @param string $PasswordHash
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds
      */
-    public function __construct($Username, $PasswordHash, $ProductIds)
+    public function __construct(string $Username, string $PasswordHash, \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds)
     {
         $this->Username = $Username;
         $this->PasswordHash = $PasswordHash;
@@ -39,16 +38,16 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
     /**
      * @return string
      */
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->Username;
     }
 
     /**
      * @param string $Username
-     * @return GetStockAndPriceInformationByProductIds
+     * @return static
      */
-    public function withUsername($Username)
+    public function withUsername(string $Username): static
     {
         $new = clone $this;
         $new->Username = $Username;
@@ -59,16 +58,16 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
     /**
      * @return string
      */
-    public function getPasswordHash()
+    public function getPasswordHash(): string
     {
         return $this->PasswordHash;
     }
 
     /**
      * @param string $PasswordHash
-     * @return GetStockAndPriceInformationByProductIds
+     * @return static
      */
-    public function withPasswordHash($PasswordHash)
+    public function withPasswordHash(string $PasswordHash): static
     {
         $new = clone $this;
         $new->PasswordHash = $PasswordHash;
@@ -77,18 +76,18 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
     }
 
     /**
-     * @return array
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
      */
-    public function getProductIds()
+    public function getProductIds(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
     {
         return $this->ProductIds;
     }
 
     /**
-     * @param array $ProductIds
-     * @return GetStockAndPriceInformationByProductIds
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds
+     * @return static
      */
-    public function withProductIds($ProductIds)
+    public function withProductIds(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds): static
     {
         $new = clone $this;
         $new->ProductIds = $ProductIds;

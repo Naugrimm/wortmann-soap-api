@@ -2,56 +2,82 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class CustomerWebServiceServiceInfoResponse implements ResultInterface, ApiResponseContract
+class CustomerWebServiceServiceInfoResponse implements ResultInterface
 {
-
     /**
      * @var bool
      */
-    private $Success;
+    private bool $Success;
 
     /**
      * @var string
      */
-    private $ErrorMesssage;
+    private string $ErrorMesssage;
 
     /**
-     * @var array
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfServiceInfo
      */
-    private $ServiceInfos;
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfServiceInfo $ServiceInfos;
 
     /**
      * @return bool
      */
-    public function getSuccess()
+    public function getSuccess(): bool
     {
         return $this->Success;
     }
 
     /**
+     * @param bool $Success
+     * @return static
+     */
+    public function withSuccess(bool $Success): static
+    {
+        $new = clone $this;
+        $new->Success = $Success;
+
+        return $new;
+    }
+
+    /**
      * @return string
      */
-    public function getErrorMesssage()
+    public function getErrorMesssage(): string
     {
         return $this->ErrorMesssage;
     }
 
     /**
-     * @return array
+     * @param string $ErrorMesssage
+     * @return static
      */
-    public function getServiceInfos()
+    public function withErrorMesssage(string $ErrorMesssage): static
+    {
+        $new = clone $this;
+        $new->ErrorMesssage = $ErrorMesssage;
+
+        return $new;
+    }
+
+    /**
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfServiceInfo
+     */
+    public function getServiceInfos(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfServiceInfo
     {
         return $this->ServiceInfos;
     }
 
-    public function entry(): array
+    /**
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfServiceInfo $ServiceInfos
+     * @return static
+     */
+    public function withServiceInfos(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfServiceInfo $ServiceInfos): static
     {
-        if (!$this->getServiceInfos()) {
-            return [];
-        }
-        return current($this->getServiceInfos());
+        $new = clone $this;
+        $new->ServiceInfos = $ServiceInfos;
+
+        return $new;
     }
 }

@@ -2,37 +2,43 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
+use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class GetStockAndPriceInformationForForeignCustomerByProductIdsResponse implements ResultInterface, ApiResponseContract
+class GetStockAndPriceInformationForForeignCustomerByProductIdsResponse implements RequestInterface, ResultInterface
 {
-
     /**
-     * @var CustomerWebServiceProductInfoResponse
+     * @var \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
      */
-    private $GetStockAndPriceInformationForForeignCustomerByProductIdsResult;
+    private \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationForForeignCustomerByProductIdsResult;
 
     /**
      * Constructor
      *
-     * @var CustomerWebServiceProductInfoResponse $item
+     * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationForForeignCustomerByProductIdsResult
      */
-    public function __construct($item)
+    public function __construct(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationForForeignCustomerByProductIdsResult)
     {
-        $this->GetStockAndPriceInformationForForeignCustomerByProductIdsResult = $item;
+        $this->GetStockAndPriceInformationForForeignCustomerByProductIdsResult = $GetStockAndPriceInformationForForeignCustomerByProductIdsResult;
     }
 
     /**
-     * @return CustomerWebServiceProductInfoResponse
+     * @return \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
      */
-    public function getGetStockAndPriceInformationForForeignCustomerByProductIdsResult()
+    public function getGetStockAndPriceInformationForForeignCustomerByProductIdsResult(): \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
     {
         return $this->GetStockAndPriceInformationForForeignCustomerByProductIdsResult;
     }
 
-    public function entry(): array
+    /**
+     * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationForForeignCustomerByProductIdsResult
+     * @return static
+     */
+    public function withGetStockAndPriceInformationForForeignCustomerByProductIdsResult(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationForForeignCustomerByProductIdsResult): static
     {
-        return $this->getGetStockAndPriceInformationForForeignCustomerByProductIdsResult()->entry();
+        $new = clone $this;
+        $new->GetStockAndPriceInformationForForeignCustomerByProductIdsResult = $GetStockAndPriceInformationForForeignCustomerByProductIdsResult;
+
+        return $new;
     }
 }

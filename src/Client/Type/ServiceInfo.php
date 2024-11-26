@@ -4,125 +4,124 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 
 class ServiceInfo
 {
+    /**
+     * @var string
+     */
+    private string $ServiceItemNo;
 
     /**
      * @var string
      */
-    private $ServiceItemNo;
+    private string $ServiceItemDescription;
 
     /**
      * @var string
      */
-    private $ServiceItemDescription;
+    private string $ServiceItemDescription2;
 
     /**
      * @var string
      */
-    private $ServiceItemDescription2;
+    private string $ItemNo;
 
     /**
      * @var string
      */
-    private $ItemNo;
+    private string $ItemDescription;
 
     /**
      * @var string
      */
-    private $ItemDescription;
+    private string $CustomerNo;
 
     /**
      * @var string
      */
-    private $CustomerNo;
+    private string $SerialNo;
 
     /**
      * @var string
      */
-    private $SerialNo;
+    private string $InvoiceNo;
 
     /**
      * @var string
      */
-    private $InvoiceNo;
+    private string $InvoicePostingDate;
 
     /**
      * @var string
      */
-    private $InvoicePostingDate;
+    private string $ShipmentNo;
 
     /**
      * @var string
      */
-    private $ShipmentNo;
+    private string $ShipmentPostingDate;
 
     /**
      * @var string
      */
-    private $ShipmentPostingDate;
+    private string $ExternalDocumentNo;
 
     /**
      * @var string
      */
-    private $ExternalDocumentNo;
-
-    /**
-     * @var string
-     */
-    private $Commission;
+    private string $Commission;
 
     /**
      * @var float
      */
-    private $InvoiceUnitPrice;
+    private float $InvoiceUnitPrice;
 
     /**
      * @var string
      */
-    private $InvoiceCurrencyCode;
+    private string $InvoiceCurrencyCode;
 
     /**
      * @var string
      */
-    private $InvoiceLineCommission;
+    private string $InvoiceLineCommission;
 
     /**
      * @var string
      */
-    private $WarrantyCode;
+    private string $WarrantyCode;
 
     /**
      * @var string
      */
-    private $WarrantyDescription;
+    private string $WarrantyDescription;
 
     /**
      * @var string
      */
-    private $WarrantyStartingDate;
+    private string $WarrantyStartingDate;
 
     /**
      * @var string
      */
-    private $WarrantyEndingDate;
+    private string $WarrantyEndingDate;
 
     /**
-     * @var array
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfComponent
      */
-    private $Components;
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfComponent $Components;
 
     /**
      * @return string
      */
-    public function getServiceItemNo()
+    public function getServiceItemNo(): string
     {
         return $this->ServiceItemNo;
     }
 
     /**
      * @param string $ServiceItemNo
-     * @return ServiceInfo
+     * @return static
      */
-    public function withServiceItemNo($ServiceItemNo)
+    public function withServiceItemNo(string $ServiceItemNo): static
     {
         $new = clone $this;
         $new->ServiceItemNo = $ServiceItemNo;
@@ -133,16 +132,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getServiceItemDescription()
+    public function getServiceItemDescription(): string
     {
         return $this->ServiceItemDescription;
     }
 
     /**
      * @param string $ServiceItemDescription
-     * @return ServiceInfo
+     * @return static
      */
-    public function withServiceItemDescription($ServiceItemDescription)
+    public function withServiceItemDescription(string $ServiceItemDescription): static
     {
         $new = clone $this;
         $new->ServiceItemDescription = $ServiceItemDescription;
@@ -153,16 +152,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getServiceItemDescription2()
+    public function getServiceItemDescription2(): string
     {
         return $this->ServiceItemDescription2;
     }
 
     /**
      * @param string $ServiceItemDescription2
-     * @return ServiceInfo
+     * @return static
      */
-    public function withServiceItemDescription2($ServiceItemDescription2)
+    public function withServiceItemDescription2(string $ServiceItemDescription2): static
     {
         $new = clone $this;
         $new->ServiceItemDescription2 = $ServiceItemDescription2;
@@ -173,16 +172,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getItemNo()
+    public function getItemNo(): string
     {
         return $this->ItemNo;
     }
 
     /**
      * @param string $ItemNo
-     * @return ServiceInfo
+     * @return static
      */
-    public function withItemNo($ItemNo)
+    public function withItemNo(string $ItemNo): static
     {
         $new = clone $this;
         $new->ItemNo = $ItemNo;
@@ -193,16 +192,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getItemDescription()
+    public function getItemDescription(): string
     {
         return $this->ItemDescription;
     }
 
     /**
      * @param string $ItemDescription
-     * @return ServiceInfo
+     * @return static
      */
-    public function withItemDescription($ItemDescription)
+    public function withItemDescription(string $ItemDescription): static
     {
         $new = clone $this;
         $new->ItemDescription = $ItemDescription;
@@ -213,16 +212,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getCustomerNo()
+    public function getCustomerNo(): string
     {
         return $this->CustomerNo;
     }
 
     /**
      * @param string $CustomerNo
-     * @return ServiceInfo
+     * @return static
      */
-    public function withCustomerNo($CustomerNo)
+    public function withCustomerNo(string $CustomerNo): static
     {
         $new = clone $this;
         $new->CustomerNo = $CustomerNo;
@@ -233,16 +232,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getSerialNo()
+    public function getSerialNo(): string
     {
         return $this->SerialNo;
     }
 
     /**
      * @param string $SerialNo
-     * @return ServiceInfo
+     * @return static
      */
-    public function withSerialNo($SerialNo)
+    public function withSerialNo(string $SerialNo): static
     {
         $new = clone $this;
         $new->SerialNo = $SerialNo;
@@ -253,16 +252,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getInvoiceNo()
+    public function getInvoiceNo(): string
     {
         return $this->InvoiceNo;
     }
 
     /**
      * @param string $InvoiceNo
-     * @return ServiceInfo
+     * @return static
      */
-    public function withInvoiceNo($InvoiceNo)
+    public function withInvoiceNo(string $InvoiceNo): static
     {
         $new = clone $this;
         $new->InvoiceNo = $InvoiceNo;
@@ -273,16 +272,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getInvoicePostingDate()
+    public function getInvoicePostingDate(): string
     {
         return $this->InvoicePostingDate;
     }
 
     /**
      * @param string $InvoicePostingDate
-     * @return ServiceInfo
+     * @return static
      */
-    public function withInvoicePostingDate($InvoicePostingDate)
+    public function withInvoicePostingDate(string $InvoicePostingDate): static
     {
         $new = clone $this;
         $new->InvoicePostingDate = $InvoicePostingDate;
@@ -293,16 +292,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getShipmentNo()
+    public function getShipmentNo(): string
     {
         return $this->ShipmentNo;
     }
 
     /**
      * @param string $ShipmentNo
-     * @return ServiceInfo
+     * @return static
      */
-    public function withShipmentNo($ShipmentNo)
+    public function withShipmentNo(string $ShipmentNo): static
     {
         $new = clone $this;
         $new->ShipmentNo = $ShipmentNo;
@@ -313,16 +312,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getShipmentPostingDate()
+    public function getShipmentPostingDate(): string
     {
         return $this->ShipmentPostingDate;
     }
 
     /**
      * @param string $ShipmentPostingDate
-     * @return ServiceInfo
+     * @return static
      */
-    public function withShipmentPostingDate($ShipmentPostingDate)
+    public function withShipmentPostingDate(string $ShipmentPostingDate): static
     {
         $new = clone $this;
         $new->ShipmentPostingDate = $ShipmentPostingDate;
@@ -333,16 +332,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getExternalDocumentNo()
+    public function getExternalDocumentNo(): string
     {
         return $this->ExternalDocumentNo;
     }
 
     /**
      * @param string $ExternalDocumentNo
-     * @return ServiceInfo
+     * @return static
      */
-    public function withExternalDocumentNo($ExternalDocumentNo)
+    public function withExternalDocumentNo(string $ExternalDocumentNo): static
     {
         $new = clone $this;
         $new->ExternalDocumentNo = $ExternalDocumentNo;
@@ -353,16 +352,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getCommission()
+    public function getCommission(): string
     {
         return $this->Commission;
     }
 
     /**
      * @param string $Commission
-     * @return ServiceInfo
+     * @return static
      */
-    public function withCommission($Commission)
+    public function withCommission(string $Commission): static
     {
         $new = clone $this;
         $new->Commission = $Commission;
@@ -373,16 +372,16 @@ class ServiceInfo
     /**
      * @return float
      */
-    public function getInvoiceUnitPrice()
+    public function getInvoiceUnitPrice(): float
     {
         return $this->InvoiceUnitPrice;
     }
 
     /**
      * @param float $InvoiceUnitPrice
-     * @return ServiceInfo
+     * @return static
      */
-    public function withInvoiceUnitPrice($InvoiceUnitPrice)
+    public function withInvoiceUnitPrice(float $InvoiceUnitPrice): static
     {
         $new = clone $this;
         $new->InvoiceUnitPrice = $InvoiceUnitPrice;
@@ -393,16 +392,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getInvoiceCurrencyCode()
+    public function getInvoiceCurrencyCode(): string
     {
         return $this->InvoiceCurrencyCode;
     }
 
     /**
      * @param string $InvoiceCurrencyCode
-     * @return ServiceInfo
+     * @return static
      */
-    public function withInvoiceCurrencyCode($InvoiceCurrencyCode)
+    public function withInvoiceCurrencyCode(string $InvoiceCurrencyCode): static
     {
         $new = clone $this;
         $new->InvoiceCurrencyCode = $InvoiceCurrencyCode;
@@ -413,16 +412,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getInvoiceLineCommission()
+    public function getInvoiceLineCommission(): string
     {
         return $this->InvoiceLineCommission;
     }
 
     /**
      * @param string $InvoiceLineCommission
-     * @return ServiceInfo
+     * @return static
      */
-    public function withInvoiceLineCommission($InvoiceLineCommission)
+    public function withInvoiceLineCommission(string $InvoiceLineCommission): static
     {
         $new = clone $this;
         $new->InvoiceLineCommission = $InvoiceLineCommission;
@@ -433,16 +432,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getWarrantyCode()
+    public function getWarrantyCode(): string
     {
         return $this->WarrantyCode;
     }
 
     /**
      * @param string $WarrantyCode
-     * @return ServiceInfo
+     * @return static
      */
-    public function withWarrantyCode($WarrantyCode)
+    public function withWarrantyCode(string $WarrantyCode): static
     {
         $new = clone $this;
         $new->WarrantyCode = $WarrantyCode;
@@ -453,16 +452,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getWarrantyDescription()
+    public function getWarrantyDescription(): string
     {
         return $this->WarrantyDescription;
     }
 
     /**
      * @param string $WarrantyDescription
-     * @return ServiceInfo
+     * @return static
      */
-    public function withWarrantyDescription($WarrantyDescription)
+    public function withWarrantyDescription(string $WarrantyDescription): static
     {
         $new = clone $this;
         $new->WarrantyDescription = $WarrantyDescription;
@@ -473,16 +472,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getWarrantyStartingDate()
+    public function getWarrantyStartingDate(): string
     {
         return $this->WarrantyStartingDate;
     }
 
     /**
      * @param string $WarrantyStartingDate
-     * @return ServiceInfo
+     * @return static
      */
-    public function withWarrantyStartingDate($WarrantyStartingDate)
+    public function withWarrantyStartingDate(string $WarrantyStartingDate): static
     {
         $new = clone $this;
         $new->WarrantyStartingDate = $WarrantyStartingDate;
@@ -493,16 +492,16 @@ class ServiceInfo
     /**
      * @return string
      */
-    public function getWarrantyEndingDate()
+    public function getWarrantyEndingDate(): string
     {
         return $this->WarrantyEndingDate;
     }
 
     /**
      * @param string $WarrantyEndingDate
-     * @return ServiceInfo
+     * @return static
      */
-    public function withWarrantyEndingDate($WarrantyEndingDate)
+    public function withWarrantyEndingDate(string $WarrantyEndingDate): static
     {
         $new = clone $this;
         $new->WarrantyEndingDate = $WarrantyEndingDate;
@@ -511,18 +510,18 @@ class ServiceInfo
     }
 
     /**
-     * @return array
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfComponent
      */
-    public function getComponents()
+    public function getComponents(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfComponent
     {
         return $this->Components;
     }
 
     /**
-     * @param array $Components
-     * @return ServiceInfo
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfComponent $Components
+     * @return static
      */
-    public function withComponents($Components)
+    public function withComponents(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfComponent $Components): static
     {
         $new = clone $this;
         $new->Components = $Components;

@@ -6,36 +6,35 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetStockAndPriceInformationForForeignCustomerByProductIds implements RequestInterface
 {
+    /**
+     * @var string
+     */
+    private string $Username;
 
     /**
      * @var string
      */
-    private $Username;
+    private string $PasswordHash;
+
+    /**
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
+     */
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds;
 
     /**
      * @var string
      */
-    private $PasswordHash;
-
-    /**
-     * @var array
-     */
-    private $ProductIds;
-
-    /**
-     * @var string
-     */
-    private $ForeignCustomerNumber;
+    private string $ForeignCustomerNumber;
 
     /**
      * Constructor
      *
-     * @var string $Username
-     * @var string $PasswordHash
-     * @var array $ProductIds
-     * @var string $ForeignCustomerNumber
+     * @param string $Username
+     * @param string $PasswordHash
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds
+     * @param string $ForeignCustomerNumber
      */
-    public function __construct($Username, $PasswordHash, $ProductIds, $ForeignCustomerNumber)
+    public function __construct(string $Username, string $PasswordHash, \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds, string $ForeignCustomerNumber)
     {
         $this->Username = $Username;
         $this->PasswordHash = $PasswordHash;
@@ -46,16 +45,16 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     /**
      * @return string
      */
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->Username;
     }
 
     /**
      * @param string $Username
-     * @return GetStockAndPriceInformationForForeignCustomerByProductIds
+     * @return static
      */
-    public function withUsername($Username)
+    public function withUsername(string $Username): static
     {
         $new = clone $this;
         $new->Username = $Username;
@@ -66,16 +65,16 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     /**
      * @return string
      */
-    public function getPasswordHash()
+    public function getPasswordHash(): string
     {
         return $this->PasswordHash;
     }
 
     /**
      * @param string $PasswordHash
-     * @return GetStockAndPriceInformationForForeignCustomerByProductIds
+     * @return static
      */
-    public function withPasswordHash($PasswordHash)
+    public function withPasswordHash(string $PasswordHash): static
     {
         $new = clone $this;
         $new->PasswordHash = $PasswordHash;
@@ -84,18 +83,18 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     }
 
     /**
-     * @return array
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
      */
-    public function getProductIds()
+    public function getProductIds(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
     {
         return $this->ProductIds;
     }
 
     /**
-     * @param array $ProductIds
-     * @return GetStockAndPriceInformationForForeignCustomerByProductIds
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds
+     * @return static
      */
-    public function withProductIds($ProductIds)
+    public function withProductIds(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds): static
     {
         $new = clone $this;
         $new->ProductIds = $ProductIds;
@@ -106,16 +105,16 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     /**
      * @return string
      */
-    public function getForeignCustomerNumber()
+    public function getForeignCustomerNumber(): string
     {
         return $this->ForeignCustomerNumber;
     }
 
     /**
      * @param string $ForeignCustomerNumber
-     * @return GetStockAndPriceInformationForForeignCustomerByProductIds
+     * @return static
      */
-    public function withForeignCustomerNumber($ForeignCustomerNumber)
+    public function withForeignCustomerNumber(string $ForeignCustomerNumber): static
     {
         $new = clone $this;
         $new->ForeignCustomerNumber = $ForeignCustomerNumber;

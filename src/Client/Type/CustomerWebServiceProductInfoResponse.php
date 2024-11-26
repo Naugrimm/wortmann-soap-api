@@ -2,55 +2,82 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use Naugrim\WortmannSoapApi\Client\Contracts\ApiResponseContract;
 use Phpro\SoapClient\Type\ResultInterface;
 
-class CustomerWebServiceProductInfoResponse implements ResultInterface, ApiResponseContract
+class CustomerWebServiceProductInfoResponse implements ResultInterface
 {
-
     /**
      * @var bool
      */
-    private $Success;
+    private bool $Success;
 
     /**
      * @var string
      */
-    private $ErrorMesssage;
+    private string $ErrorMesssage;
 
     /**
-     * @var array
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfProductInfoPackage
      */
-    private $ProductInfoPackages;
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfProductInfoPackage $ProductInfoPackages;
 
     /**
      * @return bool
      */
-    public function getSuccess()
+    public function getSuccess(): bool
     {
         return $this->Success;
     }
 
     /**
+     * @param bool $Success
+     * @return static
+     */
+    public function withSuccess(bool $Success): static
+    {
+        $new = clone $this;
+        $new->Success = $Success;
+
+        return $new;
+    }
+
+    /**
      * @return string
      */
-    public function getErrorMesssage()
+    public function getErrorMesssage(): string
     {
         return $this->ErrorMesssage;
     }
+
     /**
-     * @return array
+     * @param string $ErrorMesssage
+     * @return static
      */
-    public function getProductInfoPackages()
+    public function withErrorMesssage(string $ErrorMesssage): static
+    {
+        $new = clone $this;
+        $new->ErrorMesssage = $ErrorMesssage;
+
+        return $new;
+    }
+
+    /**
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfProductInfoPackage
+     */
+    public function getProductInfoPackages(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfProductInfoPackage
     {
         return $this->ProductInfoPackages;
     }
 
-    public function entry(): array
+    /**
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfProductInfoPackage $ProductInfoPackages
+     * @return static
+     */
+    public function withProductInfoPackages(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfProductInfoPackage $ProductInfoPackages): static
     {
-        if (!$this->getProductInfoPackages()) {
-            return [];
-        }
-        return current($this->getProductInfoPackages());
+        $new = clone $this;
+        $new->ProductInfoPackages = $ProductInfoPackages;
+
+        return $new;
     }
 }

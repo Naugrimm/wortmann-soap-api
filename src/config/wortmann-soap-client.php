@@ -3,15 +3,16 @@
 use Phpro\SoapClient\CodeGenerator\Assembler;
 use Phpro\SoapClient\CodeGenerator\Rules;
 use Phpro\SoapClient\CodeGenerator\Config\Config;
-use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapOptions;
-use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapEngineFactory;
+use Phpro\SoapClient\Soap\DefaultEngineFactory;
+use Soap\ExtSoapEngine\ExtSoapOptions;
+
 
 return Config::create()
-    ->setEngine(ExtSoapEngineFactory::fromOptions(
-        ExtSoapOptions::defaults('https://www.wortmann.de/api/CustomerWebService.asmx?WSDL', [])
-            ->disableWsdlCache()
-    ))
-    ->setTypeDestination('src/Client/Type')
+	->setEngine(DefaultEngineFactory::create(
+		ExtSoapOptions::defaults('https://www.wortmann.de/api/CustomerWebService.asmx?WSDL', [])
+			->disableWsdlCache()
+	))
+	->setTypeDestination('src/Client/Type')
     ->setTypeNamespace('Naugrim\WortmannSoapApi\Client\Type')
     ->setClientDestination('src/Client')
     ->setClientName('ApiClient')

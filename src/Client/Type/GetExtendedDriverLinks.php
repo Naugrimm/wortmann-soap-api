@@ -4,7 +4,7 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 
 use Phpro\SoapClient\Type\RequestInterface;
 
-class GetServiceInfoBySerialNo implements RequestInterface
+class GetExtendedDriverLinks implements RequestInterface
 {
     /**
      * @var string
@@ -19,20 +19,20 @@ class GetServiceInfoBySerialNo implements RequestInterface
     /**
      * @var string
      */
-    private string $SerialNo;
+    private string $SearchTerm;
 
     /**
      * Constructor
      *
      * @param string $Username
      * @param string $PasswordHash
-     * @param string $SerialNo
+     * @param string $SearchTerm
      */
-    public function __construct(string $Username, string $PasswordHash, string $SerialNo)
+    public function __construct(string $Username, string $PasswordHash, string $SearchTerm)
     {
         $this->Username = $Username;
         $this->PasswordHash = $PasswordHash;
-        $this->SerialNo = $SerialNo;
+        $this->SearchTerm = $SearchTerm;
     }
 
     /**
@@ -78,19 +78,19 @@ class GetServiceInfoBySerialNo implements RequestInterface
     /**
      * @return string
      */
-    public function getSerialNo(): string
+    public function getSearchTerm(): string
     {
-        return $this->SerialNo;
+        return $this->SearchTerm;
     }
 
     /**
-     * @param string $SerialNo
+     * @param string $SearchTerm
      * @return static
      */
-    public function withSerialNo(string $SerialNo): static
+    public function withSearchTerm(string $SearchTerm): static
     {
         $new = clone $this;
-        $new->SerialNo = $SerialNo;
+        $new->SearchTerm = $SearchTerm;
 
         return $new;
     }

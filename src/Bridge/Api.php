@@ -25,8 +25,8 @@ class Api implements WortmannSoapApi
     }
 
     /**
-     * @param string $requestCls
-     * @param mixed ...$params
+	 * @param string $requestCls
+	 * @param mixed ...$params
      * @return ResultInterface
      * @throws ReflectionException
      * @throws XmlException

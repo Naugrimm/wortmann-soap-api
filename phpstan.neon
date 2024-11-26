@@ -1,0 +1,38 @@
+# if you get errors regarding undefined model properties/relations, ensure you have
+# added a type hint for the relation method and run
+#
+#   php artisan schema:dump
+#   php artisan schema:dump --database rsp
+#
+# afterwards.
+
+includes:
+    - ./vendor/phpstan/phpstan-deprecation-rules/rules.neon
+
+# the file can be found in the CRM
+# @TODO: extract it to a separate package
+# this is optional to provide an overview over the types of errors
+#services:
+#	errorFormatter.summary:
+#		class: App\PHPStan\SummaryErrorFormatter
+
+parameters:
+    parallel:
+        # this should be LESS than you total number of cores to prevent clogging your system
+        maximumNumberOfProcesses: 4
+    tmpDir: .phpstan
+    # put all "your" paths here
+    # this generally is "src" and "tests"
+    paths:
+        - src/
+        - tests/
+
+    editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
+
+    # Start with level 5 and gradually up this. target should be level 8 at least
+    level: 9
+
+    ignoreErrors:
+        #-
+        #    message: '#Undefined variable: \$this#'
+        #    path: tests/*
