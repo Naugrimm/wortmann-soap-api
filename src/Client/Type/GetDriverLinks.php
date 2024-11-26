@@ -24,7 +24,7 @@ class GetDriverLinks implements RequestInterface
     /**
      * @return string
      */
-    public function getSearchTerm() : string
+    public function getSearchTerm(): string
     {
         return $this->SearchTerm;
     }
@@ -33,7 +33,7 @@ class GetDriverLinks implements RequestInterface
      * @param string $SearchTerm
      * @return static
      */
-    public function withSearchTerm(string $SearchTerm) : static
+    public function withSearchTerm(string $SearchTerm): static
     {
         $new = clone $this;
         $new->SearchTerm = $SearchTerm;
@@ -41,4 +41,3 @@ class GetDriverLinks implements RequestInterface
         return $new;
     }
 }
-

@@ -12,7 +12,7 @@ class ArrayOfSysInfoSubversion
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion
      */
-    public function getSysInfoSubversion() : \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion
+    public function getSysInfoSubversion(): \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion
     {
         return $this->SysInfoSubversion;
     }
@@ -21,7 +21,7 @@ class ArrayOfSysInfoSubversion
      * @param \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion $SysInfoSubversion
      * @return static
      */
-    public function withSysInfoSubversion(\Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion $SysInfoSubversion) : static
+    public function withSysInfoSubversion(\Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion $SysInfoSubversion): static
     {
         $new = clone $this;
         $new->SysInfoSubversion = $SysInfoSubversion;
@@ -29,4 +29,3 @@ class ArrayOfSysInfoSubversion
         return $new;
     }
 }
-

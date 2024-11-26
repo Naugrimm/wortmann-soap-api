@@ -25,7 +25,7 @@ class GetStockAndPriceInformationByProductIdsResponse implements RequestInterfac
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
      */
-    public function getGetStockAndPriceInformationByProductIdsResult() : \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
+    public function getGetStockAndPriceInformationByProductIdsResult(): \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
     {
         return $this->GetStockAndPriceInformationByProductIdsResult;
     }
@@ -34,7 +34,7 @@ class GetStockAndPriceInformationByProductIdsResponse implements RequestInterfac
      * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdsResult
      * @return static
      */
-    public function withGetStockAndPriceInformationByProductIdsResult(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdsResult) : static
+    public function withGetStockAndPriceInformationByProductIdsResult(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdsResult): static
     {
         $new = clone $this;
         $new->GetStockAndPriceInformationByProductIdsResult = $GetStockAndPriceInformationByProductIdsResult;
@@ -42,4 +42,3 @@ class GetStockAndPriceInformationByProductIdsResponse implements RequestInterfac
         return $new;
     }
 }
-

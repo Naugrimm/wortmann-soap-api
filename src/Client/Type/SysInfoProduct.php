@@ -32,7 +32,7 @@ class SysInfoProduct
     /**
      * @return int
      */
-    public function getId() : int
+    public function getId(): int
     {
         return $this->Id;
     }
@@ -41,7 +41,7 @@ class SysInfoProduct
      * @param int $Id
      * @return static
      */
-    public function withId(int $Id) : static
+    public function withId(int $Id): static
     {
         $new = clone $this;
         $new->Id = $Id;
@@ -52,7 +52,7 @@ class SysInfoProduct
     /**
      * @return int
      */
-    public function getParentId() : int
+    public function getParentId(): int
     {
         return $this->ParentId;
     }
@@ -61,7 +61,7 @@ class SysInfoProduct
      * @param int $ParentId
      * @return static
      */
-    public function withParentId(int $ParentId) : static
+    public function withParentId(int $ParentId): static
     {
         $new = clone $this;
         $new->ParentId = $ParentId;
@@ -72,7 +72,7 @@ class SysInfoProduct
     /**
      * @return string
      */
-    public function getProductId() : string
+    public function getProductId(): string
     {
         return $this->ProductId;
     }
@@ -81,7 +81,7 @@ class SysInfoProduct
      * @param string $ProductId
      * @return static
      */
-    public function withProductId(string $ProductId) : static
+    public function withProductId(string $ProductId): static
     {
         $new = clone $this;
         $new->ProductId = $ProductId;
@@ -92,7 +92,7 @@ class SysInfoProduct
     /**
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->Description;
     }
@@ -101,7 +101,7 @@ class SysInfoProduct
      * @param string $Description
      * @return static
      */
-    public function withDescription(string $Description) : static
+    public function withDescription(string $Description): static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -112,7 +112,7 @@ class SysInfoProduct
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument
      */
-    public function getDocuments() : \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument
+    public function getDocuments(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument
     {
         return $this->Documents;
     }
@@ -121,7 +121,7 @@ class SysInfoProduct
      * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument $Documents
      * @return static
      */
-    public function withDocuments(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument $Documents) : static
+    public function withDocuments(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoDocument $Documents): static
     {
         $new = clone $this;
         $new->Documents = $Documents;
@@ -129,4 +129,3 @@ class SysInfoProduct
         return $new;
     }
 }
-

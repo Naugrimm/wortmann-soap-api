@@ -38,7 +38,7 @@ class GetStockAndPriceInformationByProductId implements RequestInterface
     /**
      * @return string
      */
-    public function getUsername() : string
+    public function getUsername(): string
     {
         return $this->Username;
     }
@@ -47,7 +47,7 @@ class GetStockAndPriceInformationByProductId implements RequestInterface
      * @param string $Username
      * @return static
      */
-    public function withUsername(string $Username) : static
+    public function withUsername(string $Username): static
     {
         $new = clone $this;
         $new->Username = $Username;
@@ -58,7 +58,7 @@ class GetStockAndPriceInformationByProductId implements RequestInterface
     /**
      * @return string
      */
-    public function getPasswordHash() : string
+    public function getPasswordHash(): string
     {
         return $this->PasswordHash;
     }
@@ -67,7 +67,7 @@ class GetStockAndPriceInformationByProductId implements RequestInterface
      * @param string $PasswordHash
      * @return static
      */
-    public function withPasswordHash(string $PasswordHash) : static
+    public function withPasswordHash(string $PasswordHash): static
     {
         $new = clone $this;
         $new->PasswordHash = $PasswordHash;
@@ -78,7 +78,7 @@ class GetStockAndPriceInformationByProductId implements RequestInterface
     /**
      * @return string
      */
-    public function getProductId() : string
+    public function getProductId(): string
     {
         return $this->ProductId;
     }
@@ -87,7 +87,7 @@ class GetStockAndPriceInformationByProductId implements RequestInterface
      * @param string $ProductId
      * @return static
      */
-    public function withProductId(string $ProductId) : static
+    public function withProductId(string $ProductId): static
     {
         $new = clone $this;
         $new->ProductId = $ProductId;
@@ -95,4 +95,3 @@ class GetStockAndPriceInformationByProductId implements RequestInterface
         return $new;
     }
 }
-

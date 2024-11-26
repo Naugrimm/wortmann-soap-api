@@ -45,7 +45,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     /**
      * @return string
      */
-    public function getUsername() : string
+    public function getUsername(): string
     {
         return $this->Username;
     }
@@ -54,7 +54,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
      * @param string $Username
      * @return static
      */
-    public function withUsername(string $Username) : static
+    public function withUsername(string $Username): static
     {
         $new = clone $this;
         $new->Username = $Username;
@@ -65,7 +65,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     /**
      * @return string
      */
-    public function getPasswordHash() : string
+    public function getPasswordHash(): string
     {
         return $this->PasswordHash;
     }
@@ -74,7 +74,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
      * @param string $PasswordHash
      * @return static
      */
-    public function withPasswordHash(string $PasswordHash) : static
+    public function withPasswordHash(string $PasswordHash): static
     {
         $new = clone $this;
         $new->PasswordHash = $PasswordHash;
@@ -85,7 +85,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
      */
-    public function getProductIds() : \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
+    public function getProductIds(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
     {
         return $this->ProductIds;
     }
@@ -94,7 +94,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
      * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds
      * @return static
      */
-    public function withProductIds(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds) : static
+    public function withProductIds(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds): static
     {
         $new = clone $this;
         $new->ProductIds = $ProductIds;
@@ -105,7 +105,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
     /**
      * @return string
      */
-    public function getForeignCustomerNumber() : string
+    public function getForeignCustomerNumber(): string
     {
         return $this->ForeignCustomerNumber;
     }
@@ -114,7 +114,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
      * @param string $ForeignCustomerNumber
      * @return static
      */
-    public function withForeignCustomerNumber(string $ForeignCustomerNumber) : static
+    public function withForeignCustomerNumber(string $ForeignCustomerNumber): static
     {
         $new = clone $this;
         $new->ForeignCustomerNumber = $ForeignCustomerNumber;
@@ -122,4 +122,3 @@ class GetStockAndPriceInformationForForeignCustomerByProductIds implements Reque
         return $new;
     }
 }
-

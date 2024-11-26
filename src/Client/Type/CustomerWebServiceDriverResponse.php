@@ -24,7 +24,7 @@ class CustomerWebServiceDriverResponse implements ResultInterface
     /**
      * @return bool
      */
-    public function getSuccess() : bool
+    public function getSuccess(): bool
     {
         return $this->Success;
     }
@@ -33,7 +33,7 @@ class CustomerWebServiceDriverResponse implements ResultInterface
      * @param bool $Success
      * @return static
      */
-    public function withSuccess(bool $Success) : static
+    public function withSuccess(bool $Success): static
     {
         $new = clone $this;
         $new->Success = $Success;
@@ -44,7 +44,7 @@ class CustomerWebServiceDriverResponse implements ResultInterface
     /**
      * @return string
      */
-    public function getErrorMesssage() : string
+    public function getErrorMesssage(): string
     {
         return $this->ErrorMesssage;
     }
@@ -53,7 +53,7 @@ class CustomerWebServiceDriverResponse implements ResultInterface
      * @param string $ErrorMesssage
      * @return static
      */
-    public function withErrorMesssage(string $ErrorMesssage) : static
+    public function withErrorMesssage(string $ErrorMesssage): static
     {
         $new = clone $this;
         $new->ErrorMesssage = $ErrorMesssage;
@@ -64,7 +64,7 @@ class CustomerWebServiceDriverResponse implements ResultInterface
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
      */
-    public function getDrivers() : \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
+    public function getDrivers(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
     {
         return $this->Drivers;
     }
@@ -73,7 +73,7 @@ class CustomerWebServiceDriverResponse implements ResultInterface
      * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers
      * @return static
      */
-    public function withDrivers(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers) : static
+    public function withDrivers(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers): static
     {
         $new = clone $this;
         $new->Drivers = $Drivers;
@@ -81,4 +81,3 @@ class CustomerWebServiceDriverResponse implements ResultInterface
         return $new;
     }
 }
-

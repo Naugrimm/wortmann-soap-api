@@ -17,7 +17,7 @@ class SysInfoSubversion
     /**
      * @return string
      */
-    public function getSubversion() : string
+    public function getSubversion(): string
     {
         return $this->Subversion;
     }
@@ -26,7 +26,7 @@ class SysInfoSubversion
      * @param string $Subversion
      * @return static
      */
-    public function withSubversion(string $Subversion) : static
+    public function withSubversion(string $Subversion): static
     {
         $new = clone $this;
         $new->Subversion = $Subversion;
@@ -37,7 +37,7 @@ class SysInfoSubversion
     /**
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->Description;
     }
@@ -46,7 +46,7 @@ class SysInfoSubversion
      * @param string $Description
      * @return static
      */
-    public function withDescription(string $Description) : static
+    public function withDescription(string $Description): static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -54,4 +54,3 @@ class SysInfoSubversion
         return $new;
     }
 }
-

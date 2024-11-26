@@ -62,7 +62,7 @@ class TreeListEntry
     /**
      * @return int
      */
-    public function getType() : int
+    public function getType(): int
     {
         return $this->Type;
     }
@@ -71,7 +71,7 @@ class TreeListEntry
      * @param int $Type
      * @return static
      */
-    public function withType(int $Type) : static
+    public function withType(int $Type): static
     {
         $new = clone $this;
         $new->Type = $Type;
@@ -82,7 +82,7 @@ class TreeListEntry
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem
      */
-    public function getOperatingSystems() : \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem
+    public function getOperatingSystems(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem
     {
         return $this->OperatingSystems;
     }
@@ -91,7 +91,7 @@ class TreeListEntry
      * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem $OperatingSystems
      * @return static
      */
-    public function withOperatingSystems(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem $OperatingSystems) : static
+    public function withOperatingSystems(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem $OperatingSystems): static
     {
         $new = clone $this;
         $new->OperatingSystems = $OperatingSystems;
@@ -102,7 +102,7 @@ class TreeListEntry
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage
      */
-    public function getLanguages() : \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage
+    public function getLanguages(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage
     {
         return $this->Languages;
     }
@@ -111,7 +111,7 @@ class TreeListEntry
      * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage $Languages
      * @return static
      */
-    public function withLanguages(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage $Languages) : static
+    public function withLanguages(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage $Languages): static
     {
         $new = clone $this;
         $new->Languages = $Languages;
@@ -122,7 +122,7 @@ class TreeListEntry
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink
      */
-    public function getLinks() : \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink
+    public function getLinks(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink
     {
         return $this->Links;
     }
@@ -131,7 +131,7 @@ class TreeListEntry
      * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink $Links
      * @return static
      */
-    public function withLinks(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink $Links) : static
+    public function withLinks(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink $Links): static
     {
         $new = clone $this;
         $new->Links = $Links;
@@ -142,7 +142,7 @@ class TreeListEntry
     /**
      * @return string
      */
-    public function getFaultText() : string
+    public function getFaultText(): string
     {
         return $this->FaultText;
     }
@@ -151,7 +151,7 @@ class TreeListEntry
      * @param string $FaultText
      * @return static
      */
-    public function withFaultText(string $FaultText) : static
+    public function withFaultText(string $FaultText): static
     {
         $new = clone $this;
         $new->FaultText = $FaultText;
@@ -162,7 +162,7 @@ class TreeListEntry
     /**
      * @return string
      */
-    public function getSolutionText() : string
+    public function getSolutionText(): string
     {
         return $this->SolutionText;
     }
@@ -171,7 +171,7 @@ class TreeListEntry
      * @param string $SolutionText
      * @return static
      */
-    public function withSolutionText(string $SolutionText) : static
+    public function withSolutionText(string $SolutionText): static
     {
         $new = clone $this;
         $new->SolutionText = $SolutionText;
@@ -182,7 +182,7 @@ class TreeListEntry
     /**
      * @return \DateTimeInterface
      */
-    public function getDocumentDate() : \DateTimeInterface
+    public function getDocumentDate(): \DateTimeInterface
     {
         return $this->DocumentDate;
     }
@@ -191,7 +191,7 @@ class TreeListEntry
      * @param \DateTimeInterface $DocumentDate
      * @return static
      */
-    public function withDocumentDate(\DateTimeInterface $DocumentDate) : static
+    public function withDocumentDate(\DateTimeInterface $DocumentDate): static
     {
         $new = clone $this;
         $new->DocumentDate = $DocumentDate;
@@ -202,7 +202,7 @@ class TreeListEntry
     /**
      * @return string
      */
-    public function getVersion() : string
+    public function getVersion(): string
     {
         return $this->Version;
     }
@@ -211,7 +211,7 @@ class TreeListEntry
      * @param string $Version
      * @return static
      */
-    public function withVersion(string $Version) : static
+    public function withVersion(string $Version): static
     {
         $new = clone $this;
         $new->Version = $Version;
@@ -222,7 +222,7 @@ class TreeListEntry
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion
      */
-    public function getSubversions() : \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion
+    public function getSubversions(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion
     {
         return $this->Subversions;
     }
@@ -231,7 +231,7 @@ class TreeListEntry
      * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion $Subversions
      * @return static
      */
-    public function withSubversions(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion $Subversions) : static
+    public function withSubversions(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion $Subversions): static
     {
         $new = clone $this;
         $new->Subversions = $Subversions;
@@ -242,7 +242,7 @@ class TreeListEntry
     /**
      * @return int
      */
-    public function getRelease() : int
+    public function getRelease(): int
     {
         return $this->Release;
     }
@@ -251,7 +251,7 @@ class TreeListEntry
      * @param int $Release
      * @return static
      */
-    public function withRelease(int $Release) : static
+    public function withRelease(int $Release): static
     {
         $new = clone $this;
         $new->Release = $Release;
@@ -262,7 +262,7 @@ class TreeListEntry
     /**
      * @return string
      */
-    public function getLongDescription() : string
+    public function getLongDescription(): string
     {
         return $this->LongDescription;
     }
@@ -271,7 +271,7 @@ class TreeListEntry
      * @param string $LongDescription
      * @return static
      */
-    public function withLongDescription(string $LongDescription) : static
+    public function withLongDescription(string $LongDescription): static
     {
         $new = clone $this;
         $new->LongDescription = $LongDescription;
@@ -279,4 +279,3 @@ class TreeListEntry
         return $new;
     }
 }
-

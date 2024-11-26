@@ -2,13 +2,12 @@
 
 namespace Naugrim\WortmannSoapApi\Client;
 
-use Naugrim\WortmannSoapApi\Client\Type;
-use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 
 class ApiClassmap
 {
-    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
+    public static function getCollection(): ClassMapCollection
     {
         return new ClassMapCollection(
             new ClassMap('GetStockAndPriceInformationByProductId', Type\GetStockAndPriceInformationByProductId::class),
@@ -51,4 +50,3 @@ class ApiClassmap
         );
     }
 }
-

@@ -27,7 +27,7 @@ class Component
     /**
      * @return string
      */
-    public function getItemNo() : string
+    public function getItemNo(): string
     {
         return $this->ItemNo;
     }
@@ -36,7 +36,7 @@ class Component
      * @param string $ItemNo
      * @return static
      */
-    public function withItemNo(string $ItemNo) : static
+    public function withItemNo(string $ItemNo): static
     {
         $new = clone $this;
         $new->ItemNo = $ItemNo;
@@ -47,7 +47,7 @@ class Component
     /**
      * @return int
      */
-    public function getLineNo() : int
+    public function getLineNo(): int
     {
         return $this->LineNo;
     }
@@ -56,7 +56,7 @@ class Component
      * @param int $LineNo
      * @return static
      */
-    public function withLineNo(int $LineNo) : static
+    public function withLineNo(int $LineNo): static
     {
         $new = clone $this;
         $new->LineNo = $LineNo;
@@ -67,7 +67,7 @@ class Component
     /**
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->Description;
     }
@@ -76,7 +76,7 @@ class Component
      * @param string $Description
      * @return static
      */
-    public function withDescription(string $Description) : static
+    public function withDescription(string $Description): static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -87,7 +87,7 @@ class Component
     /**
      * @return string
      */
-    public function getSerialNo() : string
+    public function getSerialNo(): string
     {
         return $this->SerialNo;
     }
@@ -96,7 +96,7 @@ class Component
      * @param string $SerialNo
      * @return static
      */
-    public function withSerialNo(string $SerialNo) : static
+    public function withSerialNo(string $SerialNo): static
     {
         $new = clone $this;
         $new->SerialNo = $SerialNo;
@@ -104,4 +104,3 @@ class Component
         return $new;
     }
 }
-

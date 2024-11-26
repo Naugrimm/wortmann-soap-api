@@ -25,7 +25,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIdsResponse implemen
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
      */
-    public function getGetStockAndPriceInformationForForeignCustomerByProductIdsResult() : \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
+    public function getGetStockAndPriceInformationForForeignCustomerByProductIdsResult(): \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
     {
         return $this->GetStockAndPriceInformationForForeignCustomerByProductIdsResult;
     }
@@ -34,7 +34,7 @@ class GetStockAndPriceInformationForForeignCustomerByProductIdsResponse implemen
      * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationForForeignCustomerByProductIdsResult
      * @return static
      */
-    public function withGetStockAndPriceInformationForForeignCustomerByProductIdsResult(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationForForeignCustomerByProductIdsResult) : static
+    public function withGetStockAndPriceInformationForForeignCustomerByProductIdsResult(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationForForeignCustomerByProductIdsResult): static
     {
         $new = clone $this;
         $new->GetStockAndPriceInformationForForeignCustomerByProductIdsResult = $GetStockAndPriceInformationForForeignCustomerByProductIdsResult;
@@ -42,4 +42,3 @@ class GetStockAndPriceInformationForForeignCustomerByProductIdsResponse implemen
         return $new;
     }
 }
-

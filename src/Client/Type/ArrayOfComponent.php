@@ -12,7 +12,7 @@ class ArrayOfComponent
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\Component
      */
-    public function getComponent() : \Naugrim\WortmannSoapApi\Client\Type\Component
+    public function getComponent(): \Naugrim\WortmannSoapApi\Client\Type\Component
     {
         return $this->Component;
     }
@@ -21,7 +21,7 @@ class ArrayOfComponent
      * @param \Naugrim\WortmannSoapApi\Client\Type\Component $Component
      * @return static
      */
-    public function withComponent(\Naugrim\WortmannSoapApi\Client\Type\Component $Component) : static
+    public function withComponent(\Naugrim\WortmannSoapApi\Client\Type\Component $Component): static
     {
         $new = clone $this;
         $new->Component = $Component;
@@ -29,4 +29,3 @@ class ArrayOfComponent
         return $new;
     }
 }
-

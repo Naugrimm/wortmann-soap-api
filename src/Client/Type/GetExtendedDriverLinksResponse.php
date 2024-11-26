@@ -25,7 +25,7 @@ class GetExtendedDriverLinksResponse implements RequestInterface, ResultInterfac
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse
      */
-    public function getGetExtendedDriverLinksResult() : \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse
+    public function getGetExtendedDriverLinksResult(): \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse
     {
         return $this->GetExtendedDriverLinksResult;
     }
@@ -34,7 +34,7 @@ class GetExtendedDriverLinksResponse implements RequestInterface, ResultInterfac
      * @param \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse $GetExtendedDriverLinksResult
      * @return static
      */
-    public function withGetExtendedDriverLinksResult(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse $GetExtendedDriverLinksResult) : static
+    public function withGetExtendedDriverLinksResult(\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceDriverResponse $GetExtendedDriverLinksResult): static
     {
         $new = clone $this;
         $new->GetExtendedDriverLinksResult = $GetExtendedDriverLinksResult;
@@ -42,4 +42,3 @@ class GetExtendedDriverLinksResponse implements RequestInterface, ResultInterfac
         return $new;
     }
 }
-

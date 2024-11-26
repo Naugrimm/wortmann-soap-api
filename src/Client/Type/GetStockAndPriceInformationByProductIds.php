@@ -38,7 +38,7 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
     /**
      * @return string
      */
-    public function getUsername() : string
+    public function getUsername(): string
     {
         return $this->Username;
     }
@@ -47,7 +47,7 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
      * @param string $Username
      * @return static
      */
-    public function withUsername(string $Username) : static
+    public function withUsername(string $Username): static
     {
         $new = clone $this;
         $new->Username = $Username;
@@ -58,7 +58,7 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
     /**
      * @return string
      */
-    public function getPasswordHash() : string
+    public function getPasswordHash(): string
     {
         return $this->PasswordHash;
     }
@@ -67,7 +67,7 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
      * @param string $PasswordHash
      * @return static
      */
-    public function withPasswordHash(string $PasswordHash) : static
+    public function withPasswordHash(string $PasswordHash): static
     {
         $new = clone $this;
         $new->PasswordHash = $PasswordHash;
@@ -78,7 +78,7 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
      */
-    public function getProductIds() : \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
+    public function getProductIds(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString
     {
         return $this->ProductIds;
     }
@@ -87,7 +87,7 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
      * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds
      * @return static
      */
-    public function withProductIds(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds) : static
+    public function withProductIds(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfString $ProductIds): static
     {
         $new = clone $this;
         $new->ProductIds = $ProductIds;
@@ -95,4 +95,3 @@ class GetStockAndPriceInformationByProductIds implements RequestInterface
         return $new;
     }
 }
-

@@ -12,7 +12,7 @@ class ArrayOfTreeListEntry
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry
      */
-    public function getTreeListEntry() : \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry
+    public function getTreeListEntry(): \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry
     {
         return $this->TreeListEntry;
     }
@@ -21,7 +21,7 @@ class ArrayOfTreeListEntry
      * @param \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry $TreeListEntry
      * @return static
      */
-    public function withTreeListEntry(\Naugrim\WortmannSoapApi\Client\Type\TreeListEntry $TreeListEntry) : static
+    public function withTreeListEntry(\Naugrim\WortmannSoapApi\Client\Type\TreeListEntry $TreeListEntry): static
     {
         $new = clone $this;
         $new->TreeListEntry = $TreeListEntry;
@@ -29,4 +29,3 @@ class ArrayOfTreeListEntry
         return $new;
     }
 }
-

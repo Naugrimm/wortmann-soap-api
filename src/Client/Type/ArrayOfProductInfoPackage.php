@@ -12,7 +12,7 @@ class ArrayOfProductInfoPackage
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage
      */
-    public function getProductInfoPackage() : \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage
+    public function getProductInfoPackage(): \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage
     {
         return $this->ProductInfoPackage;
     }
@@ -21,7 +21,7 @@ class ArrayOfProductInfoPackage
      * @param \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage $ProductInfoPackage
      * @return static
      */
-    public function withProductInfoPackage(\Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage $ProductInfoPackage) : static
+    public function withProductInfoPackage(\Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage $ProductInfoPackage): static
     {
         $new = clone $this;
         $new->ProductInfoPackage = $ProductInfoPackage;
@@ -29,4 +29,3 @@ class ArrayOfProductInfoPackage
         return $new;
     }
 }
-

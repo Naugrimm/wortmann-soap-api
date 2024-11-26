@@ -12,7 +12,7 @@ class ArrayOfSysInfoDocument
     /**
      * @return \Naugrim\WortmannSoapApi\Client\Type\SysInfoDocument
      */
-    public function getSysInfoDocument() : \Naugrim\WortmannSoapApi\Client\Type\SysInfoDocument
+    public function getSysInfoDocument(): \Naugrim\WortmannSoapApi\Client\Type\SysInfoDocument
     {
         return $this->SysInfoDocument;
     }
@@ -21,7 +21,7 @@ class ArrayOfSysInfoDocument
      * @param \Naugrim\WortmannSoapApi\Client\Type\SysInfoDocument $SysInfoDocument
      * @return static
      */
-    public function withSysInfoDocument(\Naugrim\WortmannSoapApi\Client\Type\SysInfoDocument $SysInfoDocument) : static
+    public function withSysInfoDocument(\Naugrim\WortmannSoapApi\Client\Type\SysInfoDocument $SysInfoDocument): static
     {
         $new = clone $this;
         $new->SysInfoDocument = $SysInfoDocument;
@@ -29,4 +29,3 @@ class ArrayOfSysInfoDocument
         return $new;
     }
 }
-
