@@ -3,18 +3,18 @@
 namespace Naugrim\WortmannSoapApi\Client;
 
 use GuzzleHttp\Client;
+use Phpro\SoapClient\Caller\EngineCaller;
+use Phpro\SoapClient\Caller\EventDispatchingCaller;
+use Phpro\SoapClient\Soap\DefaultEngineFactory;
 use Psr\Http\Client\ClientInterface;
+use Soap\ExtSoapEngine\ExtSoapOptions;
 use Soap\Psr18Transport\Psr18Transport;
 use Symfony\Component\EventDispatcher\EventDispatcher;
-use Phpro\SoapClient\Soap\DefaultEngineFactory;
-use Soap\ExtSoapEngine\ExtSoapOptions;
-use Phpro\SoapClient\Caller\EventDispatchingCaller;
-use Phpro\SoapClient\Caller\EngineCaller;
 
 class ApiClientFactory
 {
 
-    public static function factory(string $wsdl, ?ClientInterface $client = null) : ApiClient
+    public static function factory(string $wsdl, ?ClientInterface $client = null): ApiClient
     {
         $client ??= new Client();
 

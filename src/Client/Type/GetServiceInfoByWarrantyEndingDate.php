@@ -2,35 +2,33 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use DateTimeInterface;
 use Phpro\SoapClient\Type\RequestInterface;
 
 class GetServiceInfoByWarrantyEndingDate implements RequestInterface
 {
+    /**
+     * @var string
+     */
+    private string $Username;
 
     /**
      * @var string
      */
-    private $Username;
+    private string $PasswordHash;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
-    private $PasswordHash;
-
-    /**
-     * @var DateTimeInterface
-     */
-    private $WarrantyEndingDate;
+    private \DateTimeInterface $WarrantyEndingDate;
 
     /**
      * Constructor
      *
-     * @var string $Username
-     * @var string $PasswordHash
-     * @var DateTimeInterface $WarrantyEndingDate
+     * @param string $Username
+     * @param string $PasswordHash
+     * @param \DateTimeInterface $WarrantyEndingDate
      */
-    public function __construct($Username, $PasswordHash, $WarrantyEndingDate)
+    public function __construct(string $Username, string $PasswordHash, \DateTimeInterface $WarrantyEndingDate)
     {
         $this->Username = $Username;
         $this->PasswordHash = $PasswordHash;
@@ -40,16 +38,16 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
     /**
      * @return string
      */
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->Username;
     }
 
     /**
      * @param string $Username
-     * @return GetServiceInfoByWarrantyEndingDate
+     * @return static
      */
-    public function withUsername($Username)
+    public function withUsername(string $Username): static
     {
         $new = clone $this;
         $new->Username = $Username;
@@ -60,16 +58,16 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
     /**
      * @return string
      */
-    public function getPasswordHash()
+    public function getPasswordHash(): string
     {
         return $this->PasswordHash;
     }
 
     /**
      * @param string $PasswordHash
-     * @return GetServiceInfoByWarrantyEndingDate
+     * @return static
      */
-    public function withPasswordHash($PasswordHash)
+    public function withPasswordHash(string $PasswordHash): static
     {
         $new = clone $this;
         $new->PasswordHash = $PasswordHash;
@@ -78,18 +76,18 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getWarrantyEndingDate()
+    public function getWarrantyEndingDate(): \DateTimeInterface
     {
         return $this->WarrantyEndingDate;
     }
 
     /**
-     * @param DateTimeInterface $WarrantyEndingDate
-     * @return GetServiceInfoByWarrantyEndingDate
+     * @param \DateTimeInterface $WarrantyEndingDate
+     * @return static
      */
-    public function withWarrantyEndingDate($WarrantyEndingDate)
+    public function withWarrantyEndingDate(\DateTimeInterface $WarrantyEndingDate): static
     {
         $new = clone $this;
         $new->WarrantyEndingDate = $WarrantyEndingDate;

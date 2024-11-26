@@ -2,124 +2,126 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use DateTimeInterface;
-
 class SysInfoDocument
 {
+    /**
+     * @var int
+     */
+    private int $Id;
+
+    /**
+     * @var string
+     */
+    private string $NavID;
 
     /**
      * @var int
      */
-    private $Id;
+    private int $ParentId;
 
     /**
      * @var string
      */
-    private $NavID;
+    private string $OldId;
+
+    /**
+     * @var string
+     */
+    private string $Description;
 
     /**
      * @var int
      */
-    private $ParentId;
+    private int $Type;
+
+    /**
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem
+     */
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem $OperatingSystems;
+
+    /**
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage
+     */
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage $Languages;
+
+    /**
+     * @var \DateTimeInterface
+     */
+    private \DateTimeInterface $DocumentDate;
 
     /**
      * @var string
      */
-    private $OldId;
+    private string $Version;
+
+    /**
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion
+     */
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion $Subversions;
 
     /**
      * @var string
      */
-    private $Description;
+    private string $MatchCode;
 
     /**
      * @var int
      */
-    private $Type;
-
-    /**
-     * @var array
-     */
-    private $OperatingSystems;
-
-    /**
-     * @var array
-     */
-    private $Languages;
-
-    /**
-     * @var DateTimeInterface
-     */
-    private $DocumentDate;
-
-    /**
-     * @var string
-     */
-    private $Version;
-
-    /**
-     * @var string
-     */
-    private $MatchCode;
-
-    /**
-     * @var int
-     */
-    private $Release;
+    private int $Release;
 
     /**
      * @var bool
      */
-    private $RegisteredDownload;
+    private bool $RegisteredDownload;
 
     /**
      * @var bool
      */
-    private $FindOnlyViaSerialNo;
+    private bool $FindOnlyViaSerialNo;
 
     /**
      * @var string
      */
-    private $LongDescription;
+    private string $LongDescription;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
-    private $MinDate;
+    private \DateTimeInterface $MinDate;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
-    private $MaxDate;
+    private \DateTimeInterface $MaxDate;
 
     /**
-     * @var array
+     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink
      */
-    private $Links;
-
-    /**
-     * @var string
-     */
-    private $FaultText;
+    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink $Links;
 
     /**
      * @var string
      */
-    private $SolutionText;
+    private string $FaultText;
+
+    /**
+     * @var string
+     */
+    private string $SolutionText;
 
     /**
      * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->Id;
     }
 
     /**
      * @param int $Id
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withId($Id)
+    public function withId(int $Id): static
     {
         $new = clone $this;
         $new->Id = $Id;
@@ -130,16 +132,16 @@ class SysInfoDocument
     /**
      * @return string
      */
-    public function getNavID()
+    public function getNavID(): string
     {
         return $this->NavID;
     }
 
     /**
      * @param string $NavID
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withNavID($NavID)
+    public function withNavID(string $NavID): static
     {
         $new = clone $this;
         $new->NavID = $NavID;
@@ -150,16 +152,16 @@ class SysInfoDocument
     /**
      * @return int
      */
-    public function getParentId()
+    public function getParentId(): int
     {
         return $this->ParentId;
     }
 
     /**
      * @param int $ParentId
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withParentId($ParentId)
+    public function withParentId(int $ParentId): static
     {
         $new = clone $this;
         $new->ParentId = $ParentId;
@@ -170,16 +172,16 @@ class SysInfoDocument
     /**
      * @return string
      */
-    public function getOldId()
+    public function getOldId(): string
     {
         return $this->OldId;
     }
 
     /**
      * @param string $OldId
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withOldId($OldId)
+    public function withOldId(string $OldId): static
     {
         $new = clone $this;
         $new->OldId = $OldId;
@@ -190,16 +192,16 @@ class SysInfoDocument
     /**
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->Description;
     }
 
     /**
      * @param string $Description
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withDescription($Description)
+    public function withDescription(string $Description): static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -210,16 +212,16 @@ class SysInfoDocument
     /**
      * @return int
      */
-    public function getType()
+    public function getType(): int
     {
         return $this->Type;
     }
 
     /**
      * @param int $Type
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withType($Type)
+    public function withType(int $Type): static
     {
         $new = clone $this;
         $new->Type = $Type;
@@ -228,18 +230,18 @@ class SysInfoDocument
     }
 
     /**
-     * @return array
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem
      */
-    public function getOperatingSystems()
+    public function getOperatingSystems(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem
     {
         return $this->OperatingSystems;
     }
 
     /**
-     * @param array $OperatingSystems
-     * @return SysInfoDocument
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem $OperatingSystems
+     * @return static
      */
-    public function withOperatingSystems($OperatingSystems)
+    public function withOperatingSystems(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoOperatingSystem $OperatingSystems): static
     {
         $new = clone $this;
         $new->OperatingSystems = $OperatingSystems;
@@ -248,18 +250,18 @@ class SysInfoDocument
     }
 
     /**
-     * @return array
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage
      */
-    public function getLanguages()
+    public function getLanguages(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage
     {
         return $this->Languages;
     }
 
     /**
-     * @param array $Languages
-     * @return SysInfoDocument
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage $Languages
+     * @return static
      */
-    public function withLanguages($Languages)
+    public function withLanguages(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLanguage $Languages): static
     {
         $new = clone $this;
         $new->Languages = $Languages;
@@ -268,18 +270,18 @@ class SysInfoDocument
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getDocumentDate()
+    public function getDocumentDate(): \DateTimeInterface
     {
         return $this->DocumentDate;
     }
 
     /**
-     * @param DateTimeInterface $DocumentDate
-     * @return SysInfoDocument
+     * @param \DateTimeInterface $DocumentDate
+     * @return static
      */
-    public function withDocumentDate($DocumentDate)
+    public function withDocumentDate(\DateTimeInterface $DocumentDate): static
     {
         $new = clone $this;
         $new->DocumentDate = $DocumentDate;
@@ -290,16 +292,16 @@ class SysInfoDocument
     /**
      * @return string
      */
-    public function getVersion()
+    public function getVersion(): string
     {
         return $this->Version;
     }
 
     /**
      * @param string $Version
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withVersion($Version)
+    public function withVersion(string $Version): static
     {
         $new = clone $this;
         $new->Version = $Version;
@@ -308,18 +310,38 @@ class SysInfoDocument
     }
 
     /**
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion
+     */
+    public function getSubversions(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion
+    {
+        return $this->Subversions;
+    }
+
+    /**
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion $Subversions
+     * @return static
+     */
+    public function withSubversions(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoSubversion $Subversions): static
+    {
+        $new = clone $this;
+        $new->Subversions = $Subversions;
+
+        return $new;
+    }
+
+    /**
      * @return string
      */
-    public function getMatchCode()
+    public function getMatchCode(): string
     {
         return $this->MatchCode;
     }
 
     /**
      * @param string $MatchCode
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withMatchCode($MatchCode)
+    public function withMatchCode(string $MatchCode): static
     {
         $new = clone $this;
         $new->MatchCode = $MatchCode;
@@ -330,16 +352,16 @@ class SysInfoDocument
     /**
      * @return int
      */
-    public function getRelease()
+    public function getRelease(): int
     {
         return $this->Release;
     }
 
     /**
      * @param int $Release
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withRelease($Release)
+    public function withRelease(int $Release): static
     {
         $new = clone $this;
         $new->Release = $Release;
@@ -350,16 +372,16 @@ class SysInfoDocument
     /**
      * @return bool
      */
-    public function getRegisteredDownload()
+    public function getRegisteredDownload(): bool
     {
         return $this->RegisteredDownload;
     }
 
     /**
      * @param bool $RegisteredDownload
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withRegisteredDownload($RegisteredDownload)
+    public function withRegisteredDownload(bool $RegisteredDownload): static
     {
         $new = clone $this;
         $new->RegisteredDownload = $RegisteredDownload;
@@ -370,16 +392,16 @@ class SysInfoDocument
     /**
      * @return bool
      */
-    public function getFindOnlyViaSerialNo()
+    public function getFindOnlyViaSerialNo(): bool
     {
         return $this->FindOnlyViaSerialNo;
     }
 
     /**
      * @param bool $FindOnlyViaSerialNo
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withFindOnlyViaSerialNo($FindOnlyViaSerialNo)
+    public function withFindOnlyViaSerialNo(bool $FindOnlyViaSerialNo): static
     {
         $new = clone $this;
         $new->FindOnlyViaSerialNo = $FindOnlyViaSerialNo;
@@ -390,16 +412,16 @@ class SysInfoDocument
     /**
      * @return string
      */
-    public function getLongDescription()
+    public function getLongDescription(): string
     {
         return $this->LongDescription;
     }
 
     /**
      * @param string $LongDescription
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withLongDescription($LongDescription)
+    public function withLongDescription(string $LongDescription): static
     {
         $new = clone $this;
         $new->LongDescription = $LongDescription;
@@ -408,18 +430,18 @@ class SysInfoDocument
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getMinDate()
+    public function getMinDate(): \DateTimeInterface
     {
         return $this->MinDate;
     }
 
     /**
-     * @param DateTimeInterface $MinDate
-     * @return SysInfoDocument
+     * @param \DateTimeInterface $MinDate
+     * @return static
      */
-    public function withMinDate($MinDate)
+    public function withMinDate(\DateTimeInterface $MinDate): static
     {
         $new = clone $this;
         $new->MinDate = $MinDate;
@@ -428,18 +450,18 @@ class SysInfoDocument
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getMaxDate()
+    public function getMaxDate(): \DateTimeInterface
     {
         return $this->MaxDate;
     }
 
     /**
-     * @param DateTimeInterface $MaxDate
-     * @return SysInfoDocument
+     * @param \DateTimeInterface $MaxDate
+     * @return static
      */
-    public function withMaxDate($MaxDate)
+    public function withMaxDate(\DateTimeInterface $MaxDate): static
     {
         $new = clone $this;
         $new->MaxDate = $MaxDate;
@@ -448,18 +470,18 @@ class SysInfoDocument
     }
 
     /**
-     * @return array
+     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink
      */
-    public function getLinks()
+    public function getLinks(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink
     {
         return $this->Links;
     }
 
     /**
-     * @param array $Links
-     * @return SysInfoDocument
+     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink $Links
+     * @return static
      */
-    public function withLinks($Links)
+    public function withLinks(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfSysInfoLink $Links): static
     {
         $new = clone $this;
         $new->Links = $Links;
@@ -470,16 +492,16 @@ class SysInfoDocument
     /**
      * @return string
      */
-    public function getFaultText()
+    public function getFaultText(): string
     {
         return $this->FaultText;
     }
 
     /**
      * @param string $FaultText
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withFaultText($FaultText)
+    public function withFaultText(string $FaultText): static
     {
         $new = clone $this;
         $new->FaultText = $FaultText;
@@ -490,16 +512,16 @@ class SysInfoDocument
     /**
      * @return string
      */
-    public function getSolutionText()
+    public function getSolutionText(): string
     {
         return $this->SolutionText;
     }
 
     /**
      * @param string $SolutionText
-     * @return SysInfoDocument
+     * @return static
      */
-    public function withSolutionText($SolutionText)
+    public function withSolutionText(string $SolutionText): static
     {
         $new = clone $this;
         $new->SolutionText = $SolutionText;

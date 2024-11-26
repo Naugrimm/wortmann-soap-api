@@ -6,30 +6,29 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetStockAndPriceInformationByProductId implements RequestInterface
 {
+    /**
+     * @var string
+     */
+    private string $Username;
 
     /**
      * @var string
      */
-    private $Username;
+    private string $PasswordHash;
 
     /**
      * @var string
      */
-    private $PasswordHash;
-
-    /**
-     * @var string
-     */
-    private $ProductId;
+    private string $ProductId;
 
     /**
      * Constructor
      *
-     * @var string $Username
-     * @var string $PasswordHash
-     * @var string $ProductId
+     * @param string $Username
+     * @param string $PasswordHash
+     * @param string $ProductId
      */
-    public function __construct($Username, $PasswordHash, $ProductId)
+    public function __construct(string $Username, string $PasswordHash, string $ProductId)
     {
         $this->Username = $Username;
         $this->PasswordHash = $PasswordHash;
@@ -39,16 +38,16 @@ class GetStockAndPriceInformationByProductId implements RequestInterface
     /**
      * @return string
      */
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->Username;
     }
 
     /**
      * @param string $Username
-     * @return GetStockAndPriceInformationByProductId
+     * @return static
      */
-    public function withUsername($Username)
+    public function withUsername(string $Username): static
     {
         $new = clone $this;
         $new->Username = $Username;
@@ -59,16 +58,16 @@ class GetStockAndPriceInformationByProductId implements RequestInterface
     /**
      * @return string
      */
-    public function getPasswordHash()
+    public function getPasswordHash(): string
     {
         return $this->PasswordHash;
     }
 
     /**
      * @param string $PasswordHash
-     * @return GetStockAndPriceInformationByProductId
+     * @return static
      */
-    public function withPasswordHash($PasswordHash)
+    public function withPasswordHash(string $PasswordHash): static
     {
         $new = clone $this;
         $new->PasswordHash = $PasswordHash;
@@ -79,16 +78,16 @@ class GetStockAndPriceInformationByProductId implements RequestInterface
     /**
      * @return string
      */
-    public function getProductId()
+    public function getProductId(): string
     {
         return $this->ProductId;
     }
 
     /**
      * @param string $ProductId
-     * @return GetStockAndPriceInformationByProductId
+     * @return static
      */
-    public function withProductId($ProductId)
+    public function withProductId(string $ProductId): static
     {
         $new = clone $this;
         $new->ProductId = $ProductId;

@@ -2,89 +2,86 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use DateTimeInterface;
-
 class ProductInfoPackage
 {
+    /**
+     * @var string
+     */
+    private string $ProductId;
+
+    /**
+     * @var float
+     */
+    private float $PriceB2B;
+
+    /**
+     * @var float
+     */
+    private float $PriceB2BDiscounted;
+
+    /**
+     * @var float
+     */
+    private float $PriceB2BDiscountPercent;
+
+    /**
+     * @var float
+     */
+    private float $PriceB2BDiscountAmount;
+
+    /**
+     * @var float
+     */
+    private float $PriceB2CinclVAT;
+
+    /**
+     * @var float
+     */
+    private float $PriceB2CexclVAT;
 
     /**
      * @var string
      */
-    private $ProductId;
+    private string $Currency;
 
     /**
      * @var float
      */
-    private $PriceB2B;
-
-    /**
-     * @var float
-     */
-    private $PriceB2BDiscounted;
-
-    /**
-     * @var float
-     */
-    private $PriceB2BDiscountPercent;
-
-    /**
-     * @var float
-     */
-    private $PriceB2BDiscountAmount;
-
-    /**
-     * @var float
-     */
-    private $PriceB2CinclVAT;
-
-    /**
-     * @var float
-     */
-    private $PriceB2CexclVAT;
+    private float $vatRate;
 
     /**
      * @var string
      */
-    private $Currency;
-
-    /**
-     * @var float
-     */
-    private $vatRate;
-
-    /**
-     * @var string
-     */
-    private $vatCountry;
+    private string $vatCountry;
 
     /**
      * @var int
      */
-    private $Stock;
+    private int $Stock;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
-    private $StockNextDelivery;
+    private \DateTimeInterface $StockNextDelivery;
 
     /**
      * @var int
      */
-    private $StockNextDeliveryAccessVolume;
+    private int $StockNextDeliveryAccessVolume;
 
     /**
      * @return string
      */
-    public function getProductId()
+    public function getProductId(): string
     {
         return $this->ProductId;
     }
 
     /**
      * @param string $ProductId
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withProductId($ProductId)
+    public function withProductId(string $ProductId): static
     {
         $new = clone $this;
         $new->ProductId = $ProductId;
@@ -95,16 +92,16 @@ class ProductInfoPackage
     /**
      * @return float
      */
-    public function getPriceB2B()
+    public function getPriceB2B(): float
     {
         return $this->PriceB2B;
     }
 
     /**
      * @param float $PriceB2B
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withPriceB2B($PriceB2B)
+    public function withPriceB2B(float $PriceB2B): static
     {
         $new = clone $this;
         $new->PriceB2B = $PriceB2B;
@@ -115,16 +112,16 @@ class ProductInfoPackage
     /**
      * @return float
      */
-    public function getPriceB2BDiscounted()
+    public function getPriceB2BDiscounted(): float
     {
         return $this->PriceB2BDiscounted;
     }
 
     /**
      * @param float $PriceB2BDiscounted
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withPriceB2BDiscounted($PriceB2BDiscounted)
+    public function withPriceB2BDiscounted(float $PriceB2BDiscounted): static
     {
         $new = clone $this;
         $new->PriceB2BDiscounted = $PriceB2BDiscounted;
@@ -135,16 +132,16 @@ class ProductInfoPackage
     /**
      * @return float
      */
-    public function getPriceB2BDiscountPercent()
+    public function getPriceB2BDiscountPercent(): float
     {
         return $this->PriceB2BDiscountPercent;
     }
 
     /**
      * @param float $PriceB2BDiscountPercent
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withPriceB2BDiscountPercent($PriceB2BDiscountPercent)
+    public function withPriceB2BDiscountPercent(float $PriceB2BDiscountPercent): static
     {
         $new = clone $this;
         $new->PriceB2BDiscountPercent = $PriceB2BDiscountPercent;
@@ -155,16 +152,16 @@ class ProductInfoPackage
     /**
      * @return float
      */
-    public function getPriceB2BDiscountAmount()
+    public function getPriceB2BDiscountAmount(): float
     {
         return $this->PriceB2BDiscountAmount;
     }
 
     /**
      * @param float $PriceB2BDiscountAmount
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withPriceB2BDiscountAmount($PriceB2BDiscountAmount)
+    public function withPriceB2BDiscountAmount(float $PriceB2BDiscountAmount): static
     {
         $new = clone $this;
         $new->PriceB2BDiscountAmount = $PriceB2BDiscountAmount;
@@ -175,16 +172,16 @@ class ProductInfoPackage
     /**
      * @return float
      */
-    public function getPriceB2CinclVAT()
+    public function getPriceB2CinclVAT(): float
     {
         return $this->PriceB2CinclVAT;
     }
 
     /**
      * @param float $PriceB2CinclVAT
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withPriceB2CinclVAT($PriceB2CinclVAT)
+    public function withPriceB2CinclVAT(float $PriceB2CinclVAT): static
     {
         $new = clone $this;
         $new->PriceB2CinclVAT = $PriceB2CinclVAT;
@@ -195,16 +192,16 @@ class ProductInfoPackage
     /**
      * @return float
      */
-    public function getPriceB2CexclVAT()
+    public function getPriceB2CexclVAT(): float
     {
         return $this->PriceB2CexclVAT;
     }
 
     /**
      * @param float $PriceB2CexclVAT
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withPriceB2CexclVAT($PriceB2CexclVAT)
+    public function withPriceB2CexclVAT(float $PriceB2CexclVAT): static
     {
         $new = clone $this;
         $new->PriceB2CexclVAT = $PriceB2CexclVAT;
@@ -215,16 +212,16 @@ class ProductInfoPackage
     /**
      * @return string
      */
-    public function getCurrency()
+    public function getCurrency(): string
     {
         return $this->Currency;
     }
 
     /**
      * @param string $Currency
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withCurrency($Currency)
+    public function withCurrency(string $Currency): static
     {
         $new = clone $this;
         $new->Currency = $Currency;
@@ -235,16 +232,16 @@ class ProductInfoPackage
     /**
      * @return float
      */
-    public function getVatRate()
+    public function getVatRate(): float
     {
         return $this->vatRate;
     }
 
     /**
      * @param float $vatRate
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withVatRate($vatRate)
+    public function withVatRate(float $vatRate): static
     {
         $new = clone $this;
         $new->vatRate = $vatRate;
@@ -255,16 +252,16 @@ class ProductInfoPackage
     /**
      * @return string
      */
-    public function getVatCountry()
+    public function getVatCountry(): string
     {
         return $this->vatCountry;
     }
 
     /**
      * @param string $vatCountry
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withVatCountry($vatCountry)
+    public function withVatCountry(string $vatCountry): static
     {
         $new = clone $this;
         $new->vatCountry = $vatCountry;
@@ -275,16 +272,16 @@ class ProductInfoPackage
     /**
      * @return int
      */
-    public function getStock()
+    public function getStock(): int
     {
         return $this->Stock;
     }
 
     /**
      * @param int $Stock
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withStock($Stock)
+    public function withStock(int $Stock): static
     {
         $new = clone $this;
         $new->Stock = $Stock;
@@ -293,18 +290,18 @@ class ProductInfoPackage
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getStockNextDelivery()
+    public function getStockNextDelivery(): \DateTimeInterface
     {
         return $this->StockNextDelivery;
     }
 
     /**
-     * @param DateTimeInterface $StockNextDelivery
-     * @return ProductInfoPackage
+     * @param \DateTimeInterface $StockNextDelivery
+     * @return static
      */
-    public function withStockNextDelivery($StockNextDelivery)
+    public function withStockNextDelivery(\DateTimeInterface $StockNextDelivery): static
     {
         $new = clone $this;
         $new->StockNextDelivery = $StockNextDelivery;
@@ -315,16 +312,16 @@ class ProductInfoPackage
     /**
      * @return int
      */
-    public function getStockNextDeliveryAccessVolume()
+    public function getStockNextDeliveryAccessVolume(): int
     {
         return $this->StockNextDeliveryAccessVolume;
     }
 
     /**
      * @param int $StockNextDeliveryAccessVolume
-     * @return ProductInfoPackage
+     * @return static
      */
-    public function withStockNextDeliveryAccessVolume($StockNextDeliveryAccessVolume)
+    public function withStockNextDeliveryAccessVolume(int $StockNextDeliveryAccessVolume): static
     {
         $new = clone $this;
         $new->StockNextDeliveryAccessVolume = $StockNextDeliveryAccessVolume;
