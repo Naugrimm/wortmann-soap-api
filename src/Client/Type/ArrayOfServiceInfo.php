@@ -5,23 +5,23 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 class ArrayOfServiceInfo
 {
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ServiceInfo
+     * @var null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\ServiceInfo>
      */
-    private \Naugrim\WortmannSoapApi\Client\Type\ServiceInfo $ServiceInfo;
+    private ?array $ServiceInfo = null;
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ServiceInfo
+     * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\ServiceInfo>
      */
-    public function getServiceInfo(): \Naugrim\WortmannSoapApi\Client\Type\ServiceInfo
+    public function getServiceInfo() : ?array
     {
         return $this->ServiceInfo;
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ServiceInfo $ServiceInfo
+     * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\ServiceInfo> $ServiceInfo
      * @return static
      */
-    public function withServiceInfo(\Naugrim\WortmannSoapApi\Client\Type\ServiceInfo $ServiceInfo): static
+    public function withServiceInfo(?array $ServiceInfo) : static
     {
         $new = clone $this;
         $new->ServiceInfo = $ServiceInfo;
@@ -29,3 +29,4 @@ class ArrayOfServiceInfo
         return $new;
     }
 }
+

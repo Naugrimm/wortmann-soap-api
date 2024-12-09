@@ -5,23 +5,23 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 class ArrayOfSysInfoLanguage
 {
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage
+     * @var null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage>
      */
-    private \Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage $SysInfoLanguage;
+    private ?array $SysInfoLanguage = null;
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage
+     * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage>
      */
-    public function getSysInfoLanguage(): \Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage
+    public function getSysInfoLanguage() : ?array
     {
         return $this->SysInfoLanguage;
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage $SysInfoLanguage
+     * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage> $SysInfoLanguage
      * @return static
      */
-    public function withSysInfoLanguage(\Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage $SysInfoLanguage): static
+    public function withSysInfoLanguage(?array $SysInfoLanguage) : static
     {
         $new = clone $this;
         $new->SysInfoLanguage = $SysInfoLanguage;
@@ -29,3 +29,4 @@ class ArrayOfSysInfoLanguage
         return $new;
     }
 }
+

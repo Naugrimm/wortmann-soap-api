@@ -5,23 +5,23 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 class ArrayOfSysInfoOperatingSystem
 {
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem
+     * @var null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem>
      */
-    private \Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem $SysInfoOperatingSystem;
+    private ?array $SysInfoOperatingSystem = null;
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem
+     * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem>
      */
-    public function getSysInfoOperatingSystem(): \Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem
+    public function getSysInfoOperatingSystem() : ?array
     {
         return $this->SysInfoOperatingSystem;
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem $SysInfoOperatingSystem
+     * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem> $SysInfoOperatingSystem
      * @return static
      */
-    public function withSysInfoOperatingSystem(\Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem $SysInfoOperatingSystem): static
+    public function withSysInfoOperatingSystem(?array $SysInfoOperatingSystem) : static
     {
         $new = clone $this;
         $new->SysInfoOperatingSystem = $SysInfoOperatingSystem;
@@ -29,3 +29,4 @@ class ArrayOfSysInfoOperatingSystem
         return $new;
     }
 }
+

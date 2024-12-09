@@ -25,7 +25,8 @@
         "mockery/mockery": "^1.6",
         "phpstan/phpstan": "^1.11",
         "phpstan/phpstan-deprecation-rules": "^1.2",
-        "orchestra/testbench": "^7.0||^8.0||^9.0"
+        "orchestra/testbench": "^7.0||^8.0||^9.0",
+        "php-vcr/php-vcr": "^1.8"
     },
     "autoload": {
         "psr-4": {

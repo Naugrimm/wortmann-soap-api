@@ -1,0 +1,68 @@
+
+-
+    request:
+        method: POST
+        url: 'https://www.wortmann.de/api/CustomerWebService.asmx'
+        headers:
+            Host: www.wortmann.de
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            SOAPAction: '"Wortmann.CustomerWebService/GetStockAndPriceInformationByProductId"'
+            Content-Type: 'text/xml; charset="utf-8"'
+            Accept: ''
+        body: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"Wortmann.CustomerWebService\"><SOAP-ENV:Body><ns1:GetStockAndPriceInformationByProductId><ns1:Username>test</ns1:Username><ns1:PasswordHash>test</ns1:PasswordHash><ns1:ProductId>1481272</ns1:ProductId></ns1:GetStockAndPriceInformationByProductId></SOAP-ENV:Body></SOAP-ENV:Envelope>\n"
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Cache-Control: 'private, max-age=0'
+            Content-Type: 'text/xml; charset=utf-8'
+            Server: 'WORTMANN AG Webserver 4'
+            X-Powered-By: ASP.NET
+            X-UA-Compatible: 'IE=Edge,chrome=1'
+            Strict-Transport-Security: max-age=31536000
+            Date: 'Mon, 09 Dec 2024 08:25:26 GMT'
+            Content-Length: '1058'
+        body: '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetStockAndPriceInformationByProductIdResponse xmlns="Wortmann.CustomerWebService"><GetStockAndPriceInformationByProductIdResult><Success>true</Success><ProductInfoPackages><ProductInfoPackage><ProductId>1481272</ProductId><PriceB2B>35.00</PriceB2B><PriceB2BDiscounted>35.00</PriceB2BDiscounted><PriceB2BDiscountPercent>0.00</PriceB2BDiscountPercent><PriceB2BDiscountAmount>0.00</PriceB2BDiscountAmount><PriceB2CinclVAT>0.00</PriceB2CinclVAT><PriceB2CexclVAT>0.00</PriceB2CexclVAT><Currency>EUR</Currency><vatRate>0.00</vatRate><vatCountry>DE</vatCountry><Stock>15</Stock><StockNextDelivery xsi:nil="true" /><StockNextDeliveryAccessVolume>0</StockNextDeliveryAccessVolume></ProductInfoPackage></ProductInfoPackages></GetStockAndPriceInformationByProductIdResult></GetStockAndPriceInformationByProductIdResponse></soap:Body></soap:Envelope>'
+        curl_info:
+            url: 'https://www.wortmann.de/api/CustomerWebService.asmx'
+            content_type: 'text/xml; charset=utf-8'
+            http_code: 200
+            header_size: 288
+            request_size: 795
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.080175
+            namelookup_time: 0.001867
+            connect_time: 0.023139
+            pretransfer_time: 0.053524
+            size_upload: 556.0
+            size_download: 1058.0
+            speed_download: 13196.0
+            speed_upload: 6934.0
+            download_content_length: 1058.0
+            upload_content_length: 556.0
+            starttransfer_time: 0.080147
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 185.35.12.243
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 10.11.1.159
+            local_port: 50405
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: https
+            appconnect_time_us: 53484
+            connect_time_us: 23139
+            namelookup_time_us: 1867
+            pretransfer_time_us: 53524
+            redirect_time_us: 0
+            starttransfer_time_us: 80147
+            total_time_us: 80175
+            effective_method: POST
+    index: 0

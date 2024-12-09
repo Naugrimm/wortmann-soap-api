@@ -16,4 +16,8 @@
       <directory suffix=".php">src</directory>
     </include>
   </source>
+  <php>
+    <env name="WORTMANN_SOAP_API_USERNAME" value="test" />
+    <env name="WORTMANN_SOAP_API_PASSWORD" value="test" />
+  </php>
 </phpunit>

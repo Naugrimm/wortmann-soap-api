@@ -15,14 +15,14 @@ class SysInfoLanguage
     private int $ParentId;
 
     /**
-     * @var string
+     * @var null | string
      */
-    private string $Description;
+    private ?string $Description = null;
 
     /**
-     * @var string
+     * @var null | string
      */
-    private string $Code;
+    private ?string $Code = null;
 
     /**
      * @var int
@@ -32,7 +32,7 @@ class SysInfoLanguage
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->Id;
     }
@@ -41,7 +41,7 @@ class SysInfoLanguage
      * @param int $Id
      * @return static
      */
-    public function withId(int $Id): static
+    public function withId(int $Id) : static
     {
         $new = clone $this;
         $new->Id = $Id;
@@ -52,7 +52,7 @@ class SysInfoLanguage
     /**
      * @return int
      */
-    public function getParentId(): int
+    public function getParentId() : int
     {
         return $this->ParentId;
     }
@@ -61,7 +61,7 @@ class SysInfoLanguage
      * @param int $ParentId
      * @return static
      */
-    public function withParentId(int $ParentId): static
+    public function withParentId(int $ParentId) : static
     {
         $new = clone $this;
         $new->ParentId = $ParentId;
@@ -70,18 +70,18 @@ class SysInfoLanguage
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getDescription(): string
+    public function getDescription() : ?string
     {
         return $this->Description;
     }
 
     /**
-     * @param string $Description
+     * @param null | string $Description
      * @return static
      */
-    public function withDescription(string $Description): static
+    public function withDescription(?string $Description) : static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -90,18 +90,18 @@ class SysInfoLanguage
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCode(): string
+    public function getCode() : ?string
     {
         return $this->Code;
     }
 
     /**
-     * @param string $Code
+     * @param null | string $Code
      * @return static
      */
-    public function withCode(string $Code): static
+    public function withCode(?string $Code) : static
     {
         $new = clone $this;
         $new->Code = $Code;
@@ -112,7 +112,7 @@ class SysInfoLanguage
     /**
      * @return int
      */
-    public function getSortOrder(): int
+    public function getSortOrder() : int
     {
         return $this->SortOrder;
     }
@@ -121,7 +121,7 @@ class SysInfoLanguage
      * @param int $SortOrder
      * @return static
      */
-    public function withSortOrder(int $SortOrder): static
+    public function withSortOrder(int $SortOrder) : static
     {
         $new = clone $this;
         $new->SortOrder = $SortOrder;
@@ -129,3 +129,4 @@ class SysInfoLanguage
         return $new;
     }
 }
+

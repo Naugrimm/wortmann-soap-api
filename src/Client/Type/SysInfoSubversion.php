@@ -5,28 +5,28 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 class SysInfoSubversion
 {
     /**
-     * @var string
+     * @var null | string
      */
-    private string $Subversion;
+    private ?string $Subversion = null;
 
     /**
-     * @var string
+     * @var null | string
      */
-    private string $Description;
+    private ?string $Description = null;
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getSubversion(): string
+    public function getSubversion() : ?string
     {
         return $this->Subversion;
     }
 
     /**
-     * @param string $Subversion
+     * @param null | string $Subversion
      * @return static
      */
-    public function withSubversion(string $Subversion): static
+    public function withSubversion(?string $Subversion) : static
     {
         $new = clone $this;
         $new->Subversion = $Subversion;
@@ -35,18 +35,18 @@ class SysInfoSubversion
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getDescription(): string
+    public function getDescription() : ?string
     {
         return $this->Description;
     }
 
     /**
-     * @param string $Description
+     * @param null | string $Description
      * @return static
      */
-    public function withDescription(string $Description): static
+    public function withDescription(?string $Description) : static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -54,3 +54,4 @@ class SysInfoSubversion
         return $new;
     }
 }
+

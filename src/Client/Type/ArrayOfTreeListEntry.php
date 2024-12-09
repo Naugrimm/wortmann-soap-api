@@ -5,23 +5,23 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 class ArrayOfTreeListEntry
 {
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry
+     * @var null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry>
      */
-    private \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry $TreeListEntry;
+    private ?array $TreeListEntry = null;
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry
+     * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry>
      */
-    public function getTreeListEntry(): \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry
+    public function getTreeListEntry() : ?array
     {
         return $this->TreeListEntry;
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry $TreeListEntry
+     * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\TreeListEntry> $TreeListEntry
      * @return static
      */
-    public function withTreeListEntry(\Naugrim\WortmannSoapApi\Client\Type\TreeListEntry $TreeListEntry): static
+    public function withTreeListEntry(?array $TreeListEntry) : static
     {
         $new = clone $this;
         $new->TreeListEntry = $TreeListEntry;
@@ -29,3 +29,4 @@ class ArrayOfTreeListEntry
         return $new;
     }
 }
+

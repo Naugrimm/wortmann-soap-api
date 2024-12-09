@@ -2,9 +2,7 @@
 
 namespace Naugrim\WortmannSoapApi\Client\Type;
 
-use Phpro\SoapClient\Type\ResultInterface;
-
-class CustomerWebServiceDriverResponse implements ResultInterface
+class CustomerWebServiceDriverResponse
 {
     /**
      * @var bool
@@ -12,19 +10,19 @@ class CustomerWebServiceDriverResponse implements ResultInterface
     private bool $Success;
 
     /**
-     * @var string
+     * @var null | string
      */
-    private string $ErrorMesssage;
+    private ?string $ErrorMesssage = null;
 
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
+     * @var null | \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
      */
-    private \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers;
+    private ?\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers = null;
 
     /**
      * @return bool
      */
-    public function getSuccess(): bool
+    public function getSuccess() : bool
     {
         return $this->Success;
     }
@@ -33,7 +31,7 @@ class CustomerWebServiceDriverResponse implements ResultInterface
      * @param bool $Success
      * @return static
      */
-    public function withSuccess(bool $Success): static
+    public function withSuccess(bool $Success) : static
     {
         $new = clone $this;
         $new->Success = $Success;
@@ -42,18 +40,18 @@ class CustomerWebServiceDriverResponse implements ResultInterface
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getErrorMesssage(): string
+    public function getErrorMesssage() : ?string
     {
         return $this->ErrorMesssage;
     }
 
     /**
-     * @param string $ErrorMesssage
+     * @param null | string $ErrorMesssage
      * @return static
      */
-    public function withErrorMesssage(string $ErrorMesssage): static
+    public function withErrorMesssage(?string $ErrorMesssage) : static
     {
         $new = clone $this;
         $new->ErrorMesssage = $ErrorMesssage;
@@ -62,18 +60,18 @@ class CustomerWebServiceDriverResponse implements ResultInterface
     }
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
+     * @return null | \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
      */
-    public function getDrivers(): \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
+    public function getDrivers() : ?\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
     {
         return $this->Drivers;
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers
+     * @param null | \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers
      * @return static
      */
-    public function withDrivers(\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers): static
+    public function withDrivers(?\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers) : static
     {
         $new = clone $this;
         $new->Drivers = $Drivers;
@@ -81,3 +79,4 @@ class CustomerWebServiceDriverResponse implements ResultInterface
         return $new;
     }
 }
+
