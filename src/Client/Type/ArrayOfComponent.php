@@ -5,23 +5,23 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 class ArrayOfComponent
 {
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\Component
+     * @var null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\Component>
      */
-    private \Naugrim\WortmannSoapApi\Client\Type\Component $Component;
+    private ?array $Component = null;
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\Component
+     * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\Component>
      */
-    public function getComponent(): \Naugrim\WortmannSoapApi\Client\Type\Component
+    public function getComponent() : ?array
     {
         return $this->Component;
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\Component $Component
+     * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\Component> $Component
      * @return static
      */
-    public function withComponent(\Naugrim\WortmannSoapApi\Client\Type\Component $Component): static
+    public function withComponent(?array $Component) : static
     {
         $new = clone $this;
         $new->Component = $Component;
@@ -29,3 +29,4 @@ class ArrayOfComponent
         return $new;
     }
 }
+

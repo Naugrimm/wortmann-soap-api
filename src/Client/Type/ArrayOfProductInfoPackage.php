@@ -5,23 +5,23 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 class ArrayOfProductInfoPackage
 {
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage
+     * @var null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage>
      */
-    private \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage $ProductInfoPackage;
+    private ?array $ProductInfoPackage = null;
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage
+     * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage>
      */
-    public function getProductInfoPackage(): \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage
+    public function getProductInfoPackage() : ?array
     {
         return $this->ProductInfoPackage;
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage $ProductInfoPackage
+     * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage> $ProductInfoPackage
      * @return static
      */
-    public function withProductInfoPackage(\Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage $ProductInfoPackage): static
+    public function withProductInfoPackage(?array $ProductInfoPackage) : static
     {
         $new = clone $this;
         $new->ProductInfoPackage = $ProductInfoPackage;
@@ -29,3 +29,4 @@ class ArrayOfProductInfoPackage
         return $new;
     }
 }
+

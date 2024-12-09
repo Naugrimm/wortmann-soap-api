@@ -5,23 +5,23 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 class ArrayOfSysInfoSubversion
 {
     /**
-     * @var \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion
+     * @var null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion>
      */
-    private \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion $SysInfoSubversion;
+    private ?array $SysInfoSubversion = null;
 
     /**
-     * @return \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion
+     * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion>
      */
-    public function getSysInfoSubversion(): \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion
+    public function getSysInfoSubversion() : ?array
     {
         return $this->SysInfoSubversion;
     }
 
     /**
-     * @param \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion $SysInfoSubversion
+     * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion> $SysInfoSubversion
      * @return static
      */
-    public function withSysInfoSubversion(\Naugrim\WortmannSoapApi\Client\Type\SysInfoSubversion $SysInfoSubversion): static
+    public function withSysInfoSubversion(?array $SysInfoSubversion) : static
     {
         $new = clone $this;
         $new->SysInfoSubversion = $SysInfoSubversion;
@@ -29,3 +29,4 @@ class ArrayOfSysInfoSubversion
         return $new;
     }
 }
+

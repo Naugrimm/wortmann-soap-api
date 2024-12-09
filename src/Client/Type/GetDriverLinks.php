@@ -7,33 +7,33 @@ use Phpro\SoapClient\Type\RequestInterface;
 class GetDriverLinks implements RequestInterface
 {
     /**
-     * @var string
+     * @var null | string
      */
-    private string $SearchTerm;
+    private ?string $SearchTerm = null;
 
     /**
      * Constructor
      *
-     * @param string $SearchTerm
+     * @param null | string $SearchTerm
      */
-    public function __construct(string $SearchTerm)
+    public function __construct(?string $SearchTerm)
     {
         $this->SearchTerm = $SearchTerm;
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getSearchTerm(): string
+    public function getSearchTerm() : ?string
     {
         return $this->SearchTerm;
     }
 
     /**
-     * @param string $SearchTerm
+     * @param null | string $SearchTerm
      * @return static
      */
-    public function withSearchTerm(string $SearchTerm): static
+    public function withSearchTerm(?string $SearchTerm) : static
     {
         $new = clone $this;
         $new->SearchTerm = $SearchTerm;
@@ -41,3 +41,4 @@ class GetDriverLinks implements RequestInterface
         return $new;
     }
 }
+

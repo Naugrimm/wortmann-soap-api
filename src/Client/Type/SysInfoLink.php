@@ -10,9 +10,9 @@ class SysInfoLink
     private int $Id;
 
     /**
-     * @var string
+     * @var null | string
      */
-    private string $NavID;
+    private ?string $NavID = null;
 
     /**
      * @var int
@@ -20,14 +20,14 @@ class SysInfoLink
     private int $ParentId;
 
     /**
-     * @var string
+     * @var null | string
      */
-    private string $Description;
+    private ?string $Description = null;
 
     /**
-     * @var string
+     * @var null | string
      */
-    private string $URL;
+    private ?string $URL = null;
 
     /**
      * @var bool
@@ -37,7 +37,7 @@ class SysInfoLink
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->Id;
     }
@@ -46,7 +46,7 @@ class SysInfoLink
      * @param int $Id
      * @return static
      */
-    public function withId(int $Id): static
+    public function withId(int $Id) : static
     {
         $new = clone $this;
         $new->Id = $Id;
@@ -55,18 +55,18 @@ class SysInfoLink
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getNavID(): string
+    public function getNavID() : ?string
     {
         return $this->NavID;
     }
 
     /**
-     * @param string $NavID
+     * @param null | string $NavID
      * @return static
      */
-    public function withNavID(string $NavID): static
+    public function withNavID(?string $NavID) : static
     {
         $new = clone $this;
         $new->NavID = $NavID;
@@ -77,7 +77,7 @@ class SysInfoLink
     /**
      * @return int
      */
-    public function getParentId(): int
+    public function getParentId() : int
     {
         return $this->ParentId;
     }
@@ -86,7 +86,7 @@ class SysInfoLink
      * @param int $ParentId
      * @return static
      */
-    public function withParentId(int $ParentId): static
+    public function withParentId(int $ParentId) : static
     {
         $new = clone $this;
         $new->ParentId = $ParentId;
@@ -95,18 +95,18 @@ class SysInfoLink
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getDescription(): string
+    public function getDescription() : ?string
     {
         return $this->Description;
     }
 
     /**
-     * @param string $Description
+     * @param null | string $Description
      * @return static
      */
-    public function withDescription(string $Description): static
+    public function withDescription(?string $Description) : static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -115,18 +115,18 @@ class SysInfoLink
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getURL(): string
+    public function getURL() : ?string
     {
         return $this->URL;
     }
 
     /**
-     * @param string $URL
+     * @param null | string $URL
      * @return static
      */
-    public function withURL(string $URL): static
+    public function withURL(?string $URL) : static
     {
         $new = clone $this;
         $new->URL = $URL;
@@ -137,7 +137,7 @@ class SysInfoLink
     /**
      * @return bool
      */
-    public function getRegisteredDownload(): bool
+    public function getRegisteredDownload() : bool
     {
         return $this->RegisteredDownload;
     }
@@ -146,7 +146,7 @@ class SysInfoLink
      * @param bool $RegisteredDownload
      * @return static
      */
-    public function withRegisteredDownload(bool $RegisteredDownload): static
+    public function withRegisteredDownload(bool $RegisteredDownload) : static
     {
         $new = clone $this;
         $new->RegisteredDownload = $RegisteredDownload;
@@ -154,3 +154,4 @@ class SysInfoLink
         return $new;
     }
 }
+

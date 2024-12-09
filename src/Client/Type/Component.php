@@ -5,9 +5,9 @@ namespace Naugrim\WortmannSoapApi\Client\Type;
 class Component
 {
     /**
-     * @var string
+     * @var null | string
      */
-    private string $ItemNo;
+    private ?string $ItemNo = null;
 
     /**
      * @var int
@@ -15,28 +15,28 @@ class Component
     private int $LineNo;
 
     /**
-     * @var string
+     * @var null | string
      */
-    private string $Description;
+    private ?string $Description = null;
 
     /**
-     * @var string
+     * @var null | string
      */
-    private string $SerialNo;
+    private ?string $SerialNo = null;
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getItemNo(): string
+    public function getItemNo() : ?string
     {
         return $this->ItemNo;
     }
 
     /**
-     * @param string $ItemNo
+     * @param null | string $ItemNo
      * @return static
      */
-    public function withItemNo(string $ItemNo): static
+    public function withItemNo(?string $ItemNo) : static
     {
         $new = clone $this;
         $new->ItemNo = $ItemNo;
@@ -47,7 +47,7 @@ class Component
     /**
      * @return int
      */
-    public function getLineNo(): int
+    public function getLineNo() : int
     {
         return $this->LineNo;
     }
@@ -56,7 +56,7 @@ class Component
      * @param int $LineNo
      * @return static
      */
-    public function withLineNo(int $LineNo): static
+    public function withLineNo(int $LineNo) : static
     {
         $new = clone $this;
         $new->LineNo = $LineNo;
@@ -65,18 +65,18 @@ class Component
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getDescription(): string
+    public function getDescription() : ?string
     {
         return $this->Description;
     }
 
     /**
-     * @param string $Description
+     * @param null | string $Description
      * @return static
      */
-    public function withDescription(string $Description): static
+    public function withDescription(?string $Description) : static
     {
         $new = clone $this;
         $new->Description = $Description;
@@ -85,18 +85,18 @@ class Component
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getSerialNo(): string
+    public function getSerialNo() : ?string
     {
         return $this->SerialNo;
     }
 
     /**
-     * @param string $SerialNo
+     * @param null | string $SerialNo
      * @return static
      */
-    public function withSerialNo(string $SerialNo): static
+    public function withSerialNo(?string $SerialNo) : static
     {
         $new = clone $this;
         $new->SerialNo = $SerialNo;
@@ -104,3 +104,4 @@ class Component
         return $new;
     }
 }
+

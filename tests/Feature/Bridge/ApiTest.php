@@ -8,36 +8,24 @@ use Naugrim\WortmannSoapApi\Client\ApiClient;
 use Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductId;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdResponse;
+use Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage;
 use Naugrim\WortmannSoapApi\Tests\Feature\TestCase;
 use Phpro\SoapClient\Type\ResultInterface;
+use VCR\VCR;
 
 final class ApiTest extends TestCase{
+    public function testCustomerWebServiceProductInfoResponse() {
+        $api = new Api(config('wortmann-soap-api'));
 
-	public function testRequestReturningResultInterface(): void{
-		config()->set('wortmann-soap-api.username', 'test');
-		config()->set('wortmann-soap-api.password', 'test');
+        \VCR\VCR::insertCassette('ProductWithoutStockNextDelivery.yml');
 
-		$api = new Api(['wsdl' => config('wortmann-soap-api.wsdl')]);
+        $response = $api->request(GetStockAndPriceInformationByProductId::class, '1481272');
 
-		$productInfoResponseMock = Mockery::mock(CustomerWebServiceProductInfoResponse::class);
-		$productInfoResponseMock->shouldReceive('getSuccess')->andReturnTrue(); // @phpstan-ignore-line
+        $this->assertInstanceOf(GetStockAndPriceInformationByProductIdResponse::class, $response);
 
-		$productIdResponseMock = Mockery::mock(GetStockAndPriceInformationByProductIdResponse::class);
-		$productIdResponseMock->shouldReceive('getGetStockAndPriceInformationByProductIdResult')->andReturn($productInfoResponseMock); // @phpstan-ignore-line
-
-		$clientMock = Mockery::mock(ApiClient::class);
-		$clientMock->shouldReceive('getStockAndPriceInformationByProductId')->andReturn($productIdResponseMock); // @phpstan-ignore-line
-
-		$apiClientProperty = new \ReflectionProperty(Api::class, 'client');
-		$apiClientProperty->setValue($api, $clientMock);
-
-		try{
-			$returnValue = $api->request(GetStockAndPriceInformationByProductId::class, '');
-		}catch(\Throwable){
-			$this->fail();
-		}
-		$this->assertNotNull($returnValue);
-		$this->assertInstanceOf(ResultInterface::class, $returnValue);
-		$this->assertTrue($returnValue->getGetStockAndPriceInformationByProductIdResult()->getSuccess()); // @phpstan-ignore-line
-	}
+        /** @var GetStockAndPriceInformationByProductIdResponse $response */
+        $productInfo = $response->getGetStockAndPriceInformationByProductIdResult()->getProductInfoPackages()->getProductInfoPackage();
+        $this->assertIsArray($productInfo);
+        $this->assertInstanceOf(ProductInfoPackage::class, $productInfo[0]);
+    }
 }
