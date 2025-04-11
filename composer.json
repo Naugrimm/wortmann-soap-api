@@ -16,17 +16,19 @@
         "ext-libxml": "*",
         "ext-soap": "*",
         "phpro/soap-client": "^3.0",
-        "illuminate/support": "^9.0||^10.0||^11.0",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
         "guzzlehttp/guzzle": "^7.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.0||^10.0||^11.0",
+        "phpunit/phpunit": "^9.0|^10.0|^11.0|^12.0",
         "laminas/laminas-code": "^4.0",
         "mockery/mockery": "^1.6",
-        "phpstan/phpstan": "^1.11",
-        "phpstan/phpstan-deprecation-rules": "^1.2",
-        "orchestra/testbench": "^7.0||^8.0||^9.0",
-        "php-vcr/php-vcr": "^1.8"
+        "phpstan/phpstan": "^1.11|^2.0",
+        "phpstan/phpstan-deprecation-rules": "^1.2|^2.0",
+        "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0",
+        "php-vcr/php-vcr": "^1.8",
+        "phpstan/phpstan-mockery": "^1.1",
+        "phpstan/extension-installer": "^1.4"
     },
     "autoload": {
         "psr-4": {
@@ -43,7 +45,16 @@
     },
     "config": {
         "allow-plugins": {
-            "php-http/discovery": false
+            "php-http/discovery": false,
+            "phpstan/extension-installer": true
         }
+    },
+    "scripts": {
+        "test": [
+            "@php vendor/bin/phpunit"
+        ],
+        "phpstan": [
+            "@php vendor/bin/phpstan"
+        ]
     }
 }
