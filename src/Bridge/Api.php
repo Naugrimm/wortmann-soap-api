@@ -21,9 +21,9 @@ class Api implements WortmannSoapApi
      * Api constructor.
      * @param array{wsdl: string} $config
      */
-    public function __construct(array $config)
+    public function __construct(array $config, ?ApiClient $client = null)
     {
-        $this->client = ApiClientFactory::factory($config['wsdl']);
+        $this->client = $client ?? ApiClientFactory::factory($config['wsdl']);
     }
 
     /**

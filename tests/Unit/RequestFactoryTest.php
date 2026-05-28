@@ -12,6 +12,7 @@ use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNo;
 use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDate;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductId;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds;
+use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -74,6 +75,20 @@ final class RequestFactoryTest extends TestCase
     }
 
     #[Test]
+    public function itCreatesForeignCustomerProductIdListRequests(): void
+    {
+        $request = RequestFactory::create(
+            GetStockAndPriceInformationForForeignCustomerByProductIds::class,
+            ['A123', 'B456'],
+            'FOREIGN-123',
+        );
+
+        self::assertInstanceOf(GetStockAndPriceInformationForForeignCustomerByProductIds::class, $request);
+        self::assertSame(['A123', 'B456'], $request->getProductIds()?->getString());
+        self::assertSame('FOREIGN-123', $request->getForeignCustomerNumber());
+    }
+
+    #[Test]
     public function itRejectsInvalidStringParameters(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -89,5 +104,18 @@ final class RequestFactoryTest extends TestCase
         $this->expectExceptionMessage('Request parameter #1 must be a list of strings.');
 
         RequestFactory::create(GetStockAndPriceInformationByProductIds::class, ['A123', 456]);
+    }
+
+    #[Test]
+    public function itRejectsInvalidForeignCustomerNumbers(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Request parameter #2 must be a string.');
+
+        RequestFactory::create(
+            GetStockAndPriceInformationForForeignCustomerByProductIds::class,
+            ['A123'],
+            123,
+        );
     }
 }

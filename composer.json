@@ -20,6 +20,7 @@
         "guzzlehttp/guzzle": "^7.4"
     },
     "require-dev": {
+        "ext-dom": "*",
         "phpunit/phpunit": "^13.1",
         "laminas/laminas-code": "^4.17",
         "mockery/mockery": "^1.6",
