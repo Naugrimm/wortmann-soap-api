@@ -33,7 +33,13 @@ class WortmannSoapApiProvider extends ServiceProvider
         );
 
         $this->app->singleton(WortmannSoapApi::class, function () {
-            return new Api(config('wortmann-soap-api'));
+            $config = config('wortmann-soap-api');
+
+            if (! is_array($config) || ! isset($config['wsdl']) || ! is_string($config['wsdl'])) {
+                throw new \InvalidArgumentException('Configuration value "wortmann-soap-api.wsdl" must be a string.');
+            }
+
+            return new Api(['wsdl' => $config['wsdl']]);
         });
     }
 }

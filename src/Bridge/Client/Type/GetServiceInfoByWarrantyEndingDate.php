@@ -3,6 +3,7 @@
 namespace Naugrim\WortmannSoapApi\Bridge\Client\Type;
 
 use DateTimeInterface;
+use Illuminate\Support\Facades\Config;
 use Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDate as BaseRequest;
 use Phpro\SoapClient\Type\RequestInterface;
 
@@ -15,8 +16,8 @@ class GetServiceInfoByWarrantyEndingDate implements RequestInterface
     public static function getInstance(DateTimeInterface $warrantyEndingDate) : BaseRequest
     {
         return new BaseRequest(
-            config('wortmann-soap-api.username'),
-            config('wortmann-soap-api.password'),
+            Config::string('wortmann-soap-api.username'),
+            Config::string('wortmann-soap-api.password'),
             $warrantyEndingDate
         );
     }
