@@ -7,7 +7,6 @@ parameters:
     # this generally is "src" and "tests"
     paths:
         - src/
-        - tests/
 
     editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
 
