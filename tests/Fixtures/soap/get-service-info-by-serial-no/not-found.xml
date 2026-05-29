@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+>
+  <soap:Body>
+    <GetServiceInfoBySerialNoResponse xmlns="Wortmann.CustomerWebService">
+      <GetServiceInfoBySerialNoResult>
+        <Success>false</Success>
+        <ErrorMesssage>Service info not found</ErrorMesssage>
+        <ServiceInfos/>
+      </GetServiceInfoBySerialNoResult>
+    </GetServiceInfoBySerialNoResponse>
+  </soap:Body>
+</soap:Envelope>

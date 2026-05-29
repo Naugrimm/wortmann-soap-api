@@ -12,7 +12,7 @@ class ArrayOfComponent
     /**
      * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\Component>
      */
-    public function getComponent() : ?array
+    public function getComponent(): ?array
     {
         return $this->Component;
     }
@@ -21,7 +21,7 @@ class ArrayOfComponent
      * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\Component> $Component
      * @return static
      */
-    public function withComponent(?array $Component) : static
+    public function withComponent(?array $Component): static
     {
         $new = clone $this;
         $new->Component = $Component;

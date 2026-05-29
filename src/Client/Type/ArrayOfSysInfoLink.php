@@ -12,7 +12,7 @@ class ArrayOfSysInfoLink
     /**
      * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoLink>
      */
-    public function getSysInfoLink() : ?array
+    public function getSysInfoLink(): ?array
     {
         return $this->SysInfoLink;
     }
@@ -21,7 +21,7 @@ class ArrayOfSysInfoLink
      * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoLink> $SysInfoLink
      * @return static
      */
-    public function withSysInfoLink(?array $SysInfoLink) : static
+    public function withSysInfoLink(?array $SysInfoLink): static
     {
         $new = clone $this;
         $new->SysInfoLink = $SysInfoLink;

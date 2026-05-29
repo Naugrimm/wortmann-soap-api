@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+>
+  <soap:Body>
+    <GetServiceInfoBySerialNoResponse xmlns="Wortmann.CustomerWebService">
+      <GetServiceInfoBySerialNoResult>
+        <Success>true</Success>
+        <ServiceInfos>
+          <ServiceInfo>
+            <ServiceItemNo>S123456789</ServiceItemNo>
+            <ServiceItemDescription>Aaeon FWS-2280-B12-CS-N0003</ServiceItemDescription>
+            <ServiceItemDescription2>Auftrag DB12345678</ServiceItemDescription2>
+            <ItemNo>2120905</ItemNo>
+            <ItemDescription>Aaeon FWS-2280-B12-CS-N0003</ItemDescription>
+            <CustomerNo>12345</CustomerNo>
+            <SerialNo>SP123456789</SerialNo>
+            <InvoiceNo>DR123456</InvoiceNo>
+            <InvoicePostingDate>2026-05-11</InvoicePostingDate>
+            <ShipmentNo>DL123456</ShipmentNo>
+            <ShipmentPostingDate>2026-05-11</ShipmentPostingDate>
+            <ExternalDocumentNo>EXT-DOC-123456</ExternalDocumentNo>
+            <Commission>VPN Pro aaS</Commission>
+            <InvoiceUnitPrice>123.45</InvoiceUnitPrice>
+            <InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
+            <InvoiceLineCommission>VPN Pro aaS</InvoiceLineCommission>
+            <WarrantyCode/>
+            <WarrantyDescription/>
+            <WarrantyStartingDate>2026-05-11</WarrantyStartingDate>
+            <WarrantyEndingDate>2028-05-11</WarrantyEndingDate>
+            <Components/>
+          </ServiceInfo>
+        </ServiceInfos>
+      </GetServiceInfoBySerialNoResult>
+    </GetServiceInfoBySerialNoResponse>
+  </soap:Body>
+</soap:Envelope>

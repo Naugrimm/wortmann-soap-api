@@ -2,7 +2,6 @@
 
 namespace Naugrim\WortmannSoapApi\Client;
 
-use Phpro\SoapClient\Caller\Caller;
 use Naugrim\WortmannSoapApi\Client\Type;
 use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
@@ -10,10 +9,7 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class ApiClient
 {
-    /**
-     * @var Caller
-     */
-    private $caller;
+    private \Phpro\SoapClient\Caller\Caller $caller;
 
     public function __construct(\Phpro\SoapClient\Caller\Caller $caller)
     {
@@ -25,7 +21,7 @@ class ApiClient
      * @return ResultInterface & Type\GetStockAndPriceInformationByProductIdResponse
      * @throws SoapException
      */
-    public function getStockAndPriceInformationByProductId(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductId $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdResponse
+    public function getStockAndPriceInformationByProductId(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductId $parameters): \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdResponse
     {
         $response = ($this->caller)('GetStockAndPriceInformationByProductId', $parameters);
 
@@ -40,7 +36,7 @@ class ApiClient
      * @return ResultInterface & Type\GetStockAndPriceInformationByProductIdsResponse
      * @throws SoapException
      */
-    public function getStockAndPriceInformationByProductIds(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse
+    public function getStockAndPriceInformationByProductIds(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds $parameters): \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse
     {
         $response = ($this->caller)('GetStockAndPriceInformationByProductIds', $parameters);
 
@@ -55,7 +51,7 @@ class ApiClient
      * @return ResultInterface & Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
      * @throws SoapException
      */
-    public function getStockAndPriceInformationForForeignCustomerByProductIds(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
+    public function getStockAndPriceInformationForForeignCustomerByProductIds(\Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIds $parameters): \Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationForForeignCustomerByProductIdsResponse
     {
         $response = ($this->caller)('GetStockAndPriceInformationForForeignCustomerByProductIds', $parameters);
 
@@ -70,7 +66,7 @@ class ApiClient
      * @return ResultInterface & Type\GetDriverLinksResponse
      * @throws SoapException
      */
-    public function getDriverLinks(\Naugrim\WortmannSoapApi\Client\Type\GetDriverLinks $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetDriverLinksResponse
+    public function getDriverLinks(\Naugrim\WortmannSoapApi\Client\Type\GetDriverLinks $parameters): \Naugrim\WortmannSoapApi\Client\Type\GetDriverLinksResponse
     {
         $response = ($this->caller)('GetDriverLinks', $parameters);
 
@@ -85,7 +81,7 @@ class ApiClient
      * @return ResultInterface & Type\GetExtendedDriverLinksResponse
      * @throws SoapException
      */
-    public function getExtendedDriverLinks(\Naugrim\WortmannSoapApi\Client\Type\GetExtendedDriverLinks $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetExtendedDriverLinksResponse
+    public function getExtendedDriverLinks(\Naugrim\WortmannSoapApi\Client\Type\GetExtendedDriverLinks $parameters): \Naugrim\WortmannSoapApi\Client\Type\GetExtendedDriverLinksResponse
     {
         $response = ($this->caller)('GetExtendedDriverLinks', $parameters);
 
@@ -100,7 +96,7 @@ class ApiClient
      * @return ResultInterface & Type\GetServiceInfoByWarrantyEndingDateResponse
      * @throws SoapException
      */
-    public function getServiceInfoByWarrantyEndingDate(\Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDate $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDateResponse
+    public function getServiceInfoByWarrantyEndingDate(\Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDate $parameters): \Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoByWarrantyEndingDateResponse
     {
         $response = ($this->caller)('GetServiceInfoByWarrantyEndingDate', $parameters);
 
@@ -115,7 +111,7 @@ class ApiClient
      * @return ResultInterface & Type\GetServiceInfoBySerialNoResponse
      * @throws SoapException
      */
-    public function getServiceInfoBySerialNo(\Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNo $parameters) : \Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNoResponse
+    public function getServiceInfoBySerialNo(\Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNo $parameters): \Naugrim\WortmannSoapApi\Client\Type\GetServiceInfoBySerialNoResponse
     {
         $response = ($this->caller)('GetServiceInfoBySerialNo', $parameters);
 

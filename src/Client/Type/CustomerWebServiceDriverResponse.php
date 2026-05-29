@@ -22,7 +22,7 @@ class CustomerWebServiceDriverResponse
     /**
      * @return bool
      */
-    public function getSuccess() : bool
+    public function getSuccess(): bool
     {
         return $this->Success;
     }
@@ -31,7 +31,7 @@ class CustomerWebServiceDriverResponse
      * @param bool $Success
      * @return static
      */
-    public function withSuccess(bool $Success) : static
+    public function withSuccess(bool $Success): static
     {
         $new = clone $this;
         $new->Success = $Success;
@@ -42,7 +42,7 @@ class CustomerWebServiceDriverResponse
     /**
      * @return null | string
      */
-    public function getErrorMesssage() : ?string
+    public function getErrorMesssage(): ?string
     {
         return $this->ErrorMesssage;
     }
@@ -51,7 +51,7 @@ class CustomerWebServiceDriverResponse
      * @param null | string $ErrorMesssage
      * @return static
      */
-    public function withErrorMesssage(?string $ErrorMesssage) : static
+    public function withErrorMesssage(?string $ErrorMesssage): static
     {
         $new = clone $this;
         $new->ErrorMesssage = $ErrorMesssage;
@@ -62,7 +62,7 @@ class CustomerWebServiceDriverResponse
     /**
      * @return null | \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
      */
-    public function getDrivers() : ?\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
+    public function getDrivers(): ?\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry
     {
         return $this->Drivers;
     }
@@ -71,7 +71,7 @@ class CustomerWebServiceDriverResponse
      * @param null | \Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers
      * @return static
      */
-    public function withDrivers(?\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers) : static
+    public function withDrivers(?\Naugrim\WortmannSoapApi\Client\Type\ArrayOfTreeListEntry $Drivers): static
     {
         $new = clone $this;
         $new->Drivers = $Drivers;

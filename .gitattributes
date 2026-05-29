@@ -1,0 +1,8 @@
+/tests              export-ignore
+/composer.lock      export-ignore
+/.idea              export-ignore
+/.opencode          export-ignore
+/ecs.php            export-ignore
+/phpcs.xml          export-ignore
+/phpstan.neon       export-ignore
+/phpunit.xml        export-ignore

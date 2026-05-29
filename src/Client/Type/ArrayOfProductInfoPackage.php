@@ -12,7 +12,7 @@ class ArrayOfProductInfoPackage
     /**
      * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage>
      */
-    public function getProductInfoPackage() : ?array
+    public function getProductInfoPackage(): ?array
     {
         return $this->ProductInfoPackage;
     }
@@ -21,7 +21,7 @@ class ArrayOfProductInfoPackage
      * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage> $ProductInfoPackage
      * @return static
      */
-    public function withProductInfoPackage(?array $ProductInfoPackage) : static
+    public function withProductInfoPackage(?array $ProductInfoPackage): static
     {
         $new = clone $this;
         $new->ProductInfoPackage = $ProductInfoPackage;

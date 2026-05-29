@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <GetServiceInfoByWarrantyEndingDateResponse xmlns="Wortmann.CustomerWebService">
+      <GetServiceInfoByWarrantyEndingDateResult>
+        <Success>true</Success>
+        <ServiceInfos>
+          <ServiceInfo>
+            <ServiceItemNo>S987654</ServiceItemNo>
+            <ServiceItemDescription>TERRA FIREWALL BLACK DWARF PRO G5 as a Service inkl. Securepoint Infinity-Lizenz UTM
+              jährlich
+            </ServiceItemDescription>
+            <ServiceItemDescription2>Auftrag DB12345678</ServiceItemDescription2>
+            <ItemNo>6466356</ItemNo>
+            <ItemDescription>TERRA FIREWALL BLACK DWARF PRO G5 as a Service inkl. Securepoint Infinity-Lizenz UTM
+              jährlich
+            </ItemDescription>
+            <CustomerNo>12345</CustomerNo>
+            <SerialNo>SP123456789</SerialNo>
+            <InvoiceNo>DR12345678</InvoiceNo>
+            <InvoicePostingDate>2026-01-02</InvoicePostingDate>
+            <ShipmentNo>DL235649785</ShipmentNo>
+            <ShipmentPostingDate>2026-01-02</ShipmentPostingDate>
+            <ExternalDocumentNo>EXT-DOC-1</ExternalDocumentNo>
+            <Commission>A Company</Commission>
+            <InvoiceUnitPrice xsi:nil="true"/>
+            <InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
+            <InvoiceLineCommission/>
+            <WarrantyCode>FWAAS24VOS</WarrantyCode>
+            <WarrantyDescription>TERRA 24H VOS Laufzeit lt. Lizenz</WarrantyDescription>
+            <WarrantyStartingDate>2026-01-02</WarrantyStartingDate>
+            <WarrantyEndingDate>2027-01-02</WarrantyEndingDate>
+            <Components/>
+          </ServiceInfo>
+          <ServiceInfo>
+            <ServiceItemNo>S88421562</ServiceItemNo>
+            <ServiceItemDescription>TERRA FIREWALL BLACK DWARF PRO G5 as a Service inkl. Securepoint Infinity-Lizenz UTM
+              monatlich
+            </ServiceItemDescription>
+            <ServiceItemDescription2>Auftrag DB12345678</ServiceItemDescription2>
+            <ItemNo>6466355</ItemNo>
+            <ItemDescription>TERRA FIREWALL BLACK DWARF PRO G5 as a Service inkl. Securepoint Infinity-Lizenz UTM
+              monatlich
+            </ItemDescription>
+            <CustomerNo>12345</CustomerNo>
+            <SerialNo>SP23456789</SerialNo>
+            <InvoiceNo>DR16546516521</InvoiceNo>
+            <InvoicePostingDate>2026-01-02</InvoicePostingDate>
+            <ShipmentNo>DL1234564789</ShipmentNo>
+            <ShipmentPostingDate>2026-01-02</ShipmentPostingDate>
+            <ExternalDocumentNo>EXT-DOC-2</ExternalDocumentNo>
+            <Commission>.</Commission>
+            <InvoiceUnitPrice xsi:nil="true"/>
+            <InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
+            <InvoiceLineCommission/>
+            <WarrantyCode>FWAAS24VOS</WarrantyCode>
+            <WarrantyDescription>TERRA 24H VOS Laufzeit lt. Lizenz</WarrantyDescription>
+            <WarrantyStartingDate>2026-01-02</WarrantyStartingDate>
+            <WarrantyEndingDate>2027-01-02</WarrantyEndingDate>
+            <Components/>
+          </ServiceInfo>
+          <ServiceInfo>
+            <ServiceItemNo>S45584651231</ServiceItemNo>
+            <ServiceItemDescription>TERRA FIREWALL BLACK DWARF G5 as a Service inkl. Securepoint Infinity-Lizenz UTM
+              monatlich
+            </ServiceItemDescription>
+            <ServiceItemDescription2>Auftrag DB12345678</ServiceItemDescription2>
+            <ItemNo>6466340</ItemNo>
+            <ItemDescription>TERRA FIREWALL BLACK DWARF G5 as a Service inkl. Securepoint Infinity-Lizenz UTM
+              monatlich
+            </ItemDescription>
+            <CustomerNo>12345</CustomerNo>
+            <SerialNo>SP98765421</SerialNo>
+            <InvoiceNo>DR12564984651</InvoiceNo>
+            <InvoicePostingDate>2026-01-02</InvoicePostingDate>
+            <ShipmentNo>DL12345647</ShipmentNo>
+            <ShipmentPostingDate>2026-01-02</ShipmentPostingDate>
+            <ExternalDocumentNo>FWAAS</ExternalDocumentNo>
+            <Commission>B2099884422000_001</Commission>
+            <InvoiceUnitPrice xsi:nil="true"/>
+            <InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
+            <InvoiceLineCommission/>
+            <WarrantyCode>FWAAS24VOS</WarrantyCode>
+            <WarrantyDescription>TERRA 24H VOS Laufzeit lt. Lizenz</WarrantyDescription>
+            <WarrantyStartingDate>2026-01-02</WarrantyStartingDate>
+            <WarrantyEndingDate>2027-01-02</WarrantyEndingDate>
+            <Components/>
+          </ServiceInfo>
+        </ServiceInfos>
+      </GetServiceInfoByWarrantyEndingDateResult>
+    </GetServiceInfoByWarrantyEndingDateResponse>
+  </soap:Body>
+</soap:Envelope>

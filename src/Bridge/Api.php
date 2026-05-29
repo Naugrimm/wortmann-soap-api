@@ -5,27 +5,29 @@ namespace Naugrim\WortmannSoapApi\Bridge;
 use Illuminate\Support\Str;
 use LibXMLError;
 use Naugrim\WortmannSoapApi\Bridge\Exceptions\XmlException;
+use Naugrim\WortmannSoapApi\Client\ApiClient;
 use Naugrim\WortmannSoapApi\Client\ApiClientFactory;
 use Naugrim\WortmannSoapApi\Contracts\WortmannSoapApi;
+use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 use ReflectionClass;
 use ReflectionException;
 
 class Api implements WortmannSoapApi
 {
-    protected $client;
+    protected ApiClient $client;
 
     /**
      * Api constructor.
-     * @param array $config
+     * @param array{wsdl: non-empty-string} $config
      */
-    public function __construct(array $config = [])
+    public function __construct(array $config, ?ApiClient $client = null)
     {
-        $this->client = ApiClientFactory::factory($config['wsdl']);
+        $this->client = $client ?? ApiClientFactory::factory($config['wsdl']);
     }
 
     /**
-	 * @param string $requestCls
+	 * @param class-string<RequestInterface> $requestCls
 	 * @param mixed ...$params
      * @return ResultInterface
      * @throws ReflectionException
