@@ -23,7 +23,7 @@ final class FixtureLoader
     {
         $document = new DOMDocument();
         $previous = libxml_use_internal_errors(true);
-        $loaded = $document->loadXML(self::xmlString($relativePath));
+        $loaded = @$document->loadXML(self::xmlString($relativePath));
         $errors = libxml_get_errors();
         libxml_clear_errors();
         libxml_use_internal_errors($previous);

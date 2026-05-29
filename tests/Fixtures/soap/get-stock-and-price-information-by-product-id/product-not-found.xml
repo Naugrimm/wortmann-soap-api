@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+>
+  <soap:Body>
+    <GetStockAndPriceInformationByProductIdResponse xmlns="Wortmann.CustomerWebService">
+      <GetStockAndPriceInformationByProductIdResult>
+        <Success>false</Success>
+        <ErrorMesssage>No Products found&lt;br&gt;</ErrorMesssage>
+      </GetStockAndPriceInformationByProductIdResult>
+    </GetStockAndPriceInformationByProductIdResponse>
+  </soap:Body>
+</soap:Envelope>

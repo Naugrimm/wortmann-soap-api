@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+>
+  <soap:Body>
+    <GetStockAndPriceInformationByProductIdsResponse xmlns="Wortmann.CustomerWebService">
+      <GetStockAndPriceInformationByProductIdsResult>
+        <Success>true</Success>
+        <ProductInfoPackages>
+          <ProductInfoPackage>
+            <ProductId>6466300</ProductId>
+            <PriceB2B>1000.00</PriceB2B>
+            <PriceB2BDiscounted>1000.00</PriceB2BDiscounted>
+            <PriceB2BDiscountPercent>0.00</PriceB2BDiscountPercent>
+            <PriceB2BDiscountAmount>0.00</PriceB2BDiscountAmount>
+            <PriceB2CinclVAT>2000.10</PriceB2CinclVAT>
+            <PriceB2CexclVAT>1620.00</PriceB2CexclVAT>
+            <Currency>EUR</Currency>
+            <vatRate>19.00</vatRate>
+            <vatCountry>DE</vatCountry>
+            <Stock>55</Stock>
+            <StockNextDelivery>2026-06-16T00:00:00</StockNextDelivery>
+            <StockNextDeliveryAccessVolume>50</StockNextDeliveryAccessVolume>
+          </ProductInfoPackage>
+          <ProductInfoPackage>
+            <ProductId>6466280</ProductId>
+            <PriceB2B>2000.00</PriceB2B>
+            <PriceB2BDiscounted>2000.00</PriceB2BDiscounted>
+            <PriceB2BDiscountPercent>0.00</PriceB2BDiscountPercent>
+            <PriceB2BDiscountAmount>0.00</PriceB2BDiscountAmount>
+            <PriceB2CinclVAT>4000.40</PriceB2CinclVAT>
+            <PriceB2CexclVAT>3240.00</PriceB2CexclVAT>
+            <Currency>EUR</Currency>
+            <vatRate>19.00</vatRate>
+            <vatCountry>DE</vatCountry>
+            <Stock>23</Stock>
+            <StockNextDelivery>2026-06-16T00:00:00</StockNextDelivery>
+            <StockNextDeliveryAccessVolume>25</StockNextDeliveryAccessVolume>
+          </ProductInfoPackage>
+        </ProductInfoPackages>
+      </GetStockAndPriceInformationByProductIdsResult>
+    </GetStockAndPriceInformationByProductIdsResponse>
+  </soap:Body>
+</soap:Envelope>

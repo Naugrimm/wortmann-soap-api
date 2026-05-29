@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-    <soap:Body>
-        <ExampleResponse xmlns="https://example.test/wortmann-soap-api/tests">
-            <Success>true</Success>
-        </ExampleResponse>
-    </soap:Body>
+  <soap:Body>
+    <ExampleResponse xmlns="https://example.test/wortmann-soap-api/tests">
+      <Success>true</Success>
+    </ExampleResponse>
+  </soap:Body>
 </soap:Envelope>
