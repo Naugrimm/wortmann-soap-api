@@ -53,6 +53,15 @@
         "test": [
             "@php vendor/bin/phpunit"
         ],
+        "test:unit": [
+            "@php vendor/bin/phpunit --testsuite Unit"
+        ],
+        "test:integration": [
+            "@php vendor/bin/phpunit --testsuite Integration"
+        ],
+        "test:feature": [
+            "@php vendor/bin/phpunit --testsuite Feature"
+        ],
         "stan": [
             "@php vendor/bin/phpstan"
         ]

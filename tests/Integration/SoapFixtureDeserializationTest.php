@@ -1,6 +1,6 @@
 <?php
 
-namespace Naugrim\WortmannSoapApi\Tests\Unit;
+namespace Naugrim\WortmannSoapApi\Tests\Integration;
 
 use DateTimeInterface;
 use Naugrim\WortmannSoapApi\Client\ApiClassmap;
