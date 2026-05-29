@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "084b0c9a84c15d568f4d6034f5d3922a",
+    "content-hash": "082cdb62c9b9a4762921c5a9387172ac",
     "packages": [
         {
             "name": "brick/math",
@@ -3963,16 +3963,16 @@
         },
         {
             "name": "phpro/soap-client",
-            "version": "4.8.0",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpro/soap-client.git",
-                "reference": "dd60925771169abb2f1a521686432ce96217218e"
+                "reference": "151a8efdc145fde6deed635ff3ba8e614594d2d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpro/soap-client/zipball/dd60925771169abb2f1a521686432ce96217218e",
-                "reference": "dd60925771169abb2f1a521686432ce96217218e",
+                "url": "https://api.github.com/repos/phpro/soap-client/zipball/151a8efdc145fde6deed635ff3ba8e614594d2d4",
+                "reference": "151a8efdc145fde6deed635ff3ba8e614594d2d4",
                 "shasum": ""
             },
             "require": {
@@ -4029,7 +4029,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpro/soap-client/issues",
-                "source": "https://github.com/phpro/soap-client/tree/4.8.0"
+                "source": "https://github.com/phpro/soap-client/tree/5.0.0"
             },
             "funding": [
                 {
@@ -4037,7 +4037,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2026-03-19T08:52:04+00:00"
+            "time": "2026-03-19T08:57:48+00:00"
         },
         {
             "name": "psr/cache",

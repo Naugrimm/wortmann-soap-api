@@ -2,8 +2,12 @@
 
 use Naugrim\WortmannSoapApi\Soap\WortmannNamespaceNormalizingWsdlLoader;
 use Phpro\SoapClient\CodeGenerator\Assembler;
-use Phpro\SoapClient\CodeGenerator\Rules;
+use Phpro\SoapClient\CodeGenerator\Config\ClassMapConfig;
+use Phpro\SoapClient\CodeGenerator\Config\ClientConfig;
 use Phpro\SoapClient\CodeGenerator\Config\Config;
+use Phpro\SoapClient\CodeGenerator\Config\Destination;
+use Phpro\SoapClient\CodeGenerator\Config\TypeNamespaceMap;
+use Phpro\SoapClient\CodeGenerator\Rules;
 use Phpro\SoapClient\Soap\DefaultEngineFactory;
 use Phpro\SoapClient\Soap\EngineOptions;
 use Soap\Wsdl\Loader\FlatteningLoader;
@@ -20,14 +24,11 @@ return Config::create()
                 new FlatteningLoader(new StreamWrapperLoader())
             ))
     ))
-    ->setTypeDestination('src/Client/Type')
-    ->setTypeNamespace('Naugrim\WortmannSoapApi\Client\Type')
-    ->setClientDestination('src/Client')
-    ->setClientName('ApiClient')
-    ->setClientNamespace('Naugrim\WortmannSoapApi\Client')
-    ->setClassMapDestination('src/Client')
-    ->setClassMapName('ApiClassmap')
-    ->setClassMapNamespace('Naugrim\WortmannSoapApi\Client')
+    ->setTypeNamespaceMap(
+        TypeNamespaceMap::create(new Destination('src/Client/Type', 'Naugrim\WortmannSoapApi\Client\Type'))
+    )
+    ->setClient(new ClientConfig('ApiClient', new Destination('src/Client', 'Naugrim\WortmannSoapApi\Client')))
+    ->setClassMap(new ClassMapConfig('ApiClassmap', new Destination('src/Client', 'Naugrim\WortmannSoapApi\Client')))
     ->addRule(new Rules\AssembleRule(new Assembler\GetterAssembler(new Assembler\GetterAssemblerOptions())))
     ->addRule(new Rules\AssembleRule(new Assembler\ImmutableSetterAssembler(
         new Assembler\ImmutableSetterAssemblerOptions()
