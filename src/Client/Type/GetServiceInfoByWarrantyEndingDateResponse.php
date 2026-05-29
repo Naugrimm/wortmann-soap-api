@@ -14,7 +14,7 @@ class GetServiceInfoByWarrantyEndingDateResponse implements ResultInterface
     /**
      * @return null | \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
      */
-    public function getGetServiceInfoByWarrantyEndingDateResult() : ?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
+    public function getGetServiceInfoByWarrantyEndingDateResult(): ?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
     {
         return $this->GetServiceInfoByWarrantyEndingDateResult;
     }
@@ -23,7 +23,7 @@ class GetServiceInfoByWarrantyEndingDateResponse implements ResultInterface
      * @param null | \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoByWarrantyEndingDateResult
      * @return static
      */
-    public function withGetServiceInfoByWarrantyEndingDateResult(?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoByWarrantyEndingDateResult) : static
+    public function withGetServiceInfoByWarrantyEndingDateResult(?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoByWarrantyEndingDateResult): static
     {
         $new = clone $this;
         $new->GetServiceInfoByWarrantyEndingDateResult = $GetServiceInfoByWarrantyEndingDateResult;

@@ -19,7 +19,7 @@ class Api implements WortmannSoapApi
 
     /**
      * Api constructor.
-     * @param array{wsdl: string} $config
+     * @param array{wsdl: non-empty-string} $config
      */
     public function __construct(array $config, ?ApiClient $client = null)
     {

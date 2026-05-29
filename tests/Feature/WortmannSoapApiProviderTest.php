@@ -40,7 +40,7 @@ final class WortmannSoapApiProviderTest extends TestCase
         $this->app->forgetInstance(WortmannSoapApi::class);
 
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('Configuration value "wortmann-soap-api.wsdl" must be a string.');
+        $this->expectExceptionMessage('Configuration value "wortmann-soap-api.wsdl" must be a non-empty string.');
 
         $this->app->make(WortmannSoapApi::class);
     }

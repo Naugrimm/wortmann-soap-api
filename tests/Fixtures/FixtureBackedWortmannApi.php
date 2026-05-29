@@ -6,23 +6,48 @@ use Naugrim\WortmannSoapApi\Bridge\Api;
 use Naugrim\WortmannSoapApi\Client\ApiClassmap;
 use Naugrim\WortmannSoapApi\Client\ApiClient;
 use Naugrim\WortmannSoapApi\Contracts\WortmannSoapApi;
+use Naugrim\WortmannSoapApi\Soap\WortmannNamespaceNormalizer;
+use Naugrim\WortmannSoapApi\Soap\WortmannNamespaceNormalizingTransport;
 use Phpro\SoapClient\Caller\EngineCaller;
-use Soap\ExtSoapEngine\ExtSoapEngineFactory;
-use Soap\ExtSoapEngine\ExtSoapOptions;
-use Soap\ExtSoapEngine\Wsdl\InMemoryWsdlProvider;
+use Phpro\SoapClient\Soap\DefaultEngineFactory;
+use Phpro\SoapClient\Soap\EngineOptions;
+use Soap\Encoding\EncoderRegistry;
+use Soap\Wsdl\Loader\WsdlLoader;
 
 final class FixtureBackedWortmannApi
 {
     public static function forFixture(string $fixture): WortmannSoapApi
     {
-        $options = ExtSoapOptions::defaults(self::wsdl(), [
-            'cache_wsdl' => WSDL_CACHE_NONE,
-        ])->withWsdlProvider(new InMemoryWsdlProvider())
-            ->withClassMap(ApiClassmap::getCollection());
-
-        $engine = ExtSoapEngineFactory::fromOptionsWithTransport($options, new SoapFixtureTransport($fixture));
+        $engine = DefaultEngineFactory::create(
+            EngineOptions::defaults('fixture.wsdl')
+                ->withWsdlLoader(self::wsdlLoader())
+                ->withTransport(new WortmannNamespaceNormalizingTransport(new SoapFixtureTransport($fixture)))
+                ->withEncoderRegistry(
+                    EncoderRegistry::default()
+                        ->addClassMapCollection(ApiClassmap::types())
+                        ->addBackedEnumClassMapCollection(ApiClassmap::enums())
+                ),
+        );
 
         return new Api(['wsdl' => 'fixture.wsdl'], new ApiClient(new EngineCaller($engine)));
+    }
+
+    private static function wsdlLoader(): WsdlLoader
+    {
+        return new class(self::wsdl()) implements WsdlLoader {
+            public function __construct(
+                private readonly string $wsdl,
+            ) {
+            }
+
+            public function __invoke(string $location): string
+            {
+                // Test fixtures mirror Wortmann's production non-absolute namespace.
+                // Normalize the in-memory WSDL like production so v4 metadata and
+                // response decoding use the same internal namespace behavior.
+                return WortmannNamespaceNormalizer::normalize($this->wsdl);
+            }
+        };
     }
 
     /**

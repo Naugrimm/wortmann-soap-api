@@ -12,7 +12,7 @@ class ArrayOfString
     /**
      * @return null | array<int<0,max>, string>
      */
-    public function getString() : ?array
+    public function getString(): ?array
     {
         return $this->string;
     }
@@ -21,7 +21,7 @@ class ArrayOfString
      * @param null | array<int<0,max>, string> $string
      * @return static
      */
-    public function withString(?array $string) : static
+    public function withString(?array $string): static
     {
         $new = clone $this;
         $new->string = $string;

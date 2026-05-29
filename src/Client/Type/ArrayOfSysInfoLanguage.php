@@ -12,7 +12,7 @@ class ArrayOfSysInfoLanguage
     /**
      * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage>
      */
-    public function getSysInfoLanguage() : ?array
+    public function getSysInfoLanguage(): ?array
     {
         return $this->SysInfoLanguage;
     }
@@ -21,7 +21,7 @@ class ArrayOfSysInfoLanguage
      * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoLanguage> $SysInfoLanguage
      * @return static
      */
-    public function withSysInfoLanguage(?array $SysInfoLanguage) : static
+    public function withSysInfoLanguage(?array $SysInfoLanguage): static
     {
         $new = clone $this;
         $new->SysInfoLanguage = $SysInfoLanguage;

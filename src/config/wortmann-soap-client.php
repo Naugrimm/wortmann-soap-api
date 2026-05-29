@@ -1,14 +1,24 @@
 <?php
 
+use Naugrim\WortmannSoapApi\Soap\WortmannNamespaceNormalizingWsdlLoader;
 use Phpro\SoapClient\CodeGenerator\Assembler;
 use Phpro\SoapClient\CodeGenerator\Rules;
 use Phpro\SoapClient\CodeGenerator\Config\Config;
-use Soap\ExtSoapEngine\ExtSoapOptions;
-use Phpro\SoapClient\Soap\CodeGeneratorEngineFactory;
+use Phpro\SoapClient\Soap\DefaultEngineFactory;
+use Phpro\SoapClient\Soap\EngineOptions;
+use Soap\Wsdl\Loader\FlatteningLoader;
+use Soap\Wsdl\Loader\StreamWrapperLoader;
 
 return Config::create()
-    ->setEngine($engine = CodeGeneratorEngineFactory::create(
-        'https://www.wortmann.de/api/CustomerWebService.asmx?WSDL'
+    ->setEngine($engine = DefaultEngineFactory::create(
+        EngineOptions::defaults('https://www.wortmann.de/api/CustomerWebService.asmx?WSDL')
+            // The Wortmann WSDL publishes the non-absolute namespace
+            // "Wortmann.CustomerWebService". Normalize it during generation so
+            // phpro/soap-client v4/veewee/xml can parse it and generated classmaps
+            // target the internal "urn:Wortmann.CustomerWebService" namespace.
+            ->withWsdlLoader(new WortmannNamespaceNormalizingWsdlLoader(
+                new FlatteningLoader(new StreamWrapperLoader())
+            ))
     ))
     ->setTypeDestination('src/Client/Type')
     ->setTypeNamespace('Naugrim\WortmannSoapApi\Client\Type')

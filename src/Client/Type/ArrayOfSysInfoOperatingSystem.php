@@ -12,7 +12,7 @@ class ArrayOfSysInfoOperatingSystem
     /**
      * @return null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem>
      */
-    public function getSysInfoOperatingSystem() : ?array
+    public function getSysInfoOperatingSystem(): ?array
     {
         return $this->SysInfoOperatingSystem;
     }
@@ -21,7 +21,7 @@ class ArrayOfSysInfoOperatingSystem
      * @param null | array<int<0,max>, \Naugrim\WortmannSoapApi\Client\Type\SysInfoOperatingSystem> $SysInfoOperatingSystem
      * @return static
      */
-    public function withSysInfoOperatingSystem(?array $SysInfoOperatingSystem) : static
+    public function withSysInfoOperatingSystem(?array $SysInfoOperatingSystem): static
     {
         $new = clone $this;
         $new->SysInfoOperatingSystem = $SysInfoOperatingSystem;

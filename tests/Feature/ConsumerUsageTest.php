@@ -94,7 +94,7 @@ final class ConsumerUsageTest extends TestCase
         self::assertInstanceOf(CustomerWebServiceServiceInfoResponse::class, $response);
         self::assertFalse($response->getSuccess());
         self::assertNotSame('', $response->getErrorMesssage());
-        self::assertNull($response->getServiceInfos()?->getServiceInfo());
+        self::assertSame([], $response->getServiceInfos()?->getServiceInfo());
     }
 
     #[Test]

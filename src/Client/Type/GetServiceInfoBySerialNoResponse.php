@@ -14,7 +14,7 @@ class GetServiceInfoBySerialNoResponse implements ResultInterface
     /**
      * @return null | \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
      */
-    public function getGetServiceInfoBySerialNoResult() : ?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
+    public function getGetServiceInfoBySerialNoResult(): ?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse
     {
         return $this->GetServiceInfoBySerialNoResult;
     }
@@ -23,7 +23,7 @@ class GetServiceInfoBySerialNoResponse implements ResultInterface
      * @param null | \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult
      * @return static
      */
-    public function withGetServiceInfoBySerialNoResult(?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult) : static
+    public function withGetServiceInfoBySerialNoResult(?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceServiceInfoResponse $GetServiceInfoBySerialNoResult): static
     {
         $new = clone $this;
         $new->GetServiceInfoBySerialNoResult = $GetServiceInfoBySerialNoResult;

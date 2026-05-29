@@ -16,13 +16,16 @@ use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdRe
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse;
 use Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage;
+use Naugrim\WortmannSoapApi\Soap\WortmannNamespaceNormalizer;
+use Naugrim\WortmannSoapApi\Soap\WortmannNamespaceNormalizingTransport;
 use Naugrim\WortmannSoapApi\Tests\Fixtures\SoapFixtureTransport;
+use Phpro\SoapClient\Soap\DefaultEngineFactory;
+use Phpro\SoapClient\Soap\EngineOptions;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
+use Soap\Encoding\EncoderRegistry;
 use Soap\Engine\Engine;
-use Soap\ExtSoapEngine\ExtSoapEngineFactory;
-use Soap\ExtSoapEngine\ExtSoapOptions;
-use Soap\ExtSoapEngine\Wsdl\InMemoryWsdlProvider;
+use Soap\Wsdl\Loader\WsdlLoader;
 
 #[CoversClass(ApiClassmap::class)]
 final class SoapFixtureDeserializationTest extends TestCase
@@ -100,7 +103,7 @@ final class SoapFixtureDeserializationTest extends TestCase
         self::assertInstanceOf(CustomerWebServiceServiceInfoResponse::class, $response);
         self::assertFalse($response->getSuccess());
         self::assertNotSame('', $response->getErrorMesssage());
-        self::assertNull($response->getServiceInfos()?->getServiceInfo());
+        self::assertSame([], $response->getServiceInfos()?->getServiceInfo());
     }
 
     public function testWarrantyEndingDateFixtureDeserializesIntoServiceInfoDtos(): void
@@ -129,12 +132,34 @@ final class SoapFixtureDeserializationTest extends TestCase
 
     private static function engine(string $fixture): Engine
     {
-        $options = ExtSoapOptions::defaults(self::wsdl(), [
-            'cache_wsdl' => WSDL_CACHE_NONE,
-        ])->withWsdlProvider(new InMemoryWsdlProvider())
-            ->withClassMap(ApiClassmap::getCollection());
+        return DefaultEngineFactory::create(
+            EngineOptions::defaults('fixture.wsdl')
+                ->withWsdlLoader(self::wsdlLoader())
+                ->withTransport(new WortmannNamespaceNormalizingTransport(new SoapFixtureTransport($fixture)))
+                ->withEncoderRegistry(
+                    EncoderRegistry::default()
+                        ->addClassMapCollection(ApiClassmap::types())
+                        ->addBackedEnumClassMapCollection(ApiClassmap::enums())
+                ),
+        );
+    }
 
-        return ExtSoapEngineFactory::fromOptionsWithTransport($options, new SoapFixtureTransport($fixture));
+    private static function wsdlLoader(): WsdlLoader
+    {
+        return new class(self::wsdl()) implements WsdlLoader {
+            public function __construct(
+                private readonly string $wsdl,
+            ) {
+            }
+
+            public function __invoke(string $location): string
+            {
+                // Test fixtures mirror Wortmann's production non-absolute namespace.
+                // Normalize the in-memory WSDL like production so v4 metadata and
+                // response decoding use the same internal namespace behavior.
+                return WortmannNamespaceNormalizer::normalize($this->wsdl);
+            }
+        };
     }
 
     /**

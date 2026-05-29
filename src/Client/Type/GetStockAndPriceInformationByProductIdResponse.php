@@ -14,7 +14,7 @@ class GetStockAndPriceInformationByProductIdResponse implements ResultInterface
     /**
      * @return null | \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
      */
-    public function getGetStockAndPriceInformationByProductIdResult() : ?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
+    public function getGetStockAndPriceInformationByProductIdResult(): ?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse
     {
         return $this->GetStockAndPriceInformationByProductIdResult;
     }
@@ -23,7 +23,7 @@ class GetStockAndPriceInformationByProductIdResponse implements ResultInterface
      * @param null | \Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdResult
      * @return static
      */
-    public function withGetStockAndPriceInformationByProductIdResult(?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdResult) : static
+    public function withGetStockAndPriceInformationByProductIdResult(?\Naugrim\WortmannSoapApi\Client\Type\CustomerWebServiceProductInfoResponse $GetStockAndPriceInformationByProductIdResult): static
     {
         $new = clone $this;
         $new->GetStockAndPriceInformationByProductIdResult = $GetStockAndPriceInformationByProductIdResult;
