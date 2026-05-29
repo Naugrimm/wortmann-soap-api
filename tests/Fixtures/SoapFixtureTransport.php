@@ -1,13 +1,12 @@
 <?php
 
-namespace Naugrim\WortmannSoapApi\Tests\Unit;
+namespace Naugrim\WortmannSoapApi\Tests\Fixtures;
 
-use Naugrim\WortmannSoapApi\Tests\Fixtures\FixtureLoader;
 use Soap\Engine\HttpBinding\SoapRequest;
 use Soap\Engine\HttpBinding\SoapResponse;
 use Soap\Engine\Transport;
 
-final class FixtureTransport implements Transport
+final class SoapFixtureTransport implements Transport
 {
     public function __construct(
         private readonly string $fixture,

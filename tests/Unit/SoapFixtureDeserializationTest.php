@@ -16,6 +16,7 @@ use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdRe
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIds;
 use Naugrim\WortmannSoapApi\Client\Type\GetStockAndPriceInformationByProductIdsResponse;
 use Naugrim\WortmannSoapApi\Client\Type\ProductInfoPackage;
+use Naugrim\WortmannSoapApi\Tests\Fixtures\SoapFixtureTransport;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Soap\Engine\Engine;
@@ -133,7 +134,7 @@ final class SoapFixtureDeserializationTest extends TestCase
         ])->withWsdlProvider(new InMemoryWsdlProvider())
             ->withClassMap(ApiClassmap::getCollection());
 
-        return ExtSoapEngineFactory::fromOptionsWithTransport($options, new FixtureTransport($fixture));
+        return ExtSoapEngineFactory::fromOptionsWithTransport($options, new SoapFixtureTransport($fixture));
     }
 
     /**
