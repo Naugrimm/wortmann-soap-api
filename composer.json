@@ -16,7 +16,7 @@
         "ext-libxml": "*",
         "ext-soap": "*",
         "phpro/soap-client": "^6.0",
-        "symfony/cache": "^7.0",
+        "symfony/cache": "^7.0|^8.0",
         "illuminate/support": "^11.0|^12.0|^13",
         "guzzlehttp/guzzle": "^7.4"
     },
