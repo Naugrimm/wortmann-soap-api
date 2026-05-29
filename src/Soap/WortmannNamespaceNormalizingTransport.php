@@ -26,7 +26,7 @@ final class WortmannNamespaceNormalizingTransport implements Transport
             new SoapRequest(
                 WortmannNamespaceNormalizer::denormalize($request->getRequest()),
                 $request->getLocation(),
-                $request->getAction(),
+                WortmannNamespaceNormalizer::denormalize($request->getAction()),
                 $request->getVersion(),
                 $request->getOneWay(),
             ),
